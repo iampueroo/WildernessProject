@@ -1,0 +1,187 @@
+html, body
+{
+	background-image: url("../Images/cream_pixels.png");
+}
+
+@media (max-width: 768px) { 
+	#background, #reg_container 
+	{
+		background: url("../Images/forestbackgroundxs.jpg") no-repeat center center ;
+	}
+}
+@media (min-width: 768px) and (max-width: 992px) { 
+	#background, #reg_container 
+	{
+		background: url("../Images/forestbackgroundsm.jpg") no-repeat center center ;
+	}
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+	#background, #reg_container 
+	{
+		background: url("../Images/forestbackgroundmd.jpg") no-repeat center center fixed;
+	}
+}
+@media (min-width: 993px) {
+	#background, #reg_container 
+	{
+		background: url("../Images/forestbackground.jpg") no-repeat center center fixed;
+	}
+}
+#background, #reg_container 
+	{
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-image-size: cover;	
+	}
+
+#background {
+	height: 547px;
+}
+
+.title
+{
+	margin-bottom: 0;
+	background-color: rgba(200,200,200,.5);
+	color: white;
+}
+
+.titleHeader
+{
+	color:white;
+}
+
+.jumbotron
+{
+	background-color:transparent;f
+	border-radius: 10px;
+	color: white;	
+	padding-bottom: 20px;
+	font-size: 20px;	
+}
+
+.jumbotron .jumbo_background
+{
+	background-color: rgba(256, 256, 256, .3);
+	padding: 20px;
+	border-radius: 10px;
+	margin-top: 80px;
+}
+
+.jumbotron h1
+{
+	color: black;
+	font-weight: 400;
+}
+
+.jumbotron p
+{
+	font-weight: 125;
+	color: black;
+}
+
+#reg_container
+{
+	margin-top: 50px;
+	color: white;	
+}
+
+#reg_container .container h1#registration, #reg_container .container h1#registration small
+{
+	color: white;
+}
+#reg_container .container .row
+{
+	background-color: rgba(0,0,0,.5);
+	border-radius: 10px;
+}
+
+.number
+{
+	font-size: 20px;
+	border-style: solid;
+	text-align: center;
+	border-radius: 70px;
+	border-color: white;
+	padding: 5px 10px;
+	
+}
+
+.numbers
+{
+	text-align: center;
+}
+
+.lead
+{
+	font-size: 1.25em;
+}
+
+h1
+{
+	color: grey;
+}
+
+@media (max-width: 768px) { 
+	#background
+	{
+		height:700px;
+	}
+	.jumbotron p
+	{
+		font-size: 16px;
+	}
+	#climbingpic, #hikingpic
+	{
+		width: 90%;
+	}
+	#climbingpic, #hikingpic, #climbingpic img, #hikingpic img {
+		margin: 0 auto;
+	}
+	#climbingpic
+	{
+		margin-bottom: 20px;
+	}
+}
+@media (min-width: 768px)  { 
+	.jumbotron p
+	{
+		font-size: 17px;
+	}
+}
+@media (min-width: 992px) {
+	.jumbotron p
+	{
+		font-size: 17px;
+	}
+}
+
+*/
+/*@media (max-width: 400px) {
+	#background
+	{
+		height: 700px;
+	}
+}
+
+@media (min-width: 765px) {
+	.jumbotron p
+	{
+		font-size: 17px;
+	}
+}
+
+@media (max-width: 480px) {
+.jumbotron p
+	{
+		font-size: 16px;
+	}
+	#main .mainrow p, #main .mainrow h2, p
+	{
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+}*/
+
+
+

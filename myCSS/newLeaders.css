@@ -1,0 +1,94 @@
+@CHARSET "UTF-8";
+@media (max-width: 768px) { 
+	#background
+	{
+		background: url("../Images/forestbackgroundxs.jpg") no-repeat center center ;
+	}
+}
+@media (min-width: 768px) and (max-width: 992px) { 
+	#background
+	{
+		background: url("../Images/forestbackgroundsm.jpg") no-repeat center center ;
+	}
+}
+@media (min-width: 992px) {
+	#background 
+	{
+		background: url("../Images/forestbackground.jpg") no-repeat center center fixed;
+	}
+}
+#background
+	{
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-image-size: cover;	
+	}
+
+#background
+{
+	
+	box-shadow: 5px 5px 5px #888888;	
+}
+
+#background {
+	height: 547px;
+}
+
+.title
+{
+	margin-bottom: 0;
+	background-color: rgba(200,200,200,.5);
+	color: white;
+}
+
+.titleHeader
+{
+	color:white;
+}
+
+.jumbotron
+{
+	background-color:transparent;f
+	border-radius: 10px;
+	color: white;	
+	padding-bottom: 20px;
+	font-size: 20px;	
+}
+
+.jumbotron .jumbo_background
+{
+	background-color: rgba(256, 256, 256, .3);
+	padding: 20px;
+	border-radius: 10px;
+	margin-top: 80px;
+}
+
+.jumbotron h1
+{
+	color: black;
+	font-weight: 400;
+}
+
+.jumbotron p
+{
+	font-weight: 125;
+	color: black;
+}
+
+.yearHolder
+{
+	margin: 0 auto;
+}
+.year
+{
+	height: 100px;
+	width: 100px;
+	border: solid 1px black;
+	border-radius: 100px;
+	text-align: center;
+	padding-top: 14px;
+	font-size: 30px;
+	color: white;	
+	font-weight: bold;
+}

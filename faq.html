@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Wilderness Project</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+@import url(http://fonts.googleapis.com/css?family=Lato:100);
+</style>
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" type="text/css" href="myCSS/faq.css">
+<link rel="stylesheet" type="text/css" href="myCSS/navbar.css">
+
+
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+<script src="jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script>
+	function prepareList() {
+		$(".answer").hide();
+		//$(".answer").click(function(){$(this).hide()});
+		$(".question:odd").toggleClass("even"	);
+		$(".question:even").toggleClass("odd");
+		$(".question").click(
+				function() {
+					$(this).toggleClass("selected");
+					$(this).find(">.answer").toggle("fast");
+					$(this).find(">.q").toggleClass("black");
+					if ($(this).find(">.plus").html() == "+") {
+						$(this).find(">.plus").html("-");
+					} else {
+						$(this).find(">.plus").html("+");
+					}
+					$(this).siblings(".selected").toggleClass("selected").find(
+							">.answer").hide("fast").parent().find(">.q")
+							.toggleClass("black").parent().find(">.plus").html(
+									"+");
+				});
+	}
+	function reSizeCoverImage() {
+		var defaultHeight = 547;
+		var newHeight = 2 * $(window).height() / 3;
+		if (newHeight > defaultHeight) {
+			$("#background").css("height", "" + newHeight + "px");
+		}
+	}
+
+	function toggleNavbar() {
+		$("#navbarButton").click(function() {
+			$("#toggleList li").toggle("fast");
+		});
+	}
+	function navHandler() {
+	$("#toggleList li").hide();
+
+	var currWidth = $(window).innerWidth();
+	var isShortened = false;
+	var isWP = false;
+	if (currWidth < 900) {
+		$("#w, #p").hide();
+		isWP = true;
+	}
+	$(window).resize(function() {
+			var newWidth = $(window).innerWidth();
+			if (!isWP && newWidth < 1000) {
+				$("#w, #p").hide("medium");
+				isWP = true;
+			} else if (isWP && newWidth >= 1000){
+				isWP = false
+				$("#w, #p").show("medium");
+			}
+		})
+	}
+	$(document).ready(function() {
+		prepareList();
+		reSizeCoverImage();
+		toggleNavbar();
+		navHandler();
+		
+	});
+</script>
+
+</head>
+<body>
+	<div id="main">
+		<div id="background">
+			<nav class="navbar navbar-default" role="navigation">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button id="navbarButton" type="button" class="navbar-toggle" >
+						<span class="sr-only">Toggle navigation</span> <span
+							class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+					<a id="bigLogo" class="navbar-brand" href="home.html"><span class="bigletter">W</span><span id="w">ilderness</span> <span
+								class="bigletter">P</span><span id="p">roject</span></a>
+					<a id="smallLogo" class="navbar-brand" href="home.hml"><span class="bigletter">WP</span></a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse"
+					id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="home.html">Home</a></li>
+						<li><a href="philosophy.html">About Us</a></li>
+						<li><a href="tripInfo.html">Trip Info</a></li>
+						<li><a href="leaders.html">Leaders</a></li>
+						<li id="selected"><a href="faq.html">FAQ</a></li>
+						<li><a href="photos.html">Photos</a></li>
+						<li><a href="contact.html">Contact Us</a></li>
+						<li><a href="http://www.outing.wustl.edu">
+								<span class="glyphicon glyphicon-home"></span> Back to OC
+							</a>
+						</li>	
+					</ul>
+				</div>
+				<ul id="toggleList" class="visible-xs">
+					<li><p><a href="home.html">Home</p></a></li>
+					<li><a href="philosophy.html"><p>About Us</p></a></li>
+						<li><a href="tripInfo.html"><p>Trip Info</p></a></li>
+						<li><a href="leaders.html"><p>Leader Profiles</p></a></li>
+						<li class="selected"><a href="faq.html"><p>FAQ</p></a></li>
+						<li><a href="photos.html"><p>Photos</p></a></li>
+						<li><a href="contact.html"><p>Contact Us</p></a></li>
+						<li><a href="http://www.outing.wustl.edu"><p>
+								<span class="glyphicon glyphicon-home"></span> Back to OC
+							</p></a>
+						</li>	
+				</ul>
+				<!-- /.navbar-collapse -->
+			</nav>
+
+
+
+
+
+
+			<div id="jumborow" class="jumbotron center-block row">
+				<div class="jumbo_background col-sm-10 col-md-8 col-lg-10">
+					<h1>Confused?</h1>
+					<p>
+						Got questions for us? Check below to see if we've already answered
+						them! <small>(You're welcome!)</small><br> If we haven't,
+						feel free to <a href="contact.html">Contact Us!</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="row">
+			<h1 class="page-header text-center">General</h1>
+			</row>
+			<div class="col-xs-0 col-sm-1 col-md-1 col-lg-1"></div>
+			<div class="container col-xs-12 col-sm-10 col-md-10 col-lg-10">
+				<ul class="dl">
+					<ul class="question">
+						<span class="q">Q</span> What is the emphasis on social justice
+						about?
+						<span class="plus pull-right">+</span>
+						<li class="answer">College is a time and place to explore new
+							things and expose ourselves to diverse issues, cultures, and
+							people. Discussing what students may encounter during their
+							college life will prepare them to face these issues with an open
+							mind. This trip is intended to increase our awareness of the
+							natural world, ourselves, our peers and, in a bigger picture, the
+							interaction of people and their environment in other places.</li>
+					</ul>
+					<ul class="question">
+						<span class="q">Q</span> What if I have never been camping?
+						<span class="plus pull-right">+</span>
+						<li class="answer">Don't worry, many participants will have
+							never been camping before. This is your opportunity to explore
+							something new. Trip leaders will teach you all the basic skills
+							you will need to be comfortable. The trip is one of the best ways
+							to learn new things with the support of leaders and a new group
+							of friends.</li>
+					</ul>
+					<ul class="question">
+						<span class="q">Q</span> Why is the Wilderness Project longer than
+						other Pre-Orientation Programs?
+						<span class="plus pull-right">+</span>
+						<li class="answer">The Wilderness Project will be an
+							experience that immerses you in nature and your backpacking
+							community. Enough time must be taken to go beyond backpacking in
+							order to build a srong community and reflect on our experiences.
+							Also, we thought it'd be fun to play out in the woods for a few
+							extra days!</li>
+					</ul>
+					<ul class="question">
+						<span class="q">Q</span> Why does the Wilderness Project cost more
+						than other Pre-Orientation Programs?
+						<span class="plus pull-right">+</span>
+						<li class="answer">The program registration fee helps to
+							cover a variety of expenses including food, leader trainings,
+							gear acquisition, and transportation from the airport to campus
+							and from campus to the woods.</li>
+					</ul>
+					<ul class="question">
+						<span class="q">Q</span> What about Financial Aid?
+						<span class="plus pull-right">+</span>
+						<li class="answer">The Wilderness Project is dedicated to
+							providing experiential education and outdoor recreation
+							regardless of financial means. We offer two need-based
+							scholarships. Please contact us if the program cost is
+							prohibitive.</li>
+					</ul>
+					<ul class="question">
+						<span class="q">Q</span> What kind of shape do I need to be in?
+						<span class="plus pull-right">+</span>
+						<li class="answer">Expect this to be a physically challenging
+							trip. We encourage everyone to engage in some type of regular
+							physical activity in preparation for the trip. While no
+							backpacking or outdoor experience is required, please respect
+							that hiking 8 miles per day with a loaded backpack demands that
+							you are physically prepared. Pay particular attention to lower
+							body strength; doing lunge exercises and situps before the trip
+							will make those hills seem less steep.</li>
+					</ul>
+					<ul class="question">
+						<span class="q">Q</span> Do I need any special equipment?
+						<span class="plus pull-right">+</span>
+						<li class="answer">Check out the Wilderness Project packing
+							list. If you dont have some of the items listed there, borrowing
+							from a friend, relative or neighbor is always an option. If you
+							cannot get a hold of certain items, please contact us. The Outing
+							Club also owns a large number of backpacks and sleeping bags to
+							lend out. If you are getting new hiking boots, wear them as much
+							as possible before the trip to get them well-broken in. This will
+							help prevent blisters and make hiking more comfortable.</li>
+					</ul>
+					<ul class="question">
+						<span class="q">Q</span> How else can I prepare for the trip?
+						<span class="plus pull-right">+</span>
+						<li class="answer">Once you have officially registered for
+							the trip and received confirmation from the Wilderness Project,
+							read our online participant packet and fill out the medical and
+							policy forms.</li>
+					</ul>
+					<ul class="question">
+						<span class="q">Q</span> When can I move in to my room?
+						<span class="plus pull-right">+</span>
+						<li class="answer">We will return to campus by 2pm on August
+							25. You can move in at this time. Anyone coming to help you move
+							in should also arrive on campus at this time. All of your
+							belongings besides your camping gear should be shipped or driven
+							in to arrive on the 25th.</li>
+					</ul>
+					<ul class="question">
+						<span class="q">Q</span> Will I be able to move in to my dorm
+						before we leave for the Wilderness Project?
+						<span class="plus pull-right">+</span>
+						<li class="answer">The dorms will not be available for
+							move-in when you arrive on campus. You can move into your dorm on
+							August 25th at 2 pm when we return. Plan on bringing the
+							essential items for the Wilderness Project and have the rest of
+							your belongings shipped or brought to you on or after the 25th.</li>
+					</ul>
+					<ul class="question">
+						<span class="q">Q</span> Can I store belongings I don't need for
+						the trip on campus while I'm on the Wilderness Project?
+						<span class="plus pull-right">+</span>
+						<li class="answer">Please bring only what you need for the
+							trip with you when you arrive on August 18th. You should arrange
+							for the rest of your belongings to arrive on campus upon your
+							return.</li>
+					</ul>
+					<ul class="question">
+						<span class="q">Q</span> What happens if I am injured before
+						arriving on campus and can no longer participate?
+						</li>
+						<span class="plus pull-right">+</span>
+						<li class="answer">If an illness or injury prevents you from
+							being able to participate, please let us know immediately. We
+							will accommodate your needs as best we can.</li>
+					</ul>
+					<ul class="question">
+						<span class="q">Q</span>What happens if I am injured before
+						arriving on campus and can no longer participate?
+						<span class="plus pull-right">+</span>
+						<li class="answer">If an illness or injury prevents you from
+							being able to participate, please let us know immediately. We
+							will accommodate your needs as best we can.</li>
+					</ul>
+					<ul class="question">
+						<span class="q">Q</span>What if I have special dietary needs?
+						<span class="plus pull-right">+</span>
+						<li class="answer">If you have specific dietary restrictions,
+							please don't hesitate to contact us and tell us about them! We
+							will try our best to accomodate your needs.</li>
+					</ul>
+					<ul class="question">
+						<span class="q">Q</span>What if I am on medication?
+						<span class="plus pull-right">+</span>
+						<li class="answer">Please list all medications (including
+							inhalers) on your application. If you need assistance
+							administering these prescriptions, please contact us so that we
+							can make the appropriate accommodations. If you have a
+							prescription for something not listed on your application (for
+							example: you are diagnosed with strep throat 3 days before the
+							trip), please bring a note from your doctor with you to campus.</li>
+					</ul>
+					<ul class="question">
+						<span class="q">Q</span>How can my parents reach me if there is an
+						emergency at home while I am on the trail?
+						<span class="plus pull-right">+</span>
+						<li class="answer">Parents can call the Orientation Office
+							from 9:00 am to 5:00 pm, Monday through Friday at (314) 935-8350.
+							After-hours emergency contact information will be distributed to
+							parents before freshman arrive on campus.</li>
+					</ul>
+					<ul class="question">
+						<span class="q">Q</span>What if I still have questions??
+						<span class="plus pull-right">+</span>
+						<li class="answer">Check out our online participant packet,
+							and if you still have questions please email us at the address
+							found on our contact page.</li>
+					</ul>
+				</ul>
+			</div>
+		</div>
+		<div class="footer row">
+			<h3 class="col-xs-12 text-center">If you have any more questions, please contact us at <a href="mailto:wildernessproject@gmail.com">wildernessproject@gmail.com</a> or at our <a href="contact.html">Contact</a> page</h3>
+		</div>
+
+
+</body>
+</html>

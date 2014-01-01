@@ -1,0 +1,64 @@
+body
+{
+	background: none	;
+	background-color: white;
+}
+#background
+{
+	background: url("../Images/brookings.jpg") center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 547px;
+
+}
+
+.title
+{
+	margin-bottom: 0;
+	background-color: rgba(200,200,200,.5);
+	color: white;
+}
+
+.titleHeader
+{
+	color:white;
+}
+
+.jumbotron
+{
+	background-color:transparent;
+	border-radius: 10px;
+	color: white;	
+	padding-bottom: 20px;
+	position: relative;
+	margin-top: 0px;;
+	font-size: 20px;	
+}
+
+.jumbotron .jumbo_background
+{
+	background-color: rgba(256, 256, 256, .3);
+	padding: 20px;
+	margin-top: 120px;
+	border-radius: 10px;
+}
+
+.jumbotron h1
+{
+	color: black;
+	font-weight: 400;
+}
+
+.jumbotron p
+{
+	font-weight: 125;
+	color: black;
+}
+
+.logos
+{
+	margin-top: 40px;
+	text-align: center;
+}

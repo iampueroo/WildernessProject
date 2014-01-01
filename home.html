@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Wilderness Project</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+@import url(http://fonts.googleapis.com/css?family=Lato:100);
+</style>
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" type="text/css" href="myCSS/navbar.css">
+<link rel="stylesheet" type="text/css" href="myCSS/home.css">
+<link rel="icon" type="image/ico"
+	href="http://www.students.cec.wustl.edu/~rachelgershon/OC Site/favicon.ico">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+<script src="jquery/jquery-1.10.2.min.js"></script>
+<script>
+	function toggleNavbar() {
+		$("#navbarButton").click(function() {
+			$("#toggleList li").toggle("fast");
+		});
+	}
+	function navHandler() {
+		$("#toggleList li").hide();
+		var currWidth = $(window).innerWidth();
+		var isShortened = false;
+		var isWP = false;
+		if (currWidth < 900) {
+			$("#w, #p").hide();
+			isWP = true;
+		}
+		$(window).resize(function() {
+			var newWidth = $(window).innerWidth();
+			if (!isWP && newWidth < 1000) {
+				$("#w, #p").hide("medium");
+				isWP = true;
+			} else if (isWP && newWidth >= 1000) {
+				isWP = false
+				$("#w, #p").show("medium");
+			}
+		})
+	}
+	function centerOnWindow(id) {
+		var e = document.getElementsByClassName(id)[0];
+		var navHeight = document.getElementsByClassName("navbar")[0].clientHeight;
+		var eHeight = e.clientHeight;
+		var windowHeight = window.innerHeight;
+		var offset = ((windowHeight - navHeight - eHeight) / 2) + navHeight;
+		if (offset < 0) {
+			offset = 5;
+		}
+		e.style.top = "" + offset + "px";
+	}
+	function centerContainers() {
+		var e1 = document.getElementsByClassName("freshmenHolder")[0];
+		var e2 = document.getElementsByClassName("freshmenHolder")[1];
+
+		var navHeight = document.getElementsByClassName("navbar")[0].clientHeight;
+		var e1Height = e1.clientHeight;
+		var e2Height = e2.clientHeight;
+		var windowHeight = window.innerHeight;
+		var offset1 = ((windowHeight - navHeight - e1Height) / 2) + navHeight;
+		var offset2 = ((windowHeight - navHeight - e2Height) / 2) + navHeight;
+		if (offset1 < 0) {
+			offset1 = 5;
+		}
+		if (offset2 < 0) {
+			offset2 = 5;
+		}
+		e1.style.cssText = "padding-top:" + offset1 + "px";
+		e2.style.cssText = "padding-top:" + offset2 + "px";
+	}
+
+	$(document).ready(function() {
+		toggleNavbar();
+		navHandler();
+		centerOnWindow("masterrow");
+		centerContainers();
+		$(".fadeIn").hide(0).delay(250).fadeIn(1600)
+	});
+</script>
+</head>
+<body>
+	<div id="main">
+		<nav class="navbar navbar-default" role="navigation">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button id="navbarButton" type="button" class="navbar-toggle">
+								<span class="sr-only">Toggle navigation</span> <span
+									class="icon-bar"></span> <span class="icon-bar"></span> <span
+									class="icon-bar"></span>
+							</button>
+							<a id="bigLogo" class="navbar-brand" href="home.html"><span
+								class="bigletter">W</span><span id="w">ilderness</span> <span
+								class="bigletter">P</span><span id="p">roject</span></a> <a
+								id="smallLogo" class="navbar-brand" href="home.hml"><span
+								class="bigletter">WP</span></a>
+						</div>
+
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse"
+							id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-right">
+								<li id="selected"><a href="home.html">Home</a></li>
+								<li><a href="philosophy.html">About Us</a></li>
+								<li><a href="tripInfo.html">Trip Info</a></li>
+								<li><a href="leaders.html">Leaders</a></li>
+								<li><a href="faq.html">FAQ</a></li>
+								<li><a href="photos.html">Photos</a></li>
+								<li><a href="contact.html">Contact Us</a></li>
+								<li><a href="http://www.outing.wustl.edu"> <span
+										class="glyphicon glyphicon-home"></span> Back to OC
+								</a></li>
+							</ul>
+						</div>
+						<ul id="toggleList" class="visible-xs">
+          <li class="selected"><p><a href="home.html">Home</p></a></li>
+          	<li><a href="philosophy.html"><p>About Us</p></a></li>
+            <li><a href="tripInfo.html"><p>Trip Info</p></a></li>
+            <li><a href="leaders.html"><p>Leaders</p></a></li>
+            <li><a href="faq.html"><p>FAQ</p></a></li>
+            <li><a href="photos.html"><p>Photos</p></a></li>
+            <li><a href="contact.html"><p>Contact Us</p></a></li>
+            <li><a href="http://www.outing.wustl.edu"><p>
+                <span class="glyphicon glyphicon-home"></span> Back to OC
+              </p></a>
+            </li> 
+        </ul>
+						<!-- /.navbar-collapse -->
+					</nav>
+
+		<div class="row myrow masterrow">
+			<div class="row myrow">
+				<div
+					class="jumbotron fadeIn col-xs-12 col-sm-offset-3 col-md-offset-3">
+					<p class="fadeIn">
+						<small>Washington University Outing Club presents...</small>
+					</p>
+					<h1 class="fadeIn">The Wilderness Project</h1>
+					<p class="fadeIn text-center">
+						<small><small>Choose below to begin!</small></small>
+					</p>
+				</div>
+			</div>
+			<div id="tentrow" class="row myrow fadeIn">
+				<div class="col-sm-offset-3 col-sm-2">
+					<a href="#leaders" class="thumbnail scroll">
+						<div class="caption">
+							<h3>Prospective Leaders</h3>
+						</div>
+					</a>
+				</div>
+				<div class="col-sm-offset-2 col-sm-2">
+					<a href="#freshmen" class="thumbnail scroll">
+						<div class="caption">
+							<h3>Incoming Freshmen</h3>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Jumbotron -->
+
+	<div class="freshmenContainer" id="freshmen">
+		<div class="freshmenHolder">
+			<div class="jumbotron">
+				<h1>Join WP</h1>
+				<p class="lead">As an incoming freshman, you will meet all the
+					cool leaders, a whole lot of other freshmen, and share experiences
+					from hiking in the Ozarks to top roping new routes!</p>
+			</div>
+
+			<!-- Example row of columns -->
+			<div class="col-sm-1 col-md-1 col-lg-1"></div>
+			<div class="row">
+				<div class="col-xs-3 col-sm-3 col-lg-3">
+					<h2>Register</h2>
+					<p>Already know WP is the pre-o for you? Don't waist anymore
+						time and register asap by clicking the link and following the
+						instructions!</p>
+					<p>
+						<a class="btn btn-success" href="tripInfo2.html#registration"
+							role="button">Register Now &raquo;</a>
+					</p>
+				</div>
+				<div class="col-xs-4 col-sm-4 col-lg-4">
+					<h2>Learn more!</h2>
+					<p>Get all the information about the pre-orientation trip -
+						from the logistics such as the schedule and the packing list, to
+						what WP is as a community - our philosophy, our goals, and all
+						about who we are!</p>
+					<p>
+						<a class="btn btn-info" href="tripInfo2.html" role="button">Get
+							Info &raquo;</a>
+					</p>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-lg-3">
+					<h2>Meet the Leaders!</h2>
+					<p>Want to see who the leaders are this year? Check them out!</p>
+					<p>
+						<a class="btn btn-primary" href="leaders.html" role="button">Stalk
+							them &raquo;</a>
+					</p>
+				</div>
+			</div>
+			<div class="col-sm-1 col-md-1 col-lg-1"></div>
+		</div>
+	</div>
+
+
+	<!-- Jumbotron -->
+	<div class="freshmenHolder" id="leaders">
+		<div class="jumbotron">
+			<h1>Lead WP</h1>
+			<p class="lead">By becoming a WP leader, you join one of the
+				closest communities on campus. The experience is unlike any other.
+				There are yearly applications so keep an eye out for us!</p>
+		</div>
+
+		<!-- Example row of columns -->
+		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
+		<div class="row">
+			<div class="col-xs-4 col-sm-4 col-lg-4">
+				<h2>Information</h2>
+				<p>See what WP is all about. Learn about the trip you could
+					lead, the places we'll be going, and the community you'll be
+					joining.</p>
+				<p>
+					<a class="btn btn-info" href="tripInfo2.html" role="button">Learn
+						More &raquo;</a>
+				</p>
+			</div>
+			<div class="col-xs-4 col-sm-4 col-lg-4">
+				<h2>Apply!</h2>
+				<p>Know you want to become a WP leader? Click the link below to
+					get to the application! Make sure to remember the deadline of when
+					it is due!</p>
+				<p>
+					<a class="btn btn-success"
+						href="https://docs.google.com/forms/d/1o61MyH1mFUNwJJjAhvRemK-VwhMp3YzFN-w50UmxWQI/closedform.html"
+						role="button">Apply Now &raquo;</a>
+				</p>
+			</div>
+
+		</div>
+		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
+	</div>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="jquery/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+	<script>
+		$(".scroll").click(
+				function(event) {
+					event.preventDefault();
+					//calculate destination place
+					var dest = 0;
+					if ($(this.hash).offset().top > $(document).height()
+							- $(window).height()) {
+						dest = $(document).height() - $(window).height();
+					} else {
+						dest = $(this.hash).offset().top;
+					}
+					//go to destination
+					$('html,body').animate({
+						scrollTop : dest
+					}, 1000, 'swing');
+				});
+
+		<!--Rememberthe packing list -->
+	</script>
+</body>
+</html>

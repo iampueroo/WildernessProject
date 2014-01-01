@@ -1,0 +1,110 @@
+h1
+{
+	color: grey;
+}
+
+#background
+{
+	background: url("../Images/background2.jpg") center center fixed;
+	height: 547px;
+}
+#background .jumbotron
+{
+	background-color: transparent;
+	color: white;
+	font-size: 20px;
+	width: 100%;
+}
+
+#background .jumbotron h1
+{
+	font-weight: 300;
+	padding-top: 80px;
+}
+
+.header
+{
+	margin-top: 10px;
+}
+.tn
+{
+	padding: 0px 20px 1px 0px;
+	margin-right: 10px;
+}
+
+.tn img
+{
+	width: 120%;
+}
+@media (max-width: 992px) {
+	.tn img
+	{
+		width: 140%;
+	}
+}
+
+.tn_container
+{
+	background-color: rgba(256, 256, 256, .4);
+	padding: 20px;
+	padding-right: 50px;
+	border-radius: 10px;
+	color: black;
+}
+.tn_container .row
+{
+	padding: 5px 0px 0px 20px;
+
+}
+
+.tn_container .row img
+{
+	webkit-box-shadow: 0 0 5px #fff;
+    box-shadow: 0 0 5px #fff;	
+}
+
+@media (max-width: 833px) {
+	#leader_container
+	{
+		didsplay: none;
+	}
+}
+
+
+.leader img 
+{
+	box-shadow: 5px 5px 5px  #888888;	
+	display: block;
+
+}
+
+.leader p, .leader blockquote
+{
+	margin-bottom: 0px;
+	z-index: 59;
+}
+
+.leader blockquote
+{
+	margin-left: 10px;
+}
+
+.page-header
+{
+	padding-left: 20px;
+}
+
+#information
+{
+	height: 10px;
+}
+/* Test runs */
+
+div#test{
+	width: 400px;
+	height: 533px;
+	background-image: url("../Images/clairemai.jpg");
+	box-shadow: 5px 5px 5px #888888;	
+
+}
+

@@ -1,0 +1,2890 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Wilderness Project</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+@import url(http://fonts.googleapis.com/css?family=Lato:100);
+</style>
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" type="text/css" href="myCSS/navbar.css">
+<link rel="stylesheet" type="text/css" href="myCSS/leaders.css">
+<link rel="stylesheet" type="text/css" href="myCSS/leaders2.css">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+<script src="jquery/jquery-1.10.2.min.js"></script>
+<script>
+	function toggleNavbar() {
+		$("#navbarButton").click(function() {
+			$("#toggleList li").toggle("fast");
+		});
+	}
+	function navHandler() {
+		$("#toggleList li").hide();
+		var currWidth = $(window).innerWidth();
+		var isShortened = false;
+		var isWP = false;
+		if (currWidth < 900) {
+			$("#w, #p").hide();
+			isWP = true;
+		}
+		$(window).resize(function() {
+			var newWidth = $(window).innerWidth();
+			if (!isWP && newWidth < 1000) {
+				$("#w, #p").hide("medium");
+				isWP = true;
+			} else if (isWP && newWidth >= 1000) {
+				isWP = false
+				$("#w, #p").show("medium");
+			}
+		})
+	}
+	
+	$(document).ready(function() {
+		$(".singleleader:odd").find("img").css("float", "left").addClass("left");
+		toggleNavbar();
+		navHandler();
+		
+	});
+</script>
+
+</head>
+<body>
+	<div id="main">
+		<div id="background">
+			<nav class="navbar navbar-default" role="navigation">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button id="navbarButton" type="button" class="navbar-toggle">
+						<span class="sr-only">Toggle navigation</span> <span
+							class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+					<a id="bigLogo" class="navbar-brand" href="home.html"><span
+						class="bigletter">W</span><span id="w"> ilderness</span> <span
+						class="bigletter">P</span><span id="p">roject</span></a> <a
+						id="smallLogo" class="navbar-brand" href="home.hml"><span
+						class="bigletter">WP</span></a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse"
+					id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="home.html">Home</a></li>
+						<li><a href="tripInfo.html">Trip Info</a></li>
+						<li id="selected"><a href="leaders.html">Leaders</a></li>
+						<li><a href="faq.html">FAQ</a></li>
+						<li><a href="photos.html">Photos</a></li>
+						<li><a href="contact.html">Contact Us</a></li>
+						<li><a href="http://www.outing.wustl.edu"> <span
+								class="glyphicon glyphicon-home"></span> Back to OC
+						</a></li>
+					</ul>
+				</div>
+				<ul id="toggleList" class="visible-xs">
+					<li><p>
+							<a href="home.html">Home 
+						</p> </a></li>
+					<li><a href="tripInfo.html"><p>Trip Info</p></a></li>
+					<li class="selected"><a href="leaders.html"><p>Leader
+								Profiles</p></a></li>
+					<li><a href="faq.html"><p>FAQ</p></a></li>
+					<li><a href="photos.html">Photos</a></li>
+					<li><a href="contact.html"><p>Contact Us</p></a></li>
+					<li><a href="http://www.outing.wustl.edu"><p>
+								<span class="glyphicon glyphicon-home"></span> Back to OC
+							</p></a></li>
+				</ul>
+				<!-- /.navbar-collapse -->
+			</nav>
+
+
+			<div class="jumbotron center-block row">
+				<h1 class="col-md-10 col-md-offset-1 col-sm-12">Leader Profiles</h1>
+				<p class="col-md-10 col-md-offset-1 col-sm-12">Check out your
+					2013 WP leaders and Steering!</p>
+				<div class="_container visible-xs">
+					<p>Our highly trained leaders are dope and this will have stuff
+						too. Omg more words and words to fill here about the leaders. omg
+						but what about steering check this out y'all.</p>
+
+				</div>
+				<div
+					class="tn_container hidden-xs col-md-10 col-md-offset-1 col-sm-12">
+
+					<div class="row">
+						<div class="col-xs-1 col-sm-1 col-md-1 tn">
+							<a href="#1" class="scroll"><img
+								src="Images/2013/helenheadtn.jpg" class="img-circle center-block"></a>
+						</div>
+
+						<div class="col-xs-1 col-sm-1 col-md-1 tn">
+							<a href="#2" class="scroll"><img
+								src="Images/2013/jaimecollinstn.jpeg" class="img-circle center-block"></a>
+						</div>
+
+						<div class="col-xs-1 col-sm-1 col-md-1 tn">
+							<a href="#3" class="scroll" class="scroll"><img
+								src="Images/2013/aidenzuckertn.jpg" class="img-circle center-block"></a>
+						</div>
+
+						<div class="col-xs-1 col-sm-1 col-md-1 tn">
+							<a href="#4" class="scroll" class="scroll"><img
+								src="Images/2013/benzodtn.jpg " class="img-circle center-block"></a>
+						</div>
+
+						<div class="col-xs-1 col-sm-1 col-md-1 tn">
+							<a href="#5" class="scroll"><img src="Images/2013/forrestcobbtn.jpeg"
+								class="img-circle center-block"></a>
+						</div>
+						<div class="col-xs-1 col-sm-1 col-md-1 tn">
+							<a href="#6" class="scroll"><img src="Images/2013/robhinshawtn.jpg"
+								class="img-circle center-block"></a>
+						</div>
+						<div class="col-xs-1 col-sm-1 col-md-1 tn">
+							<a href="#7" class="scroll"><img src="Images/2013/clairemaitn.jpg"
+								class="img-circle center-block"></a>
+						</div>
+						<div class="col-xs-1 col-sm-1 col-md-1 tn">
+							<a href="#8" class="scroll"><img src="Images/2013/madeleinebalchantn.jpg"
+								class="img-circle center-block"></a>
+						</div>
+						<div class="col-xs-1 col-sm-1 col-md-1 tn">
+							<a href="#9" class="scroll"><img src="Images/2013/marybishoptn.jpg"
+								class="img-circle center-block"></a>
+						</div>
+						<div class="col-xs-1 col-sm-1 col-md-1 tn">
+							<a href="#10" class="scroll"><img src="Images/2013/alexneumantn.jpg"
+								class="img-circle center-block"></a>
+						</div>
+					</div>
+					<div class="row">
+
+						<div class="col-xs-1 col-sm-1 col-md-1 tn">
+							<a href="#11" class="scroll"><img src="Images/2013/jaredlichtargetn.jpg"
+								class="img-circle center-block"></a>
+						</div>
+						<div class="col-xs-1 col-sm-1 col-md-1 tn">
+							<a href="#12" class="scroll"><img src="Images/2013/grantphillipstn.jpg"
+								class="img-circle center-block"></a>
+						</div>
+						<div class="col-xs-1 col-sm-1 col-md-1 tn">
+							<a href="#13" class="scroll"><img src="Images/2013/walterreillytn.jpg"
+								class="img-circle center-block"></a>
+						</div>
+						<div class="col-xs-1 col-sm-1 col-md-1 tn">
+							<a href="#14" class="scroll"><img src="Images/2013/jimenagraciatn.jpeg"
+								class="img-circle center-block"></a>
+						</div>
+						<div class="col-xs-1 col-sm-1 col-md-1 tn">
+							<a href="#15" class="scroll"><img src="Images/2013/kimgagnontn.jpg"
+								class="img-circle center-block"></a>
+						</div>
+						<div class="col-xs-1 col-sm-1 col-md-1 tn">
+							<a href="#16" class="scroll"><img src="Images/2013/mattranftletn.jpg"
+								class="img-circle center-block"></a>
+						</div>
+						<div class="col-xs-1 col-sm-1 col-md-1 tn">
+							<a href="#17" class="scroll"><img src="Images/2013/adrianasisleytn.jpg"
+								class="img-circle center-block"></a>
+						</div>
+						<div class="col-xs-1 col-sm-1 col-md-1 tn">
+							<a href="#18" class="scroll"><img src="Images/2013/emilysextontn.jpg"
+								class="img-circle center-block"></a>
+						</div>
+						<div class="col-xs-1 col-sm-1 col-md-1 tn">
+							<a href="#19" class="scroll"><img src="Images/2013/lydarossitn.jpeg"
+								class="img-circle center-block"></a>
+						</div>
+						<div class="col-xs-1 col-sm-1 col-md-1 tn">
+							<a href="#20" class="scroll"><img src="Images/2013/stephenbonfardintn.jpg"
+								class="img-circle center-block"></a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-1 col-sm-1 col-md-1 tn">
+							<a href="#21" class="scroll"><img src="Images/2013/ignacioampuerotn.jpg"
+								class="img-circle center-block"></a>
+						</div>
+						<div class="col-xs-1 col-sm-1 col-md-1 tn">
+							<a href="#22" class="scroll"><img src="Images/2013/kathrynreynoldstn.jpg"
+								class="img-circle center-block"></a>
+						</div>
+						<div class="col-xs-1 col-sm-1 col-md-1 tn">
+							<a href="#23" class="scroll"><img src="Images/2013/brendandalytn.jpg"
+								class="img-circle center-block"></a>
+						</div>
+						<div class="col-xs-1 col-sm-1 col-md-1 tn">
+							<a href="#24" class="scroll"><img src="Images/2013/michaelwraytn.jpg"
+								class="img-circle center-block"></a>
+						</div>
+						<div class="col-xs-1 col-sm-1 col-md-1 tn">
+							<a href="#25" class="scroll"><img src="Images/2013/katieluytn.jpg"
+								class="img-circle center-block"></a>
+						</div>
+						<div class="col-xs-1 col-sm-1 col-md-1 tn">
+							<a href="#26" class="scroll"><img src="Images/2013/nicolazanchitn.jpg"
+								class="img-circle center-block"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div id="leader_containers">
+
+			<div class="row">
+				<div class="col-sm-12 col-md-10 col-md-offset-1">
+
+					<div id="leader_container_mobile">
+						<h1 class=" text-center">Current Leaders</h1>
+						<div id="1" class="singleleader row">
+							<img src="Images/2013/helenhead.jpg">
+							<h2>Helen Head</h2>
+							<div>
+								<p>
+									<strong>(Light?)year in School:</strong> Junior
+								</p>
+								<p>
+									<strong>Major:</strong> Art and Anthropology
+								</p>
+								<p>
+									<strong>Superhero Name:</strong> Astral Shine
+								</p>
+								<p>
+									<strong>Where yew from:</strong> The Bestchester
+								</p>
+								<p>
+									<strong>Medical Training:</strong> Wilderness First Aid
+								</p>
+								<p>
+									<strong>WashU Actividades:</strong> Wilderness Project, Student
+									Life Writer, AP prep tutor, Kuumba talks mentor
+								</p>
+								<p>
+									<strong>If you were a pumpkin, what color would you
+										be?</strong> definitely fuchsia
+								<p>
+								<p>
+									<strong>Proper procedure when one comes across a
+										Lowland Missoura Pineapple:</strong>
+								</p>
+								<blockquote>check my person (for tics, spideys,
+									etc), remove shoes and all impurities, dig a mote around the
+									pineapple, fill the mote with liquids, hop onto the center
+									platform, sit cross-legged with the pineapple in lap, hold it
+									firmly one hand on either side.</blockquote>
+								<p>
+									<strong>How many WilderPhriends does it take to fill
+										an ice cream carton</strong>wowwwowo can't answer. WilderPhriends come
+									in many shapes and sizes.
+								</p>
+								<p>
+									<strong>Convince me in 6 words why I should go camping
+										with you.</strong>i radiate heat in the night
+								<p>
+								<p>
+									<strong>Name the best</strong> avocados
+								<p>
+								<p>
+									<strong>What are dreams made of?</strong> global station paneer
+								
+								<p>
+								<p>
+									<strong>If that’s Bill, then who are you?</strong> raven
+									symone when she was a lil beeb on the show and unintentionally
+									stole rudy's thunder.
+								<p>
+								<p>
+									<strong>What's the most underrated invention?</strong> the
+									double sided Q-tip.
+								</p>
+								<p>
+									<strong>Where in the world is Carmen San Diego?</strong> I
+									don't know how to respond to this one.
+								</p>
+								<p>
+									<strong>Preferred mode of transportation:</strong>
+									http://www.youtube.com/watch?v=ZWnW-OuggoE
+								</p>
+								<p>
+									<strong>Worst advice you could give a freshman?</strong> modern
+									dorms all the way!
+								</p>
+								<p>
+									<strong>WashU protip for a freshman</strong> 8am is dangerous
+									territory
+								</p>
+								<p>
+									<strong>Favorite flavor of Log-o-beef</strong> Salt and
+									wildergnar.
+								</p>
+							</div>
+						</div>
+						<div id="2" class="singleleader row">
+							<img src="Images/2013/jaimecollins.jpeg">
+							<h2>Jaime Collins</h2>
+							<div>
+								<p>
+									<strong>(Light?)year in School:</strong> Sophomore
+								</p>
+								<p>
+									<strong>Major:</strong> Communication Design, yo
+								</p>
+								<p>
+									<strong>Superhero Name:</strong> Captain Pink Eye
+								</p>
+								<p>
+									<strong>Where yew from:</strong> YAY AREAAAAAA (mountain view,
+									CA)
+								</p>
+								<p>
+									<strong>Medical Training:</strong> WFA & CPR & AED and other
+									three letter acronyms that should make you feel safe.
+								</p>
+								<p>
+									<strong>WashU Actividades:</strong>
+								</p>
+								<blockquote>Wilderness Project (obviously), intern
+									at Office of Public affairs (marketing for WashU), WUnderground
+									(WashU's satirical newspaper), art school tour guide, IM sportz
+									and semi-professional beat-boxer.</blockquote>
+								<p>
+									<strong>If you were a pumpkin, what color would you
+										be?</strong>
+								<blockquote>How sick would it be a translucent
+									pumpkin? Then I could avoid being carved, you could just put a
+									candle inside of me and I'd glow ten times brighter than all
+									the other pumpkins. People would be like "whoa, that's a huge
+									glass pumpkin!" and you'd be like NOPE, I genetically
+									engineered real pumpkins to be translucent, what's up.</blockquote>
+								<p>
+									<strong>Proper procedure when one comes across a
+										Lowland Missoura Pineapple:</strong>
+								</p>
+								<blockquote>1. Execute the proper dance of
+									gratitude to the gods of Missouran Agriculture. 2. Excavate. 3.
+									Observe in awe. 4. Re-bury. It's not for mere mortals like us.</blockquote>
+								<p>
+									<strong>How many WilderPhriends does it take to fill
+										an ice cream carton?</strong> Three, assuming it's standard sized.
+								</p>
+								<p>
+									<strong>Convince me in 6 words why I should go camping
+										with you.</strong> Imagine eating smores made of cuddles
+								<p>
+								<p>
+									<strong>Name the best</strong>: Michael Wray
+								<p>
+								<p>
+									<strong>What are dreams made of?</strong> Pure subconscious
+									bubbles of dandelions and Jelly Bellies.
+								<p>
+								<p>
+									<strong>If that's Bill, then who are you?</strong> I'm Aiden!
+									Remember?!
+								<p>
+								<p>
+									<strong>What's the most underrated invention?</strong>
+								</p>
+								<blockquote>Backpacks. Like there are so many
+									people in the world that use backpacks everyday. What would we
+									do without them?! Carry everything in briefcases?! No. We'd be
+									screwed. Appreciate them. Give you backpacking backpack a pat
+									on the back, which is the back of the backpacking backpack
+									since packs lack backs because they're not animals. OR ARE
+									THEY?!</blockquote>
+								<p>
+									<strong>Where in the world is Carmen San Diego?</strong> I
+									don't know. I'll be honest, I don't think anyone knows what it
+									means anymore. Scholars maintain that her location was lost
+									hundreds of years ago.
+								</p>
+								<p>
+									<strong>Preferred mode of transportation:</strong> Longboard
+									shredding down Forsyth. *hang-loose wiggle*
+								</p>
+								<p>
+									<strong>Worst advice you could give a freshman?</strong>
+									Smiling and looking people in the eyes is kind of creepy. Stop
+									it.
+								</p>
+								<p>
+									<strong>WashU protip for a freshman</strong>
+								</p>
+								<blockquote>Weekdays from 7:30 AM to 10:30 AM, go
+									to the grill, smile and ask for "two eggs with cheddar on whole
+									wheat." You'll probably have to remind them what type of
+									cheese, so pay attention while you wait because they aren't
+									going to turn around, they're just going to ask you. Take your
+									sandwich. Pay for it. Eat it. Explode.</blockquote>
+								<p>
+									<strong>Favorite flavor of Log-o-beef: </strong> Pumpernickel.
+								</p>
+							</div>
+						</div>
+						<div id="3" class="singleleader row">
+							<img src="Images/2013/aidenzucker.jpg">
+							<h2>Aiden Zucker</h2>
+							<div>
+								<p>
+									<strong>(Light?)year in School:</strong> Sophomore
+								</p>
+								<p>
+									<strong>Major:</strong> Communication Design, yo
+								</p>
+								<p>
+									<strong>Superhero Name:</strong> Captain Pink Eye
+								</p>
+								<p>
+									<strong>Where yew from:</strong> YAY AREAAAAAA (mountain view,
+									CA)
+								</p>
+								<p>
+									<strong>Medical Training:</strong> WFA & CPR & AED and other
+									three letter acronyms that should make you feel safe.
+								</p>
+								<p>
+									<strong>WashU Actividades:</strong>
+								</p>
+								<blockquote>Wilderness Project (obviously), intern
+									at Office of Public affairs (marketing for WashU), WUnderground
+									(WashU's satirical newspaper), art school tour guide, IM sportz
+									and semi-professional beat-boxer.</blockquote>
+								<p>
+									<strong>If you were a pumpkin, what color would you
+										be?</strong>
+								<blockquote>How sick would it be a translucent
+									pumpkin? Then I could avoid being carved, you could just put a
+									candle inside of me and I'd glow ten times brighter than all
+									the other pumpkins. People would be like "whoa, that's a huge
+									glass pumpkin!" and you'd be like NOPE, I genetically
+									engineered real pumpkins to be translucent, what's up.</blockquote>
+								<p>
+									<strong>Proper procedure when one comes across a
+										Lowland Missoura Pineapple:</strong>
+								</p>
+								<blockquote>1. Execute the proper dance of
+									gratitude to the gods of Missouran Agriculture. 2. Excavate. 3.
+									Observe in awe. 4. Re-bury. It's not for mere mortals like us.</blockquote>
+								<p>
+									<strong>How many WilderPhriends does it take to fill
+										an ice cream carton?</strong> Three, assuming it's standard sized.
+								</p>
+								<p>
+									<strong>Convince me in 6 words why I should go camping
+										with you.</strong> Imagine eating smores made of cuddles
+								<p>
+								<p>
+									<strong>Name the best</strong>: Michael Wray
+								<p>
+								<p>
+									<strong>What are dreams made of?</strong> Pure subconscious
+									bubbles of dandelions and Jelly Bellies.
+								<p>
+								<p>
+									<strong>If that's Bill, then who are you?</strong> I'm Aiden!
+									Remember?!
+								<p>
+								<p>
+									<strong>What's the most underrated invention?</strong>
+								</p>
+								<blockquote>Backpacks. Like there are so many
+									people in the world that use backpacks everyday. What would we
+									do without them?! Carry everything in briefcases?! No. We'd be
+									screwed. Appreciate them. Give you backpacking backpack a pat
+									on the back, which is the back of the backpacking backpack
+									since packs lack backs because they're not animals. OR ARE
+									THEY?!</blockquote>
+								<p>
+									<strong>Where in the world is Carmen San Diego?</strong> I
+									don't know. I'll be honest, I don't think anyone knows what it
+									means anymore. Scholars maintain that her location was lost
+									hundreds of years ago.
+								</p>
+								<p>
+									<strong>Preferred mode of transportation:</strong> Longboard
+									shredding down Forsyth. *hang-loose wiggle*
+								</p>
+								<p>
+									<strong>Worst advice you could give a freshman?</strong>
+									Smiling and looking people in the eyes is kind of creepy. Stop
+									it.
+								</p>
+								<p>
+									<strong>WashU protip for a freshman</strong>
+								</p>
+								<blockquote>Weekdays from 7:30 AM to 10:30 AM, go
+									to the grill, smile and ask for "two eggs with cheddar on whole
+									wheat." You'll probably have to remind them what type of
+									cheese, so pay attention while you wait because they aren't
+									going to turn around, they're just going to ask you. Take your
+									sandwich. Pay for it. Eat it. Explode.</blockquote>
+								<p>
+									<strong>Favorite flavor of Log-o-beef: </strong> Pumpernickel.
+								</p>
+							</div>
+						</div> <!-- here ends a single leader -->
+						<div id="4" class="singleleader row row">
+							<img src="Images/2013/benzod.jpg">
+							<h2>Ben Zod</h2>
+							<div>
+								<p>
+									<strong>(Light?)year in School:</strong> Junior
+								</p>
+								<p>
+									<strong>Major:</strong> Art and Anthropology
+								</p>
+								<p>
+									<strong>Superhero Name:</strong> Astral Shine
+								</p>
+								<p>
+									<strong>Where yew from:</strong> The Bestchester
+								</p>
+								<p>
+									<strong>Medical Training:</strong> Wilderness First Aid
+								</p>
+								<p>
+									<strong>WashU Actividades:</strong> Wilderness Project, Student
+									Life Writer, AP prep tutor, Kuumba talks mentor
+								</p>
+								<p>
+									<strong>If you were a pumpkin, what color would you
+										be?</strong> definitely fuchsia
+								<p>
+								<p>
+									<strong>Proper procedure when one comes across a
+										Lowland Missoura Pineapple:</strong>
+								</p>
+								<blockquote>check my person (for tics, spideys,
+									etc), remove shoes and all impurities, dig a mote around the
+									pineapple, fill the mote with liquids, hop onto the center
+									platform, sit cross-legged with the pineapple in lap, hold it
+									firmly one hand on either side.</blockquote>
+								<p>
+									<strong>How many WilderPhriends does it take to fill
+										an ice cream carton</strong>wowwwowo can't answer. WilderPhriends come
+									in many shapes and sizes.
+								</p>
+								<p>
+									<strong>Convince me in 6 words why I should go camping
+										with you.</strong>i radiate heat in the night
+								<p>
+								<p>
+									<strong>Name the best</strong> avocados
+								<p>
+								<p>
+									<strong>What are dreams made of?</strong> global station paneer
+								
+								<p>
+								<p>
+									<strong>If that’s Bill, then who are you?</strong> raven
+									symone when she was a lil beeb on the show and unintentionally
+									stole rudy's thunder.
+								<p>
+								<p>
+									<strong>What's the most underrated invention?</strong> the
+									double sided Q-tip.
+								</p>
+								<p>
+									<strong>Where in the world is Carmen San Diego?</strong> I
+									don't know how to respond to this one.
+								</p>
+								<p>
+									<strong>Preferred mode of transportation:</strong>
+									http://www.youtube.com/watch?v=ZWnW-OuggoE
+								</p>
+								<p>
+									<strong>Worst advice you could give a freshman?</strong> modern
+									dorms all the way!
+								</p>
+								<p>
+									<strong>WashU protip for a freshman</strong> 8am is dangerous
+									territory
+								</p>
+								<p>
+									<strong>Favorite flavor of Log-o-beef</strong> Salt and
+									wildergnar.
+								</p>
+							</div>
+						</div>
+						<div id="5" class="singleleader row">
+							<img src="Images/2013/forrestcobb.jpeg">
+							<h2>Forrest Cobb</h2>
+							<div>
+								<p>
+									<strong>(Light?)year in School:</strong> Sophomore
+								</p>
+								<p>
+									<strong>Major:</strong> Communication Design, yo
+								</p>
+								<p>
+									<strong>Superhero Name:</strong> Captain Pink Eye
+								</p>
+								<p>
+									<strong>Where yew from:</strong> YAY AREAAAAAA (mountain view,
+									CA)
+								</p>
+								<p>
+									<strong>Medical Training:</strong> WFA & CPR & AED and other
+									three letter acronyms that should make you feel safe.
+								</p>
+								<p>
+									<strong>WashU Actividades:</strong>
+								</p>
+								<blockquote>Wilderness Project (obviously), intern
+									at Office of Public affairs (marketing for WashU), WUnderground
+									(WashU's satirical newspaper), art school tour guide, IM sportz
+									and semi-professional beat-boxer.</blockquote>
+								<p>
+									<strong>If you were a pumpkin, what color would you
+										be?</strong>
+								<blockquote>How sick would it be a translucent
+									pumpkin? Then I could avoid being carved, you could just put a
+									candle inside of me and I'd glow ten times brighter than all
+									the other pumpkins. People would be like "whoa, that's a huge
+									glass pumpkin!" and you'd be like NOPE, I genetically
+									engineered real pumpkins to be translucent, what's up.</blockquote>
+								<p>
+									<strong>Proper procedure when one comes across a
+										Lowland Missoura Pineapple:</strong>
+								</p>
+								<blockquote>1. Execute the proper dance of
+									gratitude to the gods of Missouran Agriculture. 2. Excavate. 3.
+									Observe in awe. 4. Re-bury. It's not for mere mortals like us.</blockquote>
+								<p>
+									<strong>How many WilderPhriends does it take to fill
+										an ice cream carton?</strong> Three, assuming it's standard sized.
+								</p>
+								<p>
+									<strong>Convince me in 6 words why I should go camping
+										with you.</strong> Imagine eating smores made of cuddles
+								<p>
+								<p>
+									<strong>Name the best</strong>: Michael Wray
+								<p>
+								<p>
+									<strong>What are dreams made of?</strong> Pure subconscious
+									bubbles of dandelions and Jelly Bellies.
+								<p>
+								<p>
+									<strong>If that's Bill, then who are you?</strong> I'm Aiden!
+									Remember?!
+								<p>
+								<p>
+									<strong>What's the most underrated invention?</strong>
+								</p>
+								<blockquote>Backpacks. Like there are so many
+									people in the world that use backpacks everyday. What would we
+									do without them?! Carry everything in briefcases?! No. We'd be
+									screwed. Appreciate them. Give you backpacking backpack a pat
+									on the back, which is the back of the backpacking backpack
+									since packs lack backs because they're not animals. OR ARE
+									THEY?!</blockquote>
+								<p>
+									<strong>Where in the world is Carmen San Diego?</strong> I
+									don't know. I'll be honest, I don't think anyone knows what it
+									means anymore. Scholars maintain that her location was lost
+									hundreds of years ago.
+								</p>
+								<p>
+									<strong>Preferred mode of transportation:</strong> Longboard
+									shredding down Forsyth. *hang-loose wiggle*
+								</p>
+								<p>
+									<strong>Worst advice you could give a freshman?</strong>
+									Smiling and looking people in the eyes is kind of creepy. Stop
+									it.
+								</p>
+								<p>
+									<strong>WashU protip for a freshman</strong>
+								</p>
+								<blockquote>Weekdays from 7:30 AM to 10:30 AM, go
+									to the grill, smile and ask for "two eggs with cheddar on whole
+									wheat." You'll probably have to remind them what type of
+									cheese, so pay attention while you wait because they aren't
+									going to turn around, they're just going to ask you. Take your
+									sandwich. Pay for it. Eat it. Explode.</blockquote>
+								<p>
+									<strong>Favorite flavor of Log-o-beef: </strong> Pumpernickel.
+								</p>
+							</div>
+						</div>
+						<div id="6" class="singleleader row">
+							<img src="Images/2013/robhinshaw.jpg">
+							<h2>Rob Hinshaw</h2>
+							<div>
+								<p>
+									<strong>(Light?)year in School:</strong> Sophomore
+								</p>
+								<p>
+									<strong>Major:</strong> Communication Design, yo
+								</p>
+								<p>
+									<strong>Superhero Name:</strong> Captain Pink Eye
+								</p>
+								<p>
+									<strong>Where yew from:</strong> YAY AREAAAAAA (mountain view,
+									CA)
+								</p>
+								<p>
+									<strong>Medical Training:</strong> WFA & CPR & AED and other
+									three letter acronyms that should make you feel safe.
+								</p>
+								<p>
+									<strong>WashU Actividades:</strong>
+								</p>
+								<blockquote>Wilderness Project (obviously), intern
+									at Office of Public affairs (marketing for WashU), WUnderground
+									(WashU's satirical newspaper), art school tour guide, IM sportz
+									and semi-professional beat-boxer.</blockquote>
+								<p>
+									<strong>If you were a pumpkin, what color would you
+										be?</strong>
+								<blockquote>How sick would it be a translucent
+									pumpkin? Then I could avoid being carved, you could just put a
+									candle inside of me and I'd glow ten times brighter than all
+									the other pumpkins. People would be like "whoa, that's a huge
+									glass pumpkin!" and you'd be like NOPE, I genetically
+									engineered real pumpkins to be translucent, what's up.</blockquote>
+								<p>
+									<strong>Proper procedure when one comes across a
+										Lowland Missoura Pineapple:</strong>
+								</p>
+								<blockquote>1. Execute the proper dance of
+									gratitude to the gods of Missouran Agriculture. 2. Excavate. 3.
+									Observe in awe. 4. Re-bury. It's not for mere mortals like us.</blockquote>
+								<p>
+									<strong>How many WilderPhriends does it take to fill
+										an ice cream carton?</strong> Three, assuming it's standard sized.
+								</p>
+								<p>
+									<strong>Convince me in 6 words why I should go camping
+										with you.</strong> Imagine eating smores made of cuddles
+								<p>
+								<p>
+									<strong>Name the best</strong>: Michael Wray
+								<p>
+								<p>
+									<strong>What are dreams made of?</strong> Pure subconscious
+									bubbles of dandelions and Jelly Bellies.
+								<p>
+								<p>
+									<strong>If that's Bill, then who are you?</strong> I'm Aiden!
+									Remember?!
+								<p>
+								<p>
+									<strong>What's the most underrated invention?</strong>
+								</p>
+								<blockquote>Backpacks. Like there are so many
+									people in the world that use backpacks everyday. What would we
+									do without them?! Carry everything in briefcases?! No. We'd be
+									screwed. Appreciate them. Give you backpacking backpack a pat
+									on the back, which is the back of the backpacking backpack
+									since packs lack backs because they're not animals. OR ARE
+									THEY?!</blockquote>
+								<p>
+									<strong>Where in the world is Carmen San Diego?</strong> I
+									don't know. I'll be honest, I don't think anyone knows what it
+									means anymore. Scholars maintain that her location was lost
+									hundreds of years ago.
+								</p>
+								<p>
+									<strong>Preferred mode of transportation:</strong> Longboard
+									shredding down Forsyth. *hang-loose wiggle*
+								</p>
+								<p>
+									<strong>Worst advice you could give a freshman?</strong>
+									Smiling and looking people in the eyes is kind of creepy. Stop
+									it.
+								</p>
+								<p>
+									<strong>WashU protip for a freshman</strong>
+								</p>
+								<blockquote>Weekdays from 7:30 AM to 10:30 AM, go
+									to the grill, smile and ask for "two eggs with cheddar on whole
+									wheat." You'll probably have to remind them what type of
+									cheese, so pay attention while you wait because they aren't
+									going to turn around, they're just going to ask you. Take your
+									sandwich. Pay for it. Eat it. Explode.</blockquote>
+								<p>
+									<strong>Favorite flavor of Log-o-beef: </strong> Pumpernickel.
+								</p>
+							</div>
+						</div>
+							<div id="7" class="singleleader row">
+							<img src="Images/2013/clairemai.jpg">
+							<h2>Claire Mai</h2>
+							<div>
+								<p>
+									<strong>(Light?)year in School:</strong> Sophomore
+								</p>
+								<p>
+									<strong>Major:</strong> Communication Design, yo
+								</p>
+								<p>
+									<strong>Superhero Name:</strong> Captain Pink Eye
+								</p>
+								<p>
+									<strong>Where yew from:</strong> YAY AREAAAAAA (mountain view,
+									CA)
+								</p>
+								<p>
+									<strong>Medical Training:</strong> WFA & CPR & AED and other
+									three letter acronyms that should make you feel safe.
+								</p>
+								<p>
+									<strong>WashU Actividades:</strong>
+								</p>
+								<blockquote>Wilderness Project (obviously), intern
+									at Office of Public affairs (marketing for WashU), WUnderground
+									(WashU's satirical newspaper), art school tour guide, IM sportz
+									and semi-professional beat-boxer.</blockquote>
+								<p>
+									<strong>If you were a pumpkin, what color would you
+										be?</strong>
+								<blockquote>How sick would it be a translucent
+									pumpkin? Then I could avoid being carved, you could just put a
+									candle inside of me and I'd glow ten times brighter than all
+									the other pumpkins. People would be like "whoa, that's a huge
+									glass pumpkin!" and you'd be like NOPE, I genetically
+									engineered real pumpkins to be translucent, what's up.</blockquote>
+								<p>
+									<strong>Proper procedure when one comes across a
+										Lowland Missoura Pineapple:</strong>
+								</p>
+								<blockquote>1. Execute the proper dance of
+									gratitude to the gods of Missouran Agriculture. 2. Excavate. 3.
+									Observe in awe. 4. Re-bury. It's not for mere mortals like us.</blockquote>
+								<p>
+									<strong>How many WilderPhriends does it take to fill
+										an ice cream carton?</strong> Three, assuming it's standard sized.
+								</p>
+								<p>
+									<strong>Convince me in 6 words why I should go camping
+										with you.</strong> Imagine eating smores made of cuddles
+								<p>
+								<p>
+									<strong>Name the best</strong>: Michael Wray
+								<p>
+								<p>
+									<strong>What are dreams made of?</strong> Pure subconscious
+									bubbles of dandelions and Jelly Bellies.
+								<p>
+								<p>
+									<strong>If that's Bill, then who are you?</strong> I'm Aiden!
+									Remember?!
+								<p>
+								<p>
+									<strong>What's the most underrated invention?</strong>
+								</p>
+								<blockquote>Backpacks. Like there are so many
+									people in the world that use backpacks everyday. What would we
+									do without them?! Carry everything in briefcases?! No. We'd be
+									screwed. Appreciate them. Give you backpacking backpack a pat
+									on the back, which is the back of the backpacking backpack
+									since packs lack backs because they're not animals. OR ARE
+									THEY?!</blockquote>
+								<p>
+									<strong>Where in the world is Carmen San Diego?</strong> I
+									don't know. I'll be honest, I don't think anyone knows what it
+									means anymore. Scholars maintain that her location was lost
+									hundreds of years ago.
+								</p>
+								<p>
+									<strong>Preferred mode of transportation:</strong> Longboard
+									shredding down Forsyth. *hang-loose wiggle*
+								</p>
+								<p>
+									<strong>Worst advice you could give a freshman?</strong>
+									Smiling and looking people in the eyes is kind of creepy. Stop
+									it.
+								</p>
+								<p>
+									<strong>WashU protip for a freshman</strong>
+								</p>
+								<blockquote>Weekdays from 7:30 AM to 10:30 AM, go
+									to the grill, smile and ask for "two eggs with cheddar on whole
+									wheat." You'll probably have to remind them what type of
+									cheese, so pay attention while you wait because they aren't
+									going to turn around, they're just going to ask you. Take your
+									sandwich. Pay for it. Eat it. Explode.</blockquote>
+								<p>
+									<strong>Favorite flavor of Log-o-beef: </strong> Pumpernickel.
+								</p>
+							</div>
+						</div> <!-- here ends a single leader -->
+							<div id="8" class="singleleader row">
+							<img src="Images/2013/madeleinebalchan.jpg">
+							<h2>Madeleine Balchan</h2>
+							<div>
+								<p>
+									<strong>(Light?)year in School:</strong> Sophomore
+								</p>
+								<p>
+									<strong>Major:</strong> Communication Design, yo
+								</p>
+								<p>
+									<strong>Superhero Name:</strong> Captain Pink Eye
+								</p>
+								<p>
+									<strong>Where yew from:</strong> YAY AREAAAAAA (mountain view,
+									CA)
+								</p>
+								<p>
+									<strong>Medical Training:</strong> WFA & CPR & AED and other
+									three letter acronyms that should make you feel safe.
+								</p>
+								<p>
+									<strong>WashU Actividades:</strong>
+								</p>
+								<blockquote>Wilderness Project (obviously), intern
+									at Office of Public affairs (marketing for WashU), WUnderground
+									(WashU's satirical newspaper), art school tour guide, IM sportz
+									and semi-professional beat-boxer.</blockquote>
+								<p>
+									<strong>If you were a pumpkin, what color would you
+										be?</strong>
+								<blockquote>How sick would it be a translucent
+									pumpkin? Then I could avoid being carved, you could just put a
+									candle inside of me and I'd glow ten times brighter than all
+									the other pumpkins. People would be like "whoa, that's a huge
+									glass pumpkin!" and you'd be like NOPE, I genetically
+									engineered real pumpkins to be translucent, what's up.</blockquote>
+								<p>
+									<strong>Proper procedure when one comes across a
+										Lowland Missoura Pineapple:</strong>
+								</p>
+								<blockquote>1. Execute the proper dance of
+									gratitude to the gods of Missouran Agriculture. 2. Excavate. 3.
+									Observe in awe. 4. Re-bury. It's not for mere mortals like us.</blockquote>
+								<p>
+									<strong>How many WilderPhriends does it take to fill
+										an ice cream carton?</strong> Three, assuming it's standard sized.
+								</p>
+								<p>
+									<strong>Convince me in 6 words why I should go camping
+										with you.</strong> Imagine eating smores made of cuddles
+								<p>
+								<p>
+									<strong>Name the best</strong>: Michael Wray
+								<p>
+								<p>
+									<strong>What are dreams made of?</strong> Pure subconscious
+									bubbles of dandelions and Jelly Bellies.
+								<p>
+								<p>
+									<strong>If that's Bill, then who are you?</strong> I'm Aiden!
+									Remember?!
+								<p>
+								<p>
+									<strong>What's the most underrated invention?</strong>
+								</p>
+								<blockquote>Backpacks. Like there are so many
+									people in the world that use backpacks everyday. What would we
+									do without them?! Carry everything in briefcases?! No. We'd be
+									screwed. Appreciate them. Give you backpacking backpack a pat
+									on the back, which is the back of the backpacking backpack
+									since packs lack backs because they're not animals. OR ARE
+									THEY?!</blockquote>
+								<p>
+									<strong>Where in the world is Carmen San Diego?</strong> I
+									don't know. I'll be honest, I don't think anyone knows what it
+									means anymore. Scholars maintain that her location was lost
+									hundreds of years ago.
+								</p>
+								<p>
+									<strong>Preferred mode of transportation:</strong> Longboard
+									shredding down Forsyth. *hang-loose wiggle*
+								</p>
+								<p>
+									<strong>Worst advice you could give a freshman?</strong>
+									Smiling and looking people in the eyes is kind of creepy. Stop
+									it.
+								</p>
+								<p>
+									<strong>WashU protip for a freshman</strong>
+								</p>
+								<blockquote>Weekdays from 7:30 AM to 10:30 AM, go
+									to the grill, smile and ask for "two eggs with cheddar on whole
+									wheat." You'll probably have to remind them what type of
+									cheese, so pay attention while you wait because they aren't
+									going to turn around, they're just going to ask you. Take your
+									sandwich. Pay for it. Eat it. Explode.</blockquote>
+								<p>
+									<strong>Favorite flavor of Log-o-beef: </strong> Pumpernickel.
+								</p>
+							</div>
+						</div> <!-- here ends a single leader -->
+							<div id="9" class="singleleader row">
+							<img src="Images/2013/marybishop.jpg">
+							<h2>Mary Bishop</h2>
+							<div>
+								<p>
+									<strong>(Light?)year in School:</strong> Sophomore
+								</p>
+								<p>
+									<strong>Major:</strong> Communication Design, yo
+								</p>
+								<p>
+									<strong>Superhero Name:</strong> Captain Pink Eye
+								</p>
+								<p>
+									<strong>Where yew from:</strong> YAY AREAAAAAA (mountain view,
+									CA)
+								</p>
+								<p>
+									<strong>Medical Training:</strong> WFA & CPR & AED and other
+									three letter acronyms that should make you feel safe.
+								</p>
+								<p>
+									<strong>WashU Actividades:</strong>
+								</p>
+								<blockquote>Wilderness Project (obviously), intern
+									at Office of Public affairs (marketing for WashU), WUnderground
+									(WashU's satirical newspaper), art school tour guide, IM sportz
+									and semi-professional beat-boxer.</blockquote>
+								<p>
+									<strong>If you were a pumpkin, what color would you
+										be?</strong>
+								<blockquote>How sick would it be a translucent
+									pumpkin? Then I could avoid being carved, you could just put a
+									candle inside of me and I'd glow ten times brighter than all
+									the other pumpkins. People would be like "whoa, that's a huge
+									glass pumpkin!" and you'd be like NOPE, I genetically
+									engineered real pumpkins to be translucent, what's up.</blockquote>
+								<p>
+									<strong>Proper procedure when one comes across a
+										Lowland Missoura Pineapple:</strong>
+								</p>
+								<blockquote>1. Execute the proper dance of
+									gratitude to the gods of Missouran Agriculture. 2. Excavate. 3.
+									Observe in awe. 4. Re-bury. It's not for mere mortals like us.</blockquote>
+								<p>
+									<strong>How many WilderPhriends does it take to fill
+										an ice cream carton?</strong> Three, assuming it's standard sized.
+								</p>
+								<p>
+									<strong>Convince me in 6 words why I should go camping
+										with you.</strong> Imagine eating smores made of cuddles
+								<p>
+								<p>
+									<strong>Name the best</strong>: Michael Wray
+								<p>
+								<p>
+									<strong>What are dreams made of?</strong> Pure subconscious
+									bubbles of dandelions and Jelly Bellies.
+								<p>
+								<p>
+									<strong>If that's Bill, then who are you?</strong> I'm Aiden!
+									Remember?!
+								<p>
+								<p>
+									<strong>What's the most underrated invention?</strong>
+								</p>
+								<blockquote>Backpacks. Like there are so many
+									people in the world that use backpacks everyday. What would we
+									do without them?! Carry everything in briefcases?! No. We'd be
+									screwed. Appreciate them. Give you backpacking backpack a pat
+									on the back, which is the back of the backpacking backpack
+									since packs lack backs because they're not animals. OR ARE
+									THEY?!</blockquote>
+								<p>
+									<strong>Where in the world is Carmen San Diego?</strong> I
+									don't know. I'll be honest, I don't think anyone knows what it
+									means anymore. Scholars maintain that her location was lost
+									hundreds of years ago.
+								</p>
+								<p>
+									<strong>Preferred mode of transportation:</strong> Longboard
+									shredding down Forsyth. *hang-loose wiggle*
+								</p>
+								<p>
+									<strong>Worst advice you could give a freshman?</strong>
+									Smiling and looking people in the eyes is kind of creepy. Stop
+									it.
+								</p>
+								<p>
+									<strong>WashU protip for a freshman</strong>
+								</p>
+								<blockquote>Weekdays from 7:30 AM to 10:30 AM, go
+									to the grill, smile and ask for "two eggs with cheddar on whole
+									wheat." You'll probably have to remind them what type of
+									cheese, so pay attention while you wait because they aren't
+									going to turn around, they're just going to ask you. Take your
+									sandwich. Pay for it. Eat it. Explode.</blockquote>
+								<p>
+									<strong>Favorite flavor of Log-o-beef: </strong> Pumpernickel.
+								</p>
+							</div>
+						</div> <!-- here ends a single leader -->
+						<div id="10"class="singleleader row">
+							<img src="Images/2013/alexneuman.jpg">
+							<h2>Alex Neuman</h2>
+							<div>
+								<p>
+									<strong>(Light?)year in School:</strong> Sophomore
+								</p>
+								<p>
+									<strong>Major:</strong> Communication Design, yo
+								</p>
+								<p>
+									<strong>Superhero Name:</strong> Captain Pink Eye
+								</p>
+								<p>
+									<strong>Where yew from:</strong> YAY AREAAAAAA (mountain view,
+									CA)
+								</p>
+								<p>
+									<strong>Medical Training:</strong> WFA & CPR & AED and other
+									three letter acronyms that should make you feel safe.
+								</p>
+								<p>
+									<strong>WashU Actividades:</strong>
+								</p>
+								<blockquote>Wilderness Project (obviously), intern
+									at Office of Public affairs (marketing for WashU), WUnderground
+									(WashU's satirical newspaper), art school tour guide, IM sportz
+									and semi-professional beat-boxer.</blockquote>
+								<p>
+									<strong>If you were a pumpkin, what color would you
+										be?</strong>
+								<blockquote>How sick would it be a translucent
+									pumpkin? Then I could avoid being carved, you could just put a
+									candle inside of me and I'd glow ten times brighter than all
+									the other pumpkins. People would be like "whoa, that's a huge
+									glass pumpkin!" and you'd be like NOPE, I genetically
+									engineered real pumpkins to be translucent, what's up.</blockquote>
+								<p>
+									<strong>Proper procedure when one comes across a
+										Lowland Missoura Pineapple:</strong>
+								</p>
+								<blockquote>1. Execute the proper dance of
+									gratitude to the gods of Missouran Agriculture. 2. Excavate. 3.
+									Observe in awe. 4. Re-bury. It's not for mere mortals like us.</blockquote>
+								<p>
+									<strong>How many WilderPhriends does it take to fill
+										an ice cream carton?</strong> Three, assuming it's standard sized.
+								</p>
+								<p>
+									<strong>Convince me in 6 words why I should go camping
+										with you.</strong> Imagine eating smores made of cuddles
+								<p>
+								<p>
+									<strong>Name the best</strong>: Michael Wray
+								<p>
+								<p>
+									<strong>What are dreams made of?</strong> Pure subconscious
+									bubbles of dandelions and Jelly Bellies.
+								<p>
+								<p>
+									<strong>If that's Bill, then who are you?</strong> I'm Aiden!
+									Remember?!
+								<p>
+								<p>
+									<strong>What's the most underrated invention?</strong>
+								</p>
+								<blockquote>Backpacks. Like there are so many
+									people in the world that use backpacks everyday. What would we
+									do without them?! Carry everything in briefcases?! No. We'd be
+									screwed. Appreciate them. Give you backpacking backpack a pat
+									on the back, which is the back of the backpacking backpack
+									since packs lack backs because they're not animals. OR ARE
+									THEY?!</blockquote>
+								<p>
+									<strong>Where in the world is Carmen San Diego?</strong> I
+									don't know. I'll be honest, I don't think anyone knows what it
+									means anymore. Scholars maintain that her location was lost
+									hundreds of years ago.
+								</p>
+								<p>
+									<strong>Preferred mode of transportation:</strong> Longboard
+									shredding down Forsyth. *hang-loose wiggle*
+								</p>
+								<p>
+									<strong>Worst advice you could give a freshman?</strong>
+									Smiling and looking people in the eyes is kind of creepy. Stop
+									it.
+								</p>
+								<p>
+									<strong>WashU protip for a freshman</strong>
+								</p>
+								<blockquote>Weekdays from 7:30 AM to 10:30 AM, go
+									to the grill, smile and ask for "two eggs with cheddar on whole
+									wheat." You'll probably have to remind them what type of
+									cheese, so pay attention while you wait because they aren't
+									going to turn around, they're just going to ask you. Take your
+									sandwich. Pay for it. Eat it. Explode.</blockquote>
+								<p>
+									<strong>Favorite flavor of Log-o-beef: </strong> Pumpernickel.
+								</p>
+							</div>
+						</div> <!-- here ends a single leader -->
+						<div id="11"class="singleleader row">
+							<img src="Images/2013/jaredlichtarge.jpg">
+							<h2>Jared Lichtarge</h2>
+							<div>
+								<p>
+									<strong>(Light?)year in School:</strong> Sophomore
+								</p>
+								<p>
+									<strong>Major:</strong> Communication Design, yo
+								</p>
+								<p>
+									<strong>Superhero Name:</strong> Captain Pink Eye
+								</p>
+								<p>
+									<strong>Where yew from:</strong> YAY AREAAAAAA (mountain view,
+									CA)
+								</p>
+								<p>
+									<strong>Medical Training:</strong> WFA & CPR & AED and other
+									three letter acronyms that should make you feel safe.
+								</p>
+								<p>
+									<strong>WashU Actividades:</strong>
+								</p>
+								<blockquote>Wilderness Project (obviously), intern
+									at Office of Public affairs (marketing for WashU), WUnderground
+									(WashU's satirical newspaper), art school tour guide, IM sportz
+									and semi-professional beat-boxer.</blockquote>
+								<p>
+									<strong>If you were a pumpkin, what color would you
+										be?</strong>
+								<blockquote>How sick would it be a translucent
+									pumpkin? Then I could avoid being carved, you could just put a
+									candle inside of me and I'd glow ten times brighter than all
+									the other pumpkins. People would be like "whoa, that's a huge
+									glass pumpkin!" and you'd be like NOPE, I genetically
+									engineered real pumpkins to be translucent, what's up.</blockquote>
+								<p>
+									<strong>Proper procedure when one comes across a
+										Lowland Missoura Pineapple:</strong>
+								</p>
+								<blockquote>1. Execute the proper dance of
+									gratitude to the gods of Missouran Agriculture. 2. Excavate. 3.
+									Observe in awe. 4. Re-bury. It's not for mere mortals like us.</blockquote>
+								<p>
+									<strong>How many WilderPhriends does it take to fill
+										an ice cream carton?</strong> Three, assuming it's standard sized.
+								</p>
+								<p>
+									<strong>Convince me in 6 words why I should go camping
+										with you.</strong> Imagine eating smores made of cuddles
+								<p>
+								<p>
+									<strong>Name the best</strong>: Michael Wray
+								<p>
+								<p>
+									<strong>What are dreams made of?</strong> Pure subconscious
+									bubbles of dandelions and Jelly Bellies.
+								<p>
+								<p>
+									<strong>If that's Bill, then who are you?</strong> I'm Aiden!
+									Remember?!
+								<p>
+								<p>
+									<strong>What's the most underrated invention?</strong>
+								</p>
+								<blockquote>Backpacks. Like there are so many
+									people in the world that use backpacks everyday. What would we
+									do without them?! Carry everything in briefcases?! No. We'd be
+									screwed. Appreciate them. Give you backpacking backpack a pat
+									on the back, which is the back of the backpacking backpack
+									since packs lack backs because they're not animals. OR ARE
+									THEY?!</blockquote>
+								<p>
+									<strong>Where in the world is Carmen San Diego?</strong> I
+									don't know. I'll be honest, I don't think anyone knows what it
+									means anymore. Scholars maintain that her location was lost
+									hundreds of years ago.
+								</p>
+								<p>
+									<strong>Preferred mode of transportation:</strong> Longboard
+									shredding down Forsyth. *hang-loose wiggle*
+								</p>
+								<p>
+									<strong>Worst advice you could give a freshman?</strong>
+									Smiling and looking people in the eyes is kind of creepy. Stop
+									it.
+								</p>
+								<p>
+									<strong>WashU protip for a freshman</strong>
+								</p>
+								<blockquote>Weekdays from 7:30 AM to 10:30 AM, go
+									to the grill, smile and ask for "two eggs with cheddar on whole
+									wheat." You'll probably have to remind them what type of
+									cheese, so pay attention while you wait because they aren't
+									going to turn around, they're just going to ask you. Take your
+									sandwich. Pay for it. Eat it. Explode.</blockquote>
+								<p>
+									<strong>Favorite flavor of Log-o-beef: </strong> Pumpernickel.
+								</p>
+							</div>
+						</div> <!-- here ends a single leader -->
+						<div id="12"class="singleleader row">
+							<img src="Images/2013/grantphillips.jpg">
+							<h2>Grant Phillips</h2>
+							<div>
+								<p>
+									<strong>(Light?)year in School:</strong> Sophomore
+								</p>
+								<p>
+									<strong>Major:</strong> Communication Design, yo
+								</p>
+								<p>
+									<strong>Superhero Name:</strong> Captain Pink Eye
+								</p>
+								<p>
+									<strong>Where yew from:</strong> YAY AREAAAAAA (mountain view,
+									CA)
+								</p>
+								<p>
+									<strong>Medical Training:</strong> WFA & CPR & AED and other
+									three letter acronyms that should make you feel safe.
+								</p>
+								<p>
+									<strong>WashU Actividades:</strong>
+								</p>
+								<blockquote>Wilderness Project (obviously), intern
+									at Office of Public affairs (marketing for WashU), WUnderground
+									(WashU's satirical newspaper), art school tour guide, IM sportz
+									and semi-professional beat-boxer.</blockquote>
+								<p>
+									<strong>If you were a pumpkin, what color would you
+										be?</strong>
+								<blockquote>How sick would it be a translucent
+									pumpkin? Then I could avoid being carved, you could just put a
+									candle inside of me and I'd glow ten times brighter than all
+									the other pumpkins. People would be like "whoa, that's a huge
+									glass pumpkin!" and you'd be like NOPE, I genetically
+									engineered real pumpkins to be translucent, what's up.</blockquote>
+								<p>
+									<strong>Proper procedure when one comes across a
+										Lowland Missoura Pineapple:</strong>
+								</p>
+								<blockquote>1. Execute the proper dance of
+									gratitude to the gods of Missouran Agriculture. 2. Excavate. 3.
+									Observe in awe. 4. Re-bury. It's not for mere mortals like us.</blockquote>
+								<p>
+									<strong>How many WilderPhriends does it take to fill
+										an ice cream carton?</strong> Three, assuming it's standard sized.
+								</p>
+								<p>
+									<strong>Convince me in 6 words why I should go camping
+										with you.</strong> Imagine eating smores made of cuddles
+								<p>
+								<p>
+									<strong>Name the best</strong>: Michael Wray
+								<p>
+								<p>
+									<strong>What are dreams made of?</strong> Pure subconscious
+									bubbles of dandelions and Jelly Bellies.
+								<p>
+								<p>
+									<strong>If that's Bill, then who are you?</strong> I'm Aiden!
+									Remember?!
+								<p>
+								<p>
+									<strong>What's the most underrated invention?</strong>
+								</p>
+								<blockquote>Backpacks. Like there are so many
+									people in the world that use backpacks everyday. What would we
+									do without them?! Carry everything in briefcases?! No. We'd be
+									screwed. Appreciate them. Give you backpacking backpack a pat
+									on the back, which is the back of the backpacking backpack
+									since packs lack backs because they're not animals. OR ARE
+									THEY?!</blockquote>
+								<p>
+									<strong>Where in the world is Carmen San Diego?</strong> I
+									don't know. I'll be honest, I don't think anyone knows what it
+									means anymore. Scholars maintain that her location was lost
+									hundreds of years ago.
+								</p>
+								<p>
+									<strong>Preferred mode of transportation:</strong> Longboard
+									shredding down Forsyth. *hang-loose wiggle*
+								</p>
+								<p>
+									<strong>Worst advice you could give a freshman?</strong>
+									Smiling and looking people in the eyes is kind of creepy. Stop
+									it.
+								</p>
+								<p>
+									<strong>WashU protip for a freshman</strong>
+								</p>
+								<blockquote>Weekdays from 7:30 AM to 10:30 AM, go
+									to the grill, smile and ask for "two eggs with cheddar on whole
+									wheat." You'll probably have to remind them what type of
+									cheese, so pay attention while you wait because they aren't
+									going to turn around, they're just going to ask you. Take your
+									sandwich. Pay for it. Eat it. Explode.</blockquote>
+								<p>
+									<strong>Favorite flavor of Log-o-beef: </strong> Pumpernickel.
+								</p>
+							</div>
+						</div> <!-- here ends a single leader -->
+						<div id="13"class="singleleader row">
+							<img src="Images/2013/walterreilly.jpg">
+							<h2>Walter Reilly</h2>
+							<div>
+								<p>
+									<strong>(Light?)year in School:</strong> Sophomore
+								</p>
+								<p>
+									<strong>Major:</strong> Communication Design, yo
+								</p>
+								<p>
+									<strong>Superhero Name:</strong> Captain Pink Eye
+								</p>
+								<p>
+									<strong>Where yew from:</strong> YAY AREAAAAAA (mountain view,
+									CA)
+								</p>
+								<p>
+									<strong>Medical Training:</strong> WFA & CPR & AED and other
+									three letter acronyms that should make you feel safe.
+								</p>
+								<p>
+									<strong>WashU Actividades:</strong>
+								</p>
+								<blockquote>Wilderness Project (obviously), intern
+									at Office of Public affairs (marketing for WashU), WUnderground
+									(WashU's satirical newspaper), art school tour guide, IM sportz
+									and semi-professional beat-boxer.</blockquote>
+								<p>
+									<strong>If you were a pumpkin, what color would you
+										be?</strong>
+								<blockquote>How sick would it be a translucent
+									pumpkin? Then I could avoid being carved, you could just put a
+									candle inside of me and I'd glow ten times brighter than all
+									the other pumpkins. People would be like "whoa, that's a huge
+									glass pumpkin!" and you'd be like NOPE, I genetically
+									engineered real pumpkins to be translucent, what's up.</blockquote>
+								<p>
+									<strong>Proper procedure when one comes across a
+										Lowland Missoura Pineapple:</strong>
+								</p>
+								<blockquote>1. Execute the proper dance of
+									gratitude to the gods of Missouran Agriculture. 2. Excavate. 3.
+									Observe in awe. 4. Re-bury. It's not for mere mortals like us.</blockquote>
+								<p>
+									<strong>How many WilderPhriends does it take to fill
+										an ice cream carton?</strong> Three, assuming it's standard sized.
+								</p>
+								<p>
+									<strong>Convince me in 6 words why I should go camping
+										with you.</strong> Imagine eating smores made of cuddles
+								<p>
+								<p>
+									<strong>Name the best</strong>: Michael Wray
+								<p>
+								<p>
+									<strong>What are dreams made of?</strong> Pure subconscious
+									bubbles of dandelions and Jelly Bellies.
+								<p>
+								<p>
+									<strong>If that's Bill, then who are you?</strong> I'm Aiden!
+									Remember?!
+								<p>
+								<p>
+									<strong>What's the most underrated invention?</strong>
+								</p>
+								<blockquote>Backpacks. Like there are so many
+									people in the world that use backpacks everyday. What would we
+									do without them?! Carry everything in briefcases?! No. We'd be
+									screwed. Appreciate them. Give you backpacking backpack a pat
+									on the back, which is the back of the backpacking backpack
+									since packs lack backs because they're not animals. OR ARE
+									THEY?!</blockquote>
+								<p>
+									<strong>Where in the world is Carmen San Diego?</strong> I
+									don't know. I'll be honest, I don't think anyone knows what it
+									means anymore. Scholars maintain that her location was lost
+									hundreds of years ago.
+								</p>
+								<p>
+									<strong>Preferred mode of transportation:</strong> Longboard
+									shredding down Forsyth. *hang-loose wiggle*
+								</p>
+								<p>
+									<strong>Worst advice you could give a freshman?</strong>
+									Smiling and looking people in the eyes is kind of creepy. Stop
+									it.
+								</p>
+								<p>
+									<strong>WashU protip for a freshman</strong>
+								</p>
+								<blockquote>Weekdays from 7:30 AM to 10:30 AM, go
+									to the grill, smile and ask for "two eggs with cheddar on whole
+									wheat." You'll probably have to remind them what type of
+									cheese, so pay attention while you wait because they aren't
+									going to turn around, they're just going to ask you. Take your
+									sandwich. Pay for it. Eat it. Explode.</blockquote>
+								<p>
+									<strong>Favorite flavor of Log-o-beef: </strong> Pumpernickel.
+								</p>
+							</div>
+						</div> <!-- here ends a single leader -->
+						<div id="14"class="singleleader row">
+							<img src="Images/2013/jimenagracia.jpeg">
+							<h2>Jimena Gracia</h2>
+							<div>
+								<p>
+									<strong>(Light?)year in School:</strong> Sophomore
+								</p>
+								<p>
+									<strong>Major:</strong> Communication Design, yo
+								</p>
+								<p>
+									<strong>Superhero Name:</strong> Captain Pink Eye
+								</p>
+								<p>
+									<strong>Where yew from:</strong> YAY AREAAAAAA (mountain view,
+									CA)
+								</p>
+								<p>
+									<strong>Medical Training:</strong> WFA & CPR & AED and other
+									three letter acronyms that should make you feel safe.
+								</p>
+								<p>
+									<strong>WashU Actividades:</strong>
+								</p>
+								<blockquote>Wilderness Project (obviously), intern
+									at Office of Public affairs (marketing for WashU), WUnderground
+									(WashU's satirical newspaper), art school tour guide, IM sportz
+									and semi-professional beat-boxer.</blockquote>
+								<p>
+									<strong>If you were a pumpkin, what color would you
+										be?</strong>
+								<blockquote>How sick would it be a translucent
+									pumpkin? Then I could avoid being carved, you could just put a
+									candle inside of me and I'd glow ten times brighter than all
+									the other pumpkins. People would be like "whoa, that's a huge
+									glass pumpkin!" and you'd be like NOPE, I genetically
+									engineered real pumpkins to be translucent, what's up.</blockquote>
+								<p>
+									<strong>Proper procedure when one comes across a
+										Lowland Missoura Pineapple:</strong>
+								</p>
+								<blockquote>1. Execute the proper dance of
+									gratitude to the gods of Missouran Agriculture. 2. Excavate. 3.
+									Observe in awe. 4. Re-bury. It's not for mere mortals like us.</blockquote>
+								<p>
+									<strong>How many WilderPhriends does it take to fill
+										an ice cream carton?</strong> Three, assuming it's standard sized.
+								</p>
+								<p>
+									<strong>Convince me in 6 words why I should go camping
+										with you.</strong> Imagine eating smores made of cuddles
+								<p>
+								<p>
+									<strong>Name the best</strong>: Michael Wray
+								<p>
+								<p>
+									<strong>What are dreams made of?</strong> Pure subconscious
+									bubbles of dandelions and Jelly Bellies.
+								<p>
+								<p>
+									<strong>If that's Bill, then who are you?</strong> I'm Aiden!
+									Remember?!
+								<p>
+								<p>
+									<strong>What's the most underrated invention?</strong>
+								</p>
+								<blockquote>Backpacks. Like there are so many
+									people in the world that use backpacks everyday. What would we
+									do without them?! Carry everything in briefcases?! No. We'd be
+									screwed. Appreciate them. Give you backpacking backpack a pat
+									on the back, which is the back of the backpacking backpack
+									since packs lack backs because they're not animals. OR ARE
+									THEY?!</blockquote>
+								<p>
+									<strong>Where in the world is Carmen San Diego?</strong> I
+									don't know. I'll be honest, I don't think anyone knows what it
+									means anymore. Scholars maintain that her location was lost
+									hundreds of years ago.
+								</p>
+								<p>
+									<strong>Preferred mode of transportation:</strong> Longboard
+									shredding down Forsyth. *hang-loose wiggle*
+								</p>
+								<p>
+									<strong>Worst advice you could give a freshman?</strong>
+									Smiling and looking people in the eyes is kind of creepy. Stop
+									it.
+								</p>
+								<p>
+									<strong>WashU protip for a freshman</strong>
+								</p>
+								<blockquote>Weekdays from 7:30 AM to 10:30 AM, go
+									to the grill, smile and ask for "two eggs with cheddar on whole
+									wheat." You'll probably have to remind them what type of
+									cheese, so pay attention while you wait because they aren't
+									going to turn around, they're just going to ask you. Take your
+									sandwich. Pay for it. Eat it. Explode.</blockquote>
+								<p>
+									<strong>Favorite flavor of Log-o-beef: </strong> Pumpernickel.
+								</p>
+							</div>
+						</div> <!-- here ends a single leader -->
+						<div id="15"class="singleleader row">
+							<img src="Images/2013/kimgagnon.jpg">
+							<h2>Kim Gagnon</h2>
+							<div>
+								<p>
+									<strong>(Light?)year in School:</strong> Sophomore
+								</p>
+								<p>
+									<strong>Major:</strong> Communication Design, yo
+								</p>
+								<p>
+									<strong>Superhero Name:</strong> Captain Pink Eye
+								</p>
+								<p>
+									<strong>Where yew from:</strong> YAY AREAAAAAA (mountain view,
+									CA)
+								</p>
+								<p>
+									<strong>Medical Training:</strong> WFA & CPR & AED and other
+									three letter acronyms that should make you feel safe.
+								</p>
+								<p>
+									<strong>WashU Actividades:</strong>
+								</p>
+								<blockquote>Wilderness Project (obviously), intern
+									at Office of Public affairs (marketing for WashU), WUnderground
+									(WashU's satirical newspaper), art school tour guide, IM sportz
+									and semi-professional beat-boxer.</blockquote>
+								<p>
+									<strong>If you were a pumpkin, what color would you
+										be?</strong>
+								<blockquote>How sick would it be a translucent
+									pumpkin? Then I could avoid being carved, you could just put a
+									candle inside of me and I'd glow ten times brighter than all
+									the other pumpkins. People would be like "whoa, that's a huge
+									glass pumpkin!" and you'd be like NOPE, I genetically
+									engineered real pumpkins to be translucent, what's up.</blockquote>
+								<p>
+									<strong>Proper procedure when one comes across a
+										Lowland Missoura Pineapple:</strong>
+								</p>
+								<blockquote>1. Execute the proper dance of
+									gratitude to the gods of Missouran Agriculture. 2. Excavate. 3.
+									Observe in awe. 4. Re-bury. It's not for mere mortals like us.</blockquote>
+								<p>
+									<strong>How many WilderPhriends does it take to fill
+										an ice cream carton?</strong> Three, assuming it's standard sized.
+								</p>
+								<p>
+									<strong>Convince me in 6 words why I should go camping
+										with you.</strong> Imagine eating smores made of cuddles
+								<p>
+								<p>
+									<strong>Name the best</strong>: Michael Wray
+								<p>
+								<p>
+									<strong>What are dreams made of?</strong> Pure subconscious
+									bubbles of dandelions and Jelly Bellies.
+								<p>
+								<p>
+									<strong>If that's Bill, then who are you?</strong> I'm Aiden!
+									Remember?!
+								<p>
+								<p>
+									<strong>What's the most underrated invention?</strong>
+								</p>
+								<blockquote>Backpacks. Like there are so many
+									people in the world that use backpacks everyday. What would we
+									do without them?! Carry everything in briefcases?! No. We'd be
+									screwed. Appreciate them. Give you backpacking backpack a pat
+									on the back, which is the back of the backpacking backpack
+									since packs lack backs because they're not animals. OR ARE
+									THEY?!</blockquote>
+								<p>
+									<strong>Where in the world is Carmen San Diego?</strong> I
+									don't know. I'll be honest, I don't think anyone knows what it
+									means anymore. Scholars maintain that her location was lost
+									hundreds of years ago.
+								</p>
+								<p>
+									<strong>Preferred mode of transportation:</strong> Longboard
+									shredding down Forsyth. *hang-loose wiggle*
+								</p>
+								<p>
+									<strong>Worst advice you could give a freshman?</strong>
+									Smiling and looking people in the eyes is kind of creepy. Stop
+									it.
+								</p>
+								<p>
+									<strong>WashU protip for a freshman</strong>
+								</p>
+								<blockquote>Weekdays from 7:30 AM to 10:30 AM, go
+									to the grill, smile and ask for "two eggs with cheddar on whole
+									wheat." You'll probably have to remind them what type of
+									cheese, so pay attention while you wait because they aren't
+									going to turn around, they're just going to ask you. Take your
+									sandwich. Pay for it. Eat it. Explode.</blockquote>
+								<p>
+									<strong>Favorite flavor of Log-o-beef: </strong> Pumpernickel.
+								</p>
+							</div>
+						</div> <!-- here ends a single leader -->
+						<div id="16"class="singleleader row">
+							<img src="Images/2013/mattranftle.jpg">
+							<h2>Matt Ranftle</h2>
+							<div>
+								<p>
+									<strong>(Light?)year in School:</strong> Sophomore
+								</p>
+								<p>
+									<strong>Major:</strong> Communication Design, yo
+								</p>
+								<p>
+									<strong>Superhero Name:</strong> Captain Pink Eye
+								</p>
+								<p>
+									<strong>Where yew from:</strong> YAY AREAAAAAA (mountain view,
+									CA)
+								</p>
+								<p>
+									<strong>Medical Training:</strong> WFA & CPR & AED and other
+									three letter acronyms that should make you feel safe.
+								</p>
+								<p>
+									<strong>WashU Actividades:</strong>
+								</p>
+								<blockquote>Wilderness Project (obviously), intern
+									at Office of Public affairs (marketing for WashU), WUnderground
+									(WashU's satirical newspaper), art school tour guide, IM sportz
+									and semi-professional beat-boxer.</blockquote>
+								<p>
+									<strong>If you were a pumpkin, what color would you
+										be?</strong>
+								<blockquote>How sick would it be a translucent
+									pumpkin? Then I could avoid being carved, you could just put a
+									candle inside of me and I'd glow ten times brighter than all
+									the other pumpkins. People would be like "whoa, that's a huge
+									glass pumpkin!" and you'd be like NOPE, I genetically
+									engineered real pumpkins to be translucent, what's up.</blockquote>
+								<p>
+									<strong>Proper procedure when one comes across a
+										Lowland Missoura Pineapple:</strong>
+								</p>
+								<blockquote>1. Execute the proper dance of
+									gratitude to the gods of Missouran Agriculture. 2. Excavate. 3.
+									Observe in awe. 4. Re-bury. It's not for mere mortals like us.</blockquote>
+								<p>
+									<strong>How many WilderPhriends does it take to fill
+										an ice cream carton?</strong> Three, assuming it's standard sized.
+								</p>
+								<p>
+									<strong>Convince me in 6 words why I should go camping
+										with you.</strong> Imagine eating smores made of cuddles
+								<p>
+								<p>
+									<strong>Name the best</strong>: Michael Wray
+								<p>
+								<p>
+									<strong>What are dreams made of?</strong> Pure subconscious
+									bubbles of dandelions and Jelly Bellies.
+								<p>
+								<p>
+									<strong>If that's Bill, then who are you?</strong> I'm Aiden!
+									Remember?!
+								<p>
+								<p>
+									<strong>What's the most underrated invention?</strong>
+								</p>
+								<blockquote>Backpacks. Like there are so many
+									people in the world that use backpacks everyday. What would we
+									do without them?! Carry everything in briefcases?! No. We'd be
+									screwed. Appreciate them. Give you backpacking backpack a pat
+									on the back, which is the back of the backpacking backpack
+									since packs lack backs because they're not animals. OR ARE
+									THEY?!</blockquote>
+								<p>
+									<strong>Where in the world is Carmen San Diego?</strong> I
+									don't know. I'll be honest, I don't think anyone knows what it
+									means anymore. Scholars maintain that her location was lost
+									hundreds of years ago.
+								</p>
+								<p>
+									<strong>Preferred mode of transportation:</strong> Longboard
+									shredding down Forsyth. *hang-loose wiggle*
+								</p>
+								<p>
+									<strong>Worst advice you could give a freshman?</strong>
+									Smiling and looking people in the eyes is kind of creepy. Stop
+									it.
+								</p>
+								<p>
+									<strong>WashU protip for a freshman</strong>
+								</p>
+								<blockquote>Weekdays from 7:30 AM to 10:30 AM, go
+									to the grill, smile and ask for "two eggs with cheddar on whole
+									wheat." You'll probably have to remind them what type of
+									cheese, so pay attention while you wait because they aren't
+									going to turn around, they're just going to ask you. Take your
+									sandwich. Pay for it. Eat it. Explode.</blockquote>
+								<p>
+									<strong>Favorite flavor of Log-o-beef: </strong> Pumpernickel.
+								</p>
+							</div>
+						</div> <!-- here ends a single leader -->
+						<div id="17"class="singleleader row">
+							<img src="Images/2013/adrianasisley.jpg">
+							<h2>Adriana Sisley</h2>
+							<div>
+								<p>
+									<strong>(Light?)year in School:</strong> Sophomore
+								</p>
+								<p>
+									<strong>Major:</strong> Communication Design, yo
+								</p>
+								<p>
+									<strong>Superhero Name:</strong> Captain Pink Eye
+								</p>
+								<p>
+									<strong>Where yew from:</strong> YAY AREAAAAAA (mountain view,
+									CA)
+								</p>
+								<p>
+									<strong>Medical Training:</strong> WFA & CPR & AED and other
+									three letter acronyms that should make you feel safe.
+								</p>
+								<p>
+									<strong>WashU Actividades:</strong>
+								</p>
+								<blockquote>Wilderness Project (obviously), intern
+									at Office of Public affairs (marketing for WashU), WUnderground
+									(WashU's satirical newspaper), art school tour guide, IM sportz
+									and semi-professional beat-boxer.</blockquote>
+								<p>
+									<strong>If you were a pumpkin, what color would you
+										be?</strong>
+								<blockquote>How sick would it be a translucent
+									pumpkin? Then I could avoid being carved, you could just put a
+									candle inside of me and I'd glow ten times brighter than all
+									the other pumpkins. People would be like "whoa, that's a huge
+									glass pumpkin!" and you'd be like NOPE, I genetically
+									engineered real pumpkins to be translucent, what's up.</blockquote>
+								<p>
+									<strong>Proper procedure when one comes across a
+										Lowland Missoura Pineapple:</strong>
+								</p>
+								<blockquote>1. Execute the proper dance of
+									gratitude to the gods of Missouran Agriculture. 2. Excavate. 3.
+									Observe in awe. 4. Re-bury. It's not for mere mortals like us.</blockquote>
+								<p>
+									<strong>How many WilderPhriends does it take to fill
+										an ice cream carton?</strong> Three, assuming it's standard sized.
+								</p>
+								<p>
+									<strong>Convince me in 6 words why I should go camping
+										with you.</strong> Imagine eating smores made of cuddles
+								<p>
+								<p>
+									<strong>Name the best</strong>: Michael Wray
+								<p>
+								<p>
+									<strong>What are dreams made of?</strong> Pure subconscious
+									bubbles of dandelions and Jelly Bellies.
+								<p>
+								<p>
+									<strong>If that's Bill, then who are you?</strong> I'm Aiden!
+									Remember?!
+								<p>
+								<p>
+									<strong>What's the most underrated invention?</strong>
+								</p>
+								<blockquote>Backpacks. Like there are so many
+									people in the world that use backpacks everyday. What would we
+									do without them?! Carry everything in briefcases?! No. We'd be
+									screwed. Appreciate them. Give you backpacking backpack a pat
+									on the back, which is the back of the backpacking backpack
+									since packs lack backs because they're not animals. OR ARE
+									THEY?!</blockquote>
+								<p>
+									<strong>Where in the world is Carmen San Diego?</strong> I
+									don't know. I'll be honest, I don't think anyone knows what it
+									means anymore. Scholars maintain that her location was lost
+									hundreds of years ago.
+								</p>
+								<p>
+									<strong>Preferred mode of transportation:</strong> Longboard
+									shredding down Forsyth. *hang-loose wiggle*
+								</p>
+								<p>
+									<strong>Worst advice you could give a freshman?</strong>
+									Smiling and looking people in the eyes is kind of creepy. Stop
+									it.
+								</p>
+								<p>
+									<strong>WashU protip for a freshman</strong>
+								</p>
+								<blockquote>Weekdays from 7:30 AM to 10:30 AM, go
+									to the grill, smile and ask for "two eggs with cheddar on whole
+									wheat." You'll probably have to remind them what type of
+									cheese, so pay attention while you wait because they aren't
+									going to turn around, they're just going to ask you. Take your
+									sandwich. Pay for it. Eat it. Explode.</blockquote>
+								<p>
+									<strong>Favorite flavor of Log-o-beef: </strong> Pumpernickel.
+								</p>
+							</div>
+						</div> <!-- here ends a single leader -->
+						<div id="18"class="singleleader row">
+							<img src="Images/2013/emilysexton.jpg">
+							<h2>Emily Sexton</h2>
+							<div>
+								<p>
+									<strong>(Light?)year in School:</strong> Sophomore
+								</p>
+								<p>
+									<strong>Major:</strong> Communication Design, yo
+								</p>
+								<p>
+									<strong>Superhero Name:</strong> Captain Pink Eye
+								</p>
+								<p>
+									<strong>Where yew from:</strong> YAY AREAAAAAA (mountain view,
+									CA)
+								</p>
+								<p>
+									<strong>Medical Training:</strong> WFA & CPR & AED and other
+									three letter acronyms that should make you feel safe.
+								</p>
+								<p>
+									<strong>WashU Actividades:</strong>
+								</p>
+								<blockquote>Wilderness Project (obviously), intern
+									at Office of Public affairs (marketing for WashU), WUnderground
+									(WashU's satirical newspaper), art school tour guide, IM sportz
+									and semi-professional beat-boxer.</blockquote>
+								<p>
+									<strong>If you were a pumpkin, what color would you
+										be?</strong>
+								<blockquote>How sick would it be a translucent
+									pumpkin? Then I could avoid being carved, you could just put a
+									candle inside of me and I'd glow ten times brighter than all
+									the other pumpkins. People would be like "whoa, that's a huge
+									glass pumpkin!" and you'd be like NOPE, I genetically
+									engineered real pumpkins to be translucent, what's up.</blockquote>
+								<p>
+									<strong>Proper procedure when one comes across a
+										Lowland Missoura Pineapple:</strong>
+								</p>
+								<blockquote>1. Execute the proper dance of
+									gratitude to the gods of Missouran Agriculture. 2. Excavate. 3.
+									Observe in awe. 4. Re-bury. It's not for mere mortals like us.</blockquote>
+								<p>
+									<strong>How many WilderPhriends does it take to fill
+										an ice cream carton?</strong> Three, assuming it's standard sized.
+								</p>
+								<p>
+									<strong>Convince me in 6 words why I should go camping
+										with you.</strong> Imagine eating smores made of cuddles
+								<p>
+								<p>
+									<strong>Name the best</strong>: Michael Wray
+								<p>
+								<p>
+									<strong>What are dreams made of?</strong> Pure subconscious
+									bubbles of dandelions and Jelly Bellies.
+								<p>
+								<p>
+									<strong>If that's Bill, then who are you?</strong> I'm Aiden!
+									Remember?!
+								<p>
+								<p>
+									<strong>What's the most underrated invention?</strong>
+								</p>
+								<blockquote>Backpacks. Like there are so many
+									people in the world that use backpacks everyday. What would we
+									do without them?! Carry everything in briefcases?! No. We'd be
+									screwed. Appreciate them. Give you backpacking backpack a pat
+									on the back, which is the back of the backpacking backpack
+									since packs lack backs because they're not animals. OR ARE
+									THEY?!</blockquote>
+								<p>
+									<strong>Where in the world is Carmen San Diego?</strong> I
+									don't know. I'll be honest, I don't think anyone knows what it
+									means anymore. Scholars maintain that her location was lost
+									hundreds of years ago.
+								</p>
+								<p>
+									<strong>Preferred mode of transportation:</strong> Longboard
+									shredding down Forsyth. *hang-loose wiggle*
+								</p>
+								<p>
+									<strong>Worst advice you could give a freshman?</strong>
+									Smiling and looking people in the eyes is kind of creepy. Stop
+									it.
+								</p>
+								<p>
+									<strong>WashU protip for a freshman</strong>
+								</p>
+								<blockquote>Weekdays from 7:30 AM to 10:30 AM, go
+									to the grill, smile and ask for "two eggs with cheddar on whole
+									wheat." You'll probably have to remind them what type of
+									cheese, so pay attention while you wait because they aren't
+									going to turn around, they're just going to ask you. Take your
+									sandwich. Pay for it. Eat it. Explode.</blockquote>
+								<p>
+									<strong>Favorite flavor of Log-o-beef: </strong> Pumpernickel.
+								</p>
+							</div>
+						</div> <!-- here ends a single leader -->
+						<div id="19"class="singleleader row">
+							<img src="Images/2013/lydarossi.jpeg">
+							<h2>Lyda Rossi</h2>
+							<div>
+								<p>
+									<strong>(Light?)year in School:</strong> Sophomore
+								</p>
+								<p>
+									<strong>Major:</strong> Communication Design, yo
+								</p>
+								<p>
+									<strong>Superhero Name:</strong> Captain Pink Eye
+								</p>
+								<p>
+									<strong>Where yew from:</strong> YAY AREAAAAAA (mountain view,
+									CA)
+								</p>
+								<p>
+									<strong>Medical Training:</strong> WFA & CPR & AED and other
+									three letter acronyms that should make you feel safe.
+								</p>
+								<p>
+									<strong>WashU Actividades:</strong>
+								</p>
+								<blockquote>Wilderness Project (obviously), intern
+									at Office of Public affairs (marketing for WashU), WUnderground
+									(WashU's satirical newspaper), art school tour guide, IM sportz
+									and semi-professional beat-boxer.</blockquote>
+								<p>
+									<strong>If you were a pumpkin, what color would you
+										be?</strong>
+								<blockquote>How sick would it be a translucent
+									pumpkin? Then I could avoid being carved, you could just put a
+									candle inside of me and I'd glow ten times brighter than all
+									the other pumpkins. People would be like "whoa, that's a huge
+									glass pumpkin!" and you'd be like NOPE, I genetically
+									engineered real pumpkins to be translucent, what's up.</blockquote>
+								<p>
+									<strong>Proper procedure when one comes across a
+										Lowland Missoura Pineapple:</strong>
+								</p>
+								<blockquote>1. Execute the proper dance of
+									gratitude to the gods of Missouran Agriculture. 2. Excavate. 3.
+									Observe in awe. 4. Re-bury. It's not for mere mortals like us.</blockquote>
+								<p>
+									<strong>How many WilderPhriends does it take to fill
+										an ice cream carton?</strong> Three, assuming it's standard sized.
+								</p>
+								<p>
+									<strong>Convince me in 6 words why I should go camping
+										with you.</strong> Imagine eating smores made of cuddles
+								<p>
+								<p>
+									<strong>Name the best</strong>: Michael Wray
+								<p>
+								<p>
+									<strong>What are dreams made of?</strong> Pure subconscious
+									bubbles of dandelions and Jelly Bellies.
+								<p>
+								<p>
+									<strong>If that's Bill, then who are you?</strong> I'm Aiden!
+									Remember?!
+								<p>
+								<p>
+									<strong>What's the most underrated invention?</strong>
+								</p>
+								<blockquote>Backpacks. Like there are so many
+									people in the world that use backpacks everyday. What would we
+									do without them?! Carry everything in briefcases?! No. We'd be
+									screwed. Appreciate them. Give you backpacking backpack a pat
+									on the back, which is the back of the backpacking backpack
+									since packs lack backs because they're not animals. OR ARE
+									THEY?!</blockquote>
+								<p>
+									<strong>Where in the world is Carmen San Diego?</strong> I
+									don't know. I'll be honest, I don't think anyone knows what it
+									means anymore. Scholars maintain that her location was lost
+									hundreds of years ago.
+								</p>
+								<p>
+									<strong>Preferred mode of transportation:</strong> Longboard
+									shredding down Forsyth. *hang-loose wiggle*
+								</p>
+								<p>
+									<strong>Worst advice you could give a freshman?</strong>
+									Smiling and looking people in the eyes is kind of creepy. Stop
+									it.
+								</p>
+								<p>
+									<strong>WashU protip for a freshman</strong>
+								</p>
+								<blockquote>Weekdays from 7:30 AM to 10:30 AM, go
+									to the grill, smile and ask for "two eggs with cheddar on whole
+									wheat." You'll probably have to remind them what type of
+									cheese, so pay attention while you wait because they aren't
+									going to turn around, they're just going to ask you. Take your
+									sandwich. Pay for it. Eat it. Explode.</blockquote>
+								<p>
+									<strong>Favorite flavor of Log-o-beef: </strong> Pumpernickel.
+								</p>
+							</div>
+						</div> <!-- here ends a single leader -->
+						<div id="20"class="singleleader row">
+							<img src="Images/2013/stephenbonfardin.jpg">
+							<h2>Stephen Bonfardin</h2>
+							<div>
+								<p>
+									<strong>(Light?)year in School:</strong> Sophomore
+								</p>
+								<p>
+									<strong>Major:</strong> Communication Design, yo
+								</p>
+								<p>
+									<strong>Superhero Name:</strong> Captain Pink Eye
+								</p>
+								<p>
+									<strong>Where yew from:</strong> YAY AREAAAAAA (mountain view,
+									CA)
+								</p>
+								<p>
+									<strong>Medical Training:</strong> WFA & CPR & AED and other
+									three letter acronyms that should make you feel safe.
+								</p>
+								<p>
+									<strong>WashU Actividades:</strong>
+								</p>
+								<blockquote>Wilderness Project (obviously), intern
+									at Office of Public affairs (marketing for WashU), WUnderground
+									(WashU's satirical newspaper), art school tour guide, IM sportz
+									and semi-professional beat-boxer.</blockquote>
+								<p>
+									<strong>If you were a pumpkin, what color would you
+										be?</strong>
+								<blockquote>How sick would it be a translucent
+									pumpkin? Then I could avoid being carved, you could just put a
+									candle inside of me and I'd glow ten times brighter than all
+									the other pumpkins. People would be like "whoa, that's a huge
+									glass pumpkin!" and you'd be like NOPE, I genetically
+									engineered real pumpkins to be translucent, what's up.</blockquote>
+								<p>
+									<strong>Proper procedure when one comes across a
+										Lowland Missoura Pineapple:</strong>
+								</p>
+								<blockquote>1. Execute the proper dance of
+									gratitude to the gods of Missouran Agriculture. 2. Excavate. 3.
+									Observe in awe. 4. Re-bury. It's not for mere mortals like us.</blockquote>
+								<p>
+									<strong>How many WilderPhriends does it take to fill
+										an ice cream carton?</strong> Three, assuming it's standard sized.
+								</p>
+								<p>
+									<strong>Convince me in 6 words why I should go camping
+										with you.</strong> Imagine eating smores made of cuddles
+								<p>
+								<p>
+									<strong>Name the best</strong>: Michael Wray
+								<p>
+								<p>
+									<strong>What are dreams made of?</strong> Pure subconscious
+									bubbles of dandelions and Jelly Bellies.
+								<p>
+								<p>
+									<strong>If that's Bill, then who are you?</strong> I'm Aiden!
+									Remember?!
+								<p>
+								<p>
+									<strong>What's the most underrated invention?</strong>
+								</p>
+								<blockquote>Backpacks. Like there are so many
+									people in the world that use backpacks everyday. What would we
+									do without them?! Carry everything in briefcases?! No. We'd be
+									screwed. Appreciate them. Give you backpacking backpack a pat
+									on the back, which is the back of the backpacking backpack
+									since packs lack backs because they're not animals. OR ARE
+									THEY?!</blockquote>
+								<p>
+									<strong>Where in the world is Carmen San Diego?</strong> I
+									don't know. I'll be honest, I don't think anyone knows what it
+									means anymore. Scholars maintain that her location was lost
+									hundreds of years ago.
+								</p>
+								<p>
+									<strong>Preferred mode of transportation:</strong> Longboard
+									shredding down Forsyth. *hang-loose wiggle*
+								</p>
+								<p>
+									<strong>Worst advice you could give a freshman?</strong>
+									Smiling and looking people in the eyes is kind of creepy. Stop
+									it.
+								</p>
+								<p>
+									<strong>WashU protip for a freshman</strong>
+								</p>
+								<blockquote>Weekdays from 7:30 AM to 10:30 AM, go
+									to the grill, smile and ask for "two eggs with cheddar on whole
+									wheat." You'll probably have to remind them what type of
+									cheese, so pay attention while you wait because they aren't
+									going to turn around, they're just going to ask you. Take your
+									sandwich. Pay for it. Eat it. Explode.</blockquote>
+								<p>
+									<strong>Favorite flavor of Log-o-beef: </strong> Pumpernickel.
+								</p>
+							</div>
+						</div> <!-- here ends a single leader -->
+						<h1 class="text-center"> Steering Committee </h3>
+
+
+						<div id="21"class="singleleader steering row">
+							<img src="Images/2013/ignacioampuero.jpg">
+							<h2>Ignacio Ampuero</h2>
+							<div>
+								<p>
+									<strong>(Light?)year in School:</strong> Sophomore
+								</p>
+								<p>
+									<strong>Major:</strong> Communication Design, yo
+								</p>
+								<p>
+									<strong>Superhero Name:</strong> Captain Pink Eye
+								</p>
+								<p>
+									<strong>Where yew from:</strong> YAY AREAAAAAA (mountain view,
+									CA)
+								</p>
+								<p>
+									<strong>Medical Training:</strong> WFA & CPR & AED and other
+									three letter acronyms that should make you feel safe.
+								</p>
+								<p>
+									<strong>WashU Actividades:</strong>
+								</p>
+								<blockquote>Wilderness Project (obviously), intern
+									at Office of Public affairs (marketing for WashU), WUnderground
+									(WashU's satirical newspaper), art school tour guide, IM sportz
+									and semi-professional beat-boxer.</blockquote>
+								<p>
+									<strong>If you were a pumpkin, what color would you
+										be?</strong>
+								<blockquote>How sick would it be a translucent
+									pumpkin? Then I could avoid being carved, you could just put a
+									candle inside of me and I'd glow ten times brighter than all
+									the other pumpkins. People would be like "whoa, that's a huge
+									glass pumpkin!" and you'd be like NOPE, I genetically
+									engineered real pumpkins to be translucent, what's up.</blockquote>
+								<p>
+									<strong>Proper procedure when one comes across a
+										Lowland Missoura Pineapple:</strong>
+								</p>
+								<blockquote>1. Execute the proper dance of
+									gratitude to the gods of Missouran Agriculture. 2. Excavate. 3.
+									Observe in awe. 4. Re-bury. It's not for mere mortals like us.</blockquote>
+								<p>
+									<strong>How many WilderPhriends does it take to fill
+										an ice cream carton?</strong> Three, assuming it's standard sized.
+								</p>
+								<p>
+									<strong>Convince me in 6 words why I should go camping
+										with you.</strong> Imagine eating smores made of cuddles
+								<p>
+								<p>
+									<strong>Name the best</strong>: Michael Wray
+								<p>
+								<p>
+									<strong>What are dreams made of?</strong> Pure subconscious
+									bubbles of dandelions and Jelly Bellies.
+								<p>
+								<p>
+									<strong>If that's Bill, then who are you?</strong> I'm Aiden!
+									Remember?!
+								<p>
+								<p>
+									<strong>What's the most underrated invention?</strong>
+								</p>
+								<blockquote>Backpacks. Like there are so many
+									people in the world that use backpacks everyday. What would we
+									do without them?! Carry everything in briefcases?! No. We'd be
+									screwed. Appreciate them. Give you backpacking backpack a pat
+									on the back, which is the back of the backpacking backpack
+									since packs lack backs because they're not animals. OR ARE
+									THEY?!</blockquote>
+								<p>
+									<strong>Where in the world is Carmen San Diego?</strong> I
+									don't know. I'll be honest, I don't think anyone knows what it
+									means anymore. Scholars maintain that her location was lost
+									hundreds of years ago.
+								</p>
+								<p>
+									<strong>Preferred mode of transportation:</strong> Longboard
+									shredding down Forsyth. *hang-loose wiggle*
+								</p>
+								<p>
+									<strong>Worst advice you could give a freshman?</strong>
+									Smiling and looking people in the eyes is kind of creepy. Stop
+									it.
+								</p>
+								<p>
+									<strong>WashU protip for a freshman</strong>
+								</p>
+								<blockquote>Weekdays from 7:30 AM to 10:30 AM, go
+									to the grill, smile and ask for "two eggs with cheddar on whole
+									wheat." You'll probably have to remind them what type of
+									cheese, so pay attention while you wait because they aren't
+									going to turn around, they're just going to ask you. Take your
+									sandwich. Pay for it. Eat it. Explode.</blockquote>
+								<p>
+									<strong>Favorite flavor of Log-o-beef: </strong> Pumpernickel.
+								</p>
+							</div>
+						</div> <!-- here ends a single leader -->
+						<div id="22"class="singleleader steering row">
+							<img src="Images/2013/kathrynreynolds.jpg">
+							<h2>Kathryn Reynolds</h2>
+							<div>
+								<p>
+									<strong>(Light?)year in School:</strong> Sophomore
+								</p>
+								<p>
+									<strong>Major:</strong> Communication Design, yo
+								</p>
+								<p>
+									<strong>Superhero Name:</strong> Captain Pink Eye
+								</p>
+								<p>
+									<strong>Where yew from:</strong> YAY AREAAAAAA (mountain view,
+									CA)
+								</p>
+								<p>
+									<strong>Medical Training:</strong> WFA & CPR & AED and other
+									three letter acronyms that should make you feel safe.
+								</p>
+								<p>
+									<strong>WashU Actividades:</strong>
+								</p>
+								<blockquote>Wilderness Project (obviously), intern
+									at Office of Public affairs (marketing for WashU), WUnderground
+									(WashU's satirical newspaper), art school tour guide, IM sportz
+									and semi-professional beat-boxer.</blockquote>
+								<p>
+									<strong>If you were a pumpkin, what color would you
+										be?</strong>
+								<blockquote>How sick would it be a translucent
+									pumpkin? Then I could avoid being carved, you could just put a
+									candle inside of me and I'd glow ten times brighter than all
+									the other pumpkins. People would be like "whoa, that's a huge
+									glass pumpkin!" and you'd be like NOPE, I genetically
+									engineered real pumpkins to be translucent, what's up.</blockquote>
+								<p>
+									<strong>Proper procedure when one comes across a
+										Lowland Missoura Pineapple:</strong>
+								</p>
+								<blockquote>1. Execute the proper dance of
+									gratitude to the gods of Missouran Agriculture. 2. Excavate. 3.
+									Observe in awe. 4. Re-bury. It's not for mere mortals like us.</blockquote>
+								<p>
+									<strong>How many WilderPhriends does it take to fill
+										an ice cream carton?</strong> Three, assuming it's standard sized.
+								</p>
+								<p>
+									<strong>Convince me in 6 words why I should go camping
+										with you.</strong> Imagine eating smores made of cuddles
+								<p>
+								<p>
+									<strong>Name the best</strong>: Michael Wray
+								<p>
+								<p>
+									<strong>What are dreams made of?</strong> Pure subconscious
+									bubbles of dandelions and Jelly Bellies.
+								<p>
+								<p>
+									<strong>If that's Bill, then who are you?</strong> I'm Aiden!
+									Remember?!
+								<p>
+								<p>
+									<strong>What's the most underrated invention?</strong>
+								</p>
+								<blockquote>Backpacks. Like there are so many
+									people in the world that use backpacks everyday. What would we
+									do without them?! Carry everything in briefcases?! No. We'd be
+									screwed. Appreciate them. Give you backpacking backpack a pat
+									on the back, which is the back of the backpacking backpack
+									since packs lack backs because they're not animals. OR ARE
+									THEY?!</blockquote>
+								<p>
+									<strong>Where in the world is Carmen San Diego?</strong> I
+									don't know. I'll be honest, I don't think anyone knows what it
+									means anymore. Scholars maintain that her location was lost
+									hundreds of years ago.
+								</p>
+								<p>
+									<strong>Preferred mode of transportation:</strong> Longboard
+									shredding down Forsyth. *hang-loose wiggle*
+								</p>
+								<p>
+									<strong>Worst advice you could give a freshman?</strong>
+									Smiling and looking people in the eyes is kind of creepy. Stop
+									it.
+								</p>
+								<p>
+									<strong>WashU protip for a freshman</strong>
+								</p>
+								<blockquote>Weekdays from 7:30 AM to 10:30 AM, go
+									to the grill, smile and ask for "two eggs with cheddar on whole
+									wheat." You'll probably have to remind them what type of
+									cheese, so pay attention while you wait because they aren't
+									going to turn around, they're just going to ask you. Take your
+									sandwich. Pay for it. Eat it. Explode.</blockquote>
+								<p>
+									<strong>Favorite flavor of Log-o-beef: </strong> Pumpernickel.
+								</p>
+							</div>
+						</div> <!-- here ends a single leader -->
+						<div id="23"class="singleleader steering row">
+							<img src="Images/2013/brendandaly.jpg">
+							<h2>Brendan Daly</h2>
+							<div>
+								<p>
+									<strong>(Light?)year in School:</strong> Sophomore
+								</p>
+								<p>
+									<strong>Major:</strong> Communication Design, yo
+								</p>
+								<p>
+									<strong>Superhero Name:</strong> Captain Pink Eye
+								</p>
+								<p>
+									<strong>Where yew from:</strong> YAY AREAAAAAA (mountain view,
+									CA)
+								</p>
+								<p>
+									<strong>Medical Training:</strong> WFA & CPR & AED and other
+									three letter acronyms that should make you feel safe.
+								</p>
+								<p>
+									<strong>WashU Actividades:</strong>
+								</p>
+								<blockquote>Wilderness Project (obviously), intern
+									at Office of Public affairs (marketing for WashU), WUnderground
+									(WashU's satirical newspaper), art school tour guide, IM sportz
+									and semi-professional beat-boxer.</blockquote>
+								<p>
+									<strong>If you were a pumpkin, what color would you
+										be?</strong>
+								<blockquote>How sick would it be a translucent
+									pumpkin? Then I could avoid being carved, you could just put a
+									candle inside of me and I'd glow ten times brighter than all
+									the other pumpkins. People would be like "whoa, that's a huge
+									glass pumpkin!" and you'd be like NOPE, I genetically
+									engineered real pumpkins to be translucent, what's up.</blockquote>
+								<p>
+									<strong>Proper procedure when one comes across a
+										Lowland Missoura Pineapple:</strong>
+								</p>
+								<blockquote>1. Execute the proper dance of
+									gratitude to the gods of Missouran Agriculture. 2. Excavate. 3.
+									Observe in awe. 4. Re-bury. It's not for mere mortals like us.</blockquote>
+								<p>
+									<strong>How many WilderPhriends does it take to fill
+										an ice cream carton?</strong> Three, assuming it's standard sized.
+								</p>
+								<p>
+									<strong>Convince me in 6 words why I should go camping
+										with you.</strong> Imagine eating smores made of cuddles
+								<p>
+								<p>
+									<strong>Name the best</strong>: Michael Wray
+								<p>
+								<p>
+									<strong>What are dreams made of?</strong> Pure subconscious
+									bubbles of dandelions and Jelly Bellies.
+								<p>
+								<p>
+									<strong>If that's Bill, then who are you?</strong> I'm Aiden!
+									Remember?!
+								<p>
+								<p>
+									<strong>What's the most underrated invention?</strong>
+								</p>
+								<blockquote>Backpacks. Like there are so many
+									people in the world that use backpacks everyday. What would we
+									do without them?! Carry everything in briefcases?! No. We'd be
+									screwed. Appreciate them. Give you backpacking backpack a pat
+									on the back, which is the back of the backpacking backpack
+									since packs lack backs because they're not animals. OR ARE
+									THEY?!</blockquote>
+								<p>
+									<strong>Where in the world is Carmen San Diego?</strong> I
+									don't know. I'll be honest, I don't think anyone knows what it
+									means anymore. Scholars maintain that her location was lost
+									hundreds of years ago.
+								</p>
+								<p>
+									<strong>Preferred mode of transportation:</strong> Longboard
+									shredding down Forsyth. *hang-loose wiggle*
+								</p>
+								<p>
+									<strong>Worst advice you could give a freshman?</strong>
+									Smiling and looking people in the eyes is kind of creepy. Stop
+									it.
+								</p>
+								<p>
+									<strong>WashU protip for a freshman</strong>
+								</p>
+								<blockquote>Weekdays from 7:30 AM to 10:30 AM, go
+									to the grill, smile and ask for "two eggs with cheddar on whole
+									wheat." You'll probably have to remind them what type of
+									cheese, so pay attention while you wait because they aren't
+									going to turn around, they're just going to ask you. Take your
+									sandwich. Pay for it. Eat it. Explode.</blockquote>
+								<p>
+									<strong>Favorite flavor of Log-o-beef: </strong> Pumpernickel.
+								</p>
+							</div>
+						</div> <!-- here ends a single leader -->
+						<div id="24"class="singleleader steering row">
+							<img src="Images/2013/michaelwray.jpg">
+							<h2>Michael Wray</h2>
+							<div>
+								<p>
+									<strong>(Light?)year in School:</strong> Sophomore
+								</p>
+								<p>
+									<strong>Major:</strong> Communication Design, yo
+								</p>
+								<p>
+									<strong>Superhero Name:</strong> Captain Pink Eye
+								</p>
+								<p>
+									<strong>Where yew from:</strong> YAY AREAAAAAA (mountain view,
+									CA)
+								</p>
+								<p>
+									<strong>Medical Training:</strong> WFA & CPR & AED and other
+									three letter acronyms that should make you feel safe.
+								</p>
+								<p>
+									<strong>WashU Actividades:</strong>
+								</p>
+								<blockquote>Wilderness Project (obviously), intern
+									at Office of Public affairs (marketing for WashU), WUnderground
+									(WashU's satirical newspaper), art school tour guide, IM sportz
+									and semi-professional beat-boxer.</blockquote>
+								<p>
+									<strong>If you were a pumpkin, what color would you
+										be?</strong>
+								<blockquote>How sick would it be a translucent
+									pumpkin? Then I could avoid being carved, you could just put a
+									candle inside of me and I'd glow ten times brighter than all
+									the other pumpkins. People would be like "whoa, that's a huge
+									glass pumpkin!" and you'd be like NOPE, I genetically
+									engineered real pumpkins to be translucent, what's up.</blockquote>
+								<p>
+									<strong>Proper procedure when one comes across a
+										Lowland Missoura Pineapple:</strong>
+								</p>
+								<blockquote>1. Execute the proper dance of
+									gratitude to the gods of Missouran Agriculture. 2. Excavate. 3.
+									Observe in awe. 4. Re-bury. It's not for mere mortals like us.</blockquote>
+								<p>
+									<strong>How many WilderPhriends does it take to fill
+										an ice cream carton?</strong> Three, assuming it's standard sized.
+								</p>
+								<p>
+									<strong>Convince me in 6 words why I should go camping
+										with you.</strong> Imagine eating smores made of cuddles
+								<p>
+								<p>
+									<strong>Name the best</strong>: Michael Wray
+								<p>
+								<p>
+									<strong>What are dreams made of?</strong> Pure subconscious
+									bubbles of dandelions and Jelly Bellies.
+								<p>
+								<p>
+									<strong>If that's Bill, then who are you?</strong> I'm Aiden!
+									Remember?!
+								<p>
+								<p>
+									<strong>What's the most underrated invention?</strong>
+								</p>
+								<blockquote>Backpacks. Like there are so many
+									people in the world that use backpacks everyday. What would we
+									do without them?! Carry everything in briefcases?! No. We'd be
+									screwed. Appreciate them. Give you backpacking backpack a pat
+									on the back, which is the back of the backpacking backpack
+									since packs lack backs because they're not animals. OR ARE
+									THEY?!</blockquote>
+								<p>
+									<strong>Where in the world is Carmen San Diego?</strong> I
+									don't know. I'll be honest, I don't think anyone knows what it
+									means anymore. Scholars maintain that her location was lost
+									hundreds of years ago.
+								</p>
+								<p>
+									<strong>Preferred mode of transportation:</strong> Longboard
+									shredding down Forsyth. *hang-loose wiggle*
+								</p>
+								<p>
+									<strong>Worst advice you could give a freshman?</strong>
+									Smiling and looking people in the eyes is kind of creepy. Stop
+									it.
+								</p>
+								<p>
+									<strong>WashU protip for a freshman</strong>
+								</p>
+								<blockquote>Weekdays from 7:30 AM to 10:30 AM, go
+									to the grill, smile and ask for "two eggs with cheddar on whole
+									wheat." You'll probably have to remind them what type of
+									cheese, so pay attention while you wait because they aren't
+									going to turn around, they're just going to ask you. Take your
+									sandwich. Pay for it. Eat it. Explode.</blockquote>
+								<p>
+									<strong>Favorite flavor of Log-o-beef: </strong> Pumpernickel.
+								</p>
+							</div>
+						</div> <!-- here ends a single leader -->
+						<div id="25"class="singleleader steering row">
+							<img src="Images/2013/katieluy.jpg">
+							<h2>Katie Luy</h2>
+							<div>
+								<p>
+									<strong>(Light?)year in School:</strong> Sophomore
+								</p>
+								<p>
+									<strong>Major:</strong> Communication Design, yo
+								</p>
+								<p>
+									<strong>Superhero Name:</strong> Captain Pink Eye
+								</p>
+								<p>
+									<strong>Where yew from:</strong> YAY AREAAAAAA (mountain view,
+									CA)
+								</p>
+								<p>
+									<strong>Medical Training:</strong> WFA & CPR & AED and other
+									three letter acronyms that should make you feel safe.
+								</p>
+								<p>
+									<strong>WashU Actividades:</strong>
+								</p>
+								<blockquote>Wilderness Project (obviously), intern
+									at Office of Public affairs (marketing for WashU), WUnderground
+									(WashU's satirical newspaper), art school tour guide, IM sportz
+									and semi-professional beat-boxer.</blockquote>
+								<p>
+									<strong>If you were a pumpkin, what color would you
+										be?</strong>
+								<blockquote>How sick would it be a translucent
+									pumpkin? Then I could avoid being carved, you could just put a
+									candle inside of me and I'd glow ten times brighter than all
+									the other pumpkins. People would be like "whoa, that's a huge
+									glass pumpkin!" and you'd be like NOPE, I genetically
+									engineered real pumpkins to be translucent, what's up.</blockquote>
+								<p>
+									<strong>Proper procedure when one comes across a
+										Lowland Missoura Pineapple:</strong>
+								</p>
+								<blockquote>1. Execute the proper dance of
+									gratitude to the gods of Missouran Agriculture. 2. Excavate. 3.
+									Observe in awe. 4. Re-bury. It's not for mere mortals like us.</blockquote>
+								<p>
+									<strong>How many WilderPhriends does it take to fill
+										an ice cream carton?</strong> Three, assuming it's standard sized.
+								</p>
+								<p>
+									<strong>Convince me in 6 words why I should go camping
+										with you.</strong> Imagine eating smores made of cuddles
+								<p>
+								<p>
+									<strong>Name the best</strong>: Michael Wray
+								<p>
+								<p>
+									<strong>What are dreams made of?</strong> Pure subconscious
+									bubbles of dandelions and Jelly Bellies.
+								<p>
+								<p>
+									<strong>If that's Bill, then who are you?</strong> I'm Aiden!
+									Remember?!
+								<p>
+								<p>
+									<strong>What's the most underrated invention?</strong>
+								</p>
+								<blockquote>Backpacks. Like there are so many
+									people in the world that use backpacks everyday. What would we
+									do without them?! Carry everything in briefcases?! No. We'd be
+									screwed. Appreciate them. Give you backpacking backpack a pat
+									on the back, which is the back of the backpacking backpack
+									since packs lack backs because they're not animals. OR ARE
+									THEY?!</blockquote>
+								<p>
+									<strong>Where in the world is Carmen San Diego?</strong> I
+									don't know. I'll be honest, I don't think anyone knows what it
+									means anymore. Scholars maintain that her location was lost
+									hundreds of years ago.
+								</p>
+								<p>
+									<strong>Preferred mode of transportation:</strong> Longboard
+									shredding down Forsyth. *hang-loose wiggle*
+								</p>
+								<p>
+									<strong>Worst advice you could give a freshman?</strong>
+									Smiling and looking people in the eyes is kind of creepy. Stop
+									it.
+								</p>
+								<p>
+									<strong>WashU protip for a freshman</strong>
+								</p>
+								<blockquote>Weekdays from 7:30 AM to 10:30 AM, go
+									to the grill, smile and ask for "two eggs with cheddar on whole
+									wheat." You'll probably have to remind them what type of
+									cheese, so pay attention while you wait because they aren't
+									going to turn around, they're just going to ask you. Take your
+									sandwich. Pay for it. Eat it. Explode.</blockquote>
+								<p>
+									<strong>Favorite flavor of Log-o-beef: </strong> Pumpernickel.
+								</p>
+							</div>
+						</div> <!-- here ends a single leader -->
+						<div id="26"class="singleleader steering row">
+							<img src="Images/2013/nicolazanchi.jpg">
+							<h2>Nicola Zanchi</h2>
+							<div>
+								<p>
+									<strong>(Light?)year in School:</strong> Sophomore
+								</p>
+								<p>
+									<strong>Major:</strong> Communication Design, yo
+								</p>
+								<p>
+									<strong>Superhero Name:</strong> Captain Pink Eye
+								</p>
+								<p>
+									<strong>Where yew from:</strong> YAY AREAAAAAA (mountain view,
+									CA)
+								</p>
+								<p>
+									<strong>Medical Training:</strong> WFA & CPR & AED and other
+									three letter acronyms that should make you feel safe.
+								</p>
+								<p>
+									<strong>WashU Actividades:</strong>
+								</p>
+								<blockquote>Wilderness Project (obviously), intern
+									at Office of Public affairs (marketing for WashU), WUnderground
+									(WashU's satirical newspaper), art school tour guide, IM sportz
+									and semi-professional beat-boxer.</blockquote>
+								<p>
+									<strong>If you were a pumpkin, what color would you
+										be?</strong>
+								<blockquote>How sick would it be a translucent
+									pumpkin? Then I could avoid being carved, you could just put a
+									candle inside of me and I'd glow ten times brighter than all
+									the other pumpkins. People would be like "whoa, that's a huge
+									glass pumpkin!" and you'd be like NOPE, I genetically
+									engineered real pumpkins to be translucent, what's up.</blockquote>
+								<p>
+									<strong>Proper procedure when one comes across a
+										Lowland Missoura Pineapple:</strong>
+								</p>
+								<blockquote>1. Execute the proper dance of
+									gratitude to the gods of Missouran Agriculture. 2. Excavate. 3.
+									Observe in awe. 4. Re-bury. It's not for mere mortals like us.</blockquote>
+								<p>
+									<strong>How many WilderPhriends does it take to fill
+										an ice cream carton?</strong> Three, assuming it's standard sized.
+								</p>
+								<p>
+									<strong>Convince me in 6 words why I should go camping
+										with you.</strong> Imagine eating smores made of cuddles
+								<p>
+								<p>
+									<strong>Name the best</strong>: Michael Wray
+								<p>
+								<p>
+									<strong>What are dreams made of?</strong> Pure subconscious
+									bubbles of dandelions and Jelly Bellies.
+								<p>
+								<p>
+									<strong>If that's Bill, then who are you?</strong> I'm Aiden!
+									Remember?!
+								<p>
+								<p>
+									<strong>What's the most underrated invention?</strong>
+								</p>
+								<blockquote>Backpacks. Like there are so many
+									people in the world that use backpacks everyday. What would we
+									do without them?! Carry everything in briefcases?! No. We'd be
+									screwed. Appreciate them. Give you backpacking backpack a pat
+									on the back, which is the back of the backpacking backpack
+									since packs lack backs because they're not animals. OR ARE
+									THEY?!</blockquote>
+								<p>
+									<strong>Where in the world is Carmen San Diego?</strong> I
+									don't know. I'll be honest, I don't think anyone knows what it
+									means anymore. Scholars maintain that her location was lost
+									hundreds of years ago.
+								</p>
+								<p>
+									<strong>Preferred mode of transportation:</strong> Longboard
+									shredding down Forsyth. *hang-loose wiggle*
+								</p>
+								<p>
+									<strong>Worst advice you could give a freshman?</strong>
+									Smiling and looking people in the eyes is kind of creepy. Stop
+									it.
+								</p>
+								<p>
+									<strong>WashU protip for a freshman</strong>
+								</p>
+								<blockquote>Weekdays from 7:30 AM to 10:30 AM, go
+									to the grill, smile and ask for "two eggs with cheddar on whole
+									wheat." You'll probably have to remind them what type of
+									cheese, so pay attention while you wait because they aren't
+									going to turn around, they're just going to ask you. Take your
+									sandwich. Pay for it. Eat it. Explode.</blockquote>
+								<p>
+									<strong>Favorite flavor of Log-o-beef: </strong> Pumpernickel.
+								</p>
+							</div>
+						</div> <!-- here ends a single leader -->
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<script>
+		$(".scroll").click(
+				function(event) {
+					event.preventDefault();
+					//calculate destination place
+					var dest = 0;
+					if ($(this.hash).offset().top > $(document).height()
+							- $(window).height()) {
+						dest = $(document).height() - $(window).height();
+					} else {
+						dest = $(this.hash).offset().top;
+					}
+					//go to destination
+					$('html,body').animate({
+						scrollTop : dest
+					}, 1000, 'swing');
+				});
+	</script>
+</body>
+</html>

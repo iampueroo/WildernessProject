@@ -1,0 +1,86 @@
+body
+{
+	background: url("../Images/leaderCollage2blurlg.jpg") top center fixed;
+}
+#background
+{
+	height: 100px;
+}
+.modal .modal-content {
+    width: 120%; /* respsonsive width */
+    margin-left: -10%; /* width/2) */ 
+}
+
+.modal .modal-header button
+{
+	margin-left: 5px;
+}
+#modalPicture
+{
+	margin: 0 auto;
+	width: 100%;	
+}
+
+@media (max-width: 768px) {
+	#modalPicture
+	{
+		width: 100%;
+	}
+}
+
+#photoMainHandler
+{
+	padding	: 0;
+}
+
+#photoMainHandler #header
+{
+	margin: 30px 20px 30px 20px;
+	padding: 20px;
+	background-color: rgba(255, 255, 255, .5);
+	color: black;
+
+}
+
+#photoMainHandler a, #photoMainHandler h1
+{
+	display: inline;
+}
+
+#photoMainHandler h1
+{
+	position: relative;
+	right: 75px;
+}
+
+#photoMainHandler a 
+{
+	padding-top: 10px;
+	color: black;
+}
+
+
+
+#photoMainHandler a:hover
+{
+	color: #3366bb;
+	text-decoration: underline;
+	
+}
+
+#photoMainHandler .photoRow .photo
+{
+	background-color: black;
+	border: solid 1px white;
+	height: 200px;
+	padding: 0;
+	overflow: hidden;
+
+}
+#photoMainHandler .photoRow .photo img
+{
+	position: center;
+	vertical-align: middle;
+	height: 200px;
+	cursor: pointer;
+}

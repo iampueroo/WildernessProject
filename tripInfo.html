@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Wilderness Project</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap -->
+<style>
+@import url(http://fonts.googleapis.com/css?family=Lato:100);
+</style>
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" type="text/css" href="myCSS/navbar.css">
+<link rel="stylesheet" type="text/css" href="myCSS/tripInfo.css">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+<script src="jquery/jquery-1.10.2.min.js"></script>
+<script>
+	function toggleNavbar() {
+		$("#navbarButton").click(function() {
+			$("#toggleList li").toggle("fast");
+		});
+	}
+	function navHandler() {
+		$("#toggleList li").hide();
+		var currWidth = $(window).innerWidth();
+		var isShortened = false;
+		var isWP = false;
+		if (currWidth < 900) {
+			$("#w, #p").hide();
+			isWP = true;
+		}
+		$(window).resize(function() {
+			var newWidth = $(window).innerWidth();
+			if (!isWP && newWidth < 1000) {
+				$("#w, #p").hide("medium");
+				isWP = true;
+			} else if (isWP && newWidth >= 1000) {
+				isWP = false
+				$("#w, #p").show("medium");
+			}
+		})
+	}
+	$(document).ready(function() {
+		toggleNavbar();
+		navHandler();
+	});
+</script>
+
+
+
+
+</head>
+<body>
+	<div id="main">
+		<div id="background">
+			<nav class="navbar navbar-default" role="navigation">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button id="navbarButton" type="button" class="navbar-toggle">
+						<span class="sr-only">Toggle navigation</span> <span
+							class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+					<a id="bigLogo" class="navbar-brand" href="home.html"><span
+						class="bigletter">W</span><span id="w">ilderness</span> <span
+						class="bigletter">P</span><span id="p">roject</span></a> <a
+						id="smallLogo" class="navbar-brand" href="home.hml"><span
+						class="bigletter">WP</span></a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse"
+					id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="home.html">Home</a></li>
+						<li><a href="philosophy.html">About Us</a></li>	
+						<li id="selected"><a href="tripInfo.html">Trip Info</a></li>
+						<li><a href="leaders.html">Leaders</a></li>
+						<li><a href="faq.html">FAQ</a></li>	
+						<li><a href="photos.html">Photos</a></li>
+						<li><a href="contact.html">Contact Us</a></li>
+						<li><a href="http://www.outing.wustl.edu"> <span
+								class="glyphicon glyphicon-home"></span> Back to OC
+						</a></li>
+					</ul>
+				</div>
+				<ul id="toggleList" class="visible-xs">
+					<li><p><a href="home.html">Home
+							</p>
+					</a></li>
+					<li><a href="philosophy.html"><p>About Us</p></a></li>
+					<li class="selected"><a href="tripInfo.html"><p>Trip Info</p></a></li>
+					<li><a href="leaders.html"><p>Leader Profiles</p></a></li>
+					<li><a href="faq.html"><p>FAQ</p></a></li>
+					<li><a href="photos.html"><p>Photos</p></a></li>
+					<li><a href="contact.html"><p>Contact Us</p></a></li>
+					<li><a href="http://www.outing.wustl.edu"><p>
+								<span class="glyphicon glyphicon-home"></span> Back to OC
+							</p></a></li>
+				</ul>
+				<!-- /.navbar-collapse -->
+			</nav>
+
+
+			<!-- Main jumbotron for a primary marketing message or call to action -->
+
+			<div class="jumbotron center-block row">
+				<div class="jumbo_background col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
+					<h1>Trip Information</h1>
+					<p>
+						The Wilderness Project was founded on the philosophy that the natural environment provides a neutral space for facilitating life's transitions, for promoting personal growth, and for discussing pressing social issues. Outside the context of everyday routines, students gain a powerful perspective on their lives, their communities, and how they fit into a global perspective. The project is designed to challenge the participants to be effective, socially and environmentally conscious leaders.
+
+
+					</p>
+					<p>
+						<a class="btn btn-success btn-lg scroll" href="#registration"
+							role="button">Register &raquo;</a> <a
+							class="btn btn-primary btn-lg scroll" href="#information"
+							role="button">Learn more &raquo;</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="information"></div>
+		<div class="pic_div row">
+			<div class="col-xs-12 col-sm-12">
+				<img src="Images/logoshit.png" class="hidden center-block">
+			</div>
+		</div>
+		<!-- <hr class="featurette-divider">-->
+		<div class="row mainrow">
+			<h1 class="page-header text-center">Logistics</h1>
+			<p class="lead col-xs-12 col-sm-10 col-sm-offset-1"><strong>All
+				participants should arrive to the Washington University campus on
+				August 15th between 7am and 1pm</strong> (please do not arrive later than 1pm
+				but if you have flight restrictions, don't hesitate to contact us
+				and we can figure it out). After everyone arrives on campus, we will
+				be heading out to Greensfelder State Park where we will camp for the
+				night. The next day we will challenge ourselves on the ropes course
+				(with trained facilitators) and do team building exercises with our
+				trail groups. Backpackers will head to base camp for the night
+				before hitting the trails the next day, and climbers will drive down
+				to Arkansas. The climbers and the backpackers reunite for our final
+				day together and relax with a float trip. <strong>We will return to campus
+				on August 22nd at approximately 2pm.</strong> Please have what belongings you
+				are moving into your dorm delivered on or after this date. Do not
+				bring anything other than what is listed on your <a href="https://sites.google.com/site/wpfreshpacket/">required gear list</a> when you arrive on August 15th.</p>
+			<div class="container"></div>
+
+			<h1 class="page-header text-center">
+				General<br> <small>Backpacking or Climbing! Which one
+					will you choose?</small>
+			</h1>
+			<div class="container">
+				<!-- START THE FEATURETTES -->
+
+				<div class="row featurette">
+					<div class="col-xs-12 col-sm-12 col-md-7">
+						<h2 class="featurette-heading">
+							Backpacking<span class="text-muted"><small> ... in
+									the beautiful Ozarks</small></span>
+						</h2>
+						<p class="lead">Our trail will be a portion of the Ozark Trail
+							in southern Missouri, located within the beautiful Ozark
+							Mountains. This trail has been developed by local organizations
+							and currently contains over 200 miles of networked trail. Our
+							approximately 24-mile trip goes up rocky ridges, through secluded
+							forests, and across clear streams while maintaining an easy to
+							moderate trail difficulty. Although you have to carry your gear
+							and food, the trails are suitable for all skill levels. We will
+							be on trail for 4 days, 3 nights. Groups will be on two separate
+							trails: Blair Creek and Current River. We challenge you to step
+							outside of civilization and see some of the finest scenery
+							Missouri has to offer and make memories that will last throughout
+							your college career. For more information about the trails and
+							maps of where we're headed, check out The Ozark Trail website!</p>
+					</div>
+					<div id="hikingpic" class="col-xs-12 col-sm-12 col-md-5">
+						<img class="featurette-image img-responsive center-block"
+							src="Images/hiking.jpg" alt="Hiking in 2008!">
+					</div>
+				</div>
+
+				<hr class="featurette-divider">
+
+				<div class="row featurette">
+					<div id="climbingpic" class="col-xs-12 col-sm-12 col-md-5">
+						<img  class="featurette-image img-responsive center-block"
+							src="Images/climbing.jpg" alt="Climbing in 2007!">
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-7">
+						<h2 class="featurette-heading">
+							Rock Climbing <span class="text-muted"><small> ...
+									how high will you go?</small></span>
+						</h2>
+						<p class="lead">After leaving Greensfelder, climbers will
+							drive down to Jasper, Arkansas where they will set up camp at
+							Horseshoe Canyon Ranch (HCR) for the next four days. The ranch is
+							nesseled in a canyon containing around 300 bolted sport routes
+							and many more traditional routes and boulder problems. HCR is
+							known for great climbing at all levels. You can see pictures of
+							some climbs at their website.</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="reg_container">
+				<div class="container">
+					<!-- /END THE FEATURETTES -->
+					<h1 id="registration" class="page-header text-center">
+						How to Register<br> <small>Please follow the three
+							steps below to register for WP!</small>
+					</h1>
+					<!-- Example row of columns -->
+					<div class="row">
+						<div class="apply col-xs-12 col-sm-4 col-md-4">
+							<h2 class="text-center">
+								<span class="number">1</span> Apply
+							</h2>
+							<p class="text-center">We accept applications on a
+								first-come, first-serve basis. Registration starts May 6th. Upon
+								acceptance into our program, you'll receive an email
+								confirmation! Click below to apply!</p>
+							<p class="text-center">
+								<a class="btn btn-success "
+									href="http://orientation.wustl.edu/preorientation"
+									role="button">Register Here! &raquo;</a>
+							</p>
+						</div>
+						<div class="apply col-xs-12 col-sm-4 col-md-4">
+							<h2 class="text-center">
+								<span class="number">2</span> Complete Forms
+							</h2>
+							<p class="text-center">
+								After registering and receiving our confirmation for WP, take a
+								look at our online participant packet and <strong>sign
+									the attached medical and policy forms.<br> <span
+									class="text-danger text-center">They're required!</span>
+								</strong>
+							</p>
+							<p class="text-center">
+								<a class="btn btn-danger "
+									href="https://sites.google.com/site/wpfreshpacket/"
+									role="button">Complete Forms &raquo;</a>
+							</p>
+						</div>
+						<div class="apply col-xs-12 col-sm-4 col-md-4">
+							<h2 class="text-center">
+								<span class="number">3</span> Finish Up
+							</h2>
+							<p class="text-center">You're almost there. First, see our
+								Packing List to make sure you have everything that you need for
+								our trip! Then, go to our Leader Profiles page and stalk your
+								future leaders!</p>
+							<p class="text-center">
+								<a class="btn btn-info "
+									href="http://outing.wustl.edu/wp/gear.htm" role="button">Packing
+									List &raquo;</a> <a class="btn btn-primary" href="leaders.html"
+									role="button">Gotta Stalk 'Em All &raquo;</a>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<hr>
+
+				<footer>
+					<p>&copy; Washington University in St. Louis Outing Club 2013</p>
+				</footer>
+			</div>
+
+		</div>
+		<!-- /container -->
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<!--<script src="https://code.jquery.com/jquery.js"></script-->
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+		<script>
+			$(".scroll").click(
+					function(event) {
+						event.preventDefault();
+						//calculate destination place
+						var dest = 0;
+						if ($(this.hash).offset().top > $(document).height()
+								- $(window).height()) {
+							dest = $(document).height() - $(window).height();
+						} else {
+							dest = $(this.hash).offset().top;
+						}
+						//go to destination
+						$('html,body').animate({
+							scrollTop : dest - 100
+						}, 1000, 'swing');
+					});
+
+			$('.carousel').carousel({
+				interval : 4000
+			})<!-- Remember the packing list -->
+		</script>
+</body>

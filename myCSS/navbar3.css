@@ -1,0 +1,114 @@
+html, body
+{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#navbar, #navbar .mynav, #navbar .mynav>li {
+	height: 100px;
+}
+#navbar
+{
+	margin-bottom: 0px
+}
+
+#logo .titleHeader, .mynav > div > a > p
+{
+	font-family: 'Lato', sans-serif;
+} 	
+
+#logo .titleHeader
+{
+	text-align: left;
+	margin: 10px;
+}
+
+#logo .titleHeader
+{
+		font-size: 2.5em;
+}
+
+.bigletter
+{
+	font-size: 2em;
+		color: #74C365;	
+
+}
+
+#logo .titleHeader span:not(.bigletter)
+{
+	position: relative;
+	top: -10px;
+}
+
+
+
+div.myrow
+{
+	margin: 0 0;
+	display: block;
+}
+
+
+.mynav, .mynav>li
+{
+	hedight: 100%;
+	padding: 0;
+	width: 100%;
+	z-index: 1;
+	text-align: center;
+}
+
+
+
+.mynav:not(.linkContainer)
+{
+	position: fixed;
+	background-color:rgba(0,0,0,.7);
+	background-color: ;
+}
+
+.linkContainer
+{
+	padding-right: 20px;
+}
+
+.mynav > div
+{
+	pdadding: 0;
+	margin: 0;
+}
+
+.mynav > .active
+{
+	border-bottom-style: solid;
+	border-bottom-color: #74C365;	
+
+}
+.mynav > div > a > p
+{
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	padding-top: 20px;
+}
+
+.myli, .myli>a
+{
+	height: 100%;
+	padding: 0px 10px 0px 10px;
+	color: white;
+}
+
+.myli > a
+{
+	color: white;
+}
+.myli:not(#logo.myli):hover
+{
+	background-color:rgba(255,255,255, .1);
+	transition: background-color .75s;
+}
