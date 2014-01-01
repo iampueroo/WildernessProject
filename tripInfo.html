@@ -28,16 +28,17 @@
 		var currWidth = $(window).innerWidth();
 		var isShortened = false;
 		var isWP = false;
-		if (currWidth < 900) {
+		var changeWidth = 1020;
+		if (currWidth < changeWidth) {
 			$("#w, #p").hide();
 			isWP = true;
 		}
 		$(window).resize(function() {
 			var newWidth = $(window).innerWidth();
-			if (!isWP && newWidth < 1000) {
+			if (!isWP && newWidth < changeWidth) {
 				$("#w, #p").hide("medium");
 				isWP = true;
-			} else if (isWP && newWidth >= 1000) {
+			} else if (isWP && newWidth >= changeWidth) {
 				isWP = false
 				$("#w, #p").show("medium");
 			}
@@ -76,12 +77,12 @@
 					id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="home.html">Home</a></li>
-						<li><a href="philosophy.html">About Us</a></li>	
+						<li><a href="philosophy.html">About</a></li>	
 						<li id="selected"><a href="tripInfo.html">Trip Info</a></li>
 						<li><a href="leaders.html">Leaders</a></li>
 						<li><a href="faq.html">FAQ</a></li>	
 						<li><a href="photos.html">Photos</a></li>
-						<li><a href="contact.html">Contact Us</a></li>
+						<li><a href="contact.html">Contact</a></li>
 						<li><a href="http://www.outing.wustl.edu"> <span
 								class="glyphicon glyphicon-home"></span> Back to OC
 						</a></li>
@@ -91,12 +92,12 @@
 					<li><p><a href="home.html">Home
 							</p>
 					</a></li>
-					<li><a href="philosophy.html"><p>About Us</p></a></li>
+					<li><a href="philosophy.html"><p>About</p></a></li>
 					<li class="selected"><a href="tripInfo.html"><p>Trip Info</p></a></li>
 					<li><a href="leaders.html"><p>Leader Profiles</p></a></li>
 					<li><a href="faq.html"><p>FAQ</p></a></li>
 					<li><a href="photos.html"><p>Photos</p></a></li>
-					<li><a href="contact.html"><p>Contact Us</p></a></li>
+					<li><a href="contact.html"><p>Contact</p></a></li>
 					<li><a href="http://www.outing.wustl.edu"><p>
 								<span class="glyphicon glyphicon-home"></span> Back to OC
 							</p></a></li>

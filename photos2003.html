@@ -28,16 +28,17 @@
 		var currWidth = $(window).innerWidth();
 		var isShortened = false;
 		var isWP = false;
-		if (currWidth < 900) {
+		var changeWidth = 1020;
+		if (currWidth < changeWidth) {
 			$("#w, #p").hide();
 			isWP = true;
 		}
 		$(window).resize(function() {
 			var newWidth = $(window).innerWidth();
-			if (!isWP && newWidth < 1000) {
+			if (!isWP && newWidth < changeWidth) {
 				$("#w, #p").hide("medium");
 				isWP = true;
-			} else if (isWP && newWidth >= 1000) {
+			} else if (isWP && newWidth >= changeWidth) {
 				isWP = false
 				$("#w, #p").show("medium");
 			}

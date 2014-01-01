@@ -28,22 +28,22 @@
 		var currWidth = $(window).innerWidth();
 		var isShortened = false;
 		var isWP = false;
-		if (currWidth < 900) {
+		var changeWidth = 1020;
+		if (currWidth < changeWidth) {
 			$("#w, #p").hide();
 			isWP = true;
 		}
 		$(window).resize(function() {
 			var newWidth = $(window).innerWidth();
-			if (!isWP && newWidth < 1000) {
+			if (!isWP && newWidth < changeWidth) {
 				$("#w, #p").hide("medium");
 				isWP = true;
-			} else if (isWP && newWidth >= 1000) {
+			} else if (isWP && newWidth >= changeWidth) {
 				isWP = false
 				$("#w, #p").show("medium");
 			}
 		})
 	}
-
 	$(document).ready(function() {
 		toggleNavbar();
 		navHandler();
@@ -73,12 +73,12 @@
 					id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="home.html">Home</a></li>
-						<li><a href="philosophy.html">About Us</a></li>
+						<li><a href="philosophy.html">About</a></li>
 						<li><a href="tripInfo.html">Trip Info</a></li>
 						<li><a href="leaders.html">Leaders</a></li>
 						<li><a href="faq.html">FAQ</a></li>
 						<li id="selected"><a href="photos.html">Photos</a></li>
-						<li><a href="contact.html">Contact Us</a></li>
+						<li><a href="contact.html">Contact</a></li>
 						<li><a href="http://www.outing.wustl.edu"> <span
 								class="glyphicon glyphicon-home"></span> Back to OC
 						</a></li>
