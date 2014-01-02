@@ -26,12 +26,12 @@ html, body
 	{
 		background: url("../Images/missourispringbg.jpg") no-repeat center center fixed;
 	}
-	#promoteContainer
+}
+#promoteContainer
 	{
 		background-color: #80d4df;
 		background-color: #94e49e;
 	}
-}
 #background, #reg_container 
 	{
 		-webkit-background-size: cover;
