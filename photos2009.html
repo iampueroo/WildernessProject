@@ -47,14 +47,14 @@
 
 	function prepareImagesAndModal() {
 		$(".photo img").click(function() {
-			var url = $(this).attr("src").replace("tn","");
+			var url = $(this).attr("src").replace("tn", "");
 			var file = getFileName(url);
 			var number = parseInt(file.split(".")[0]);
 			$("#modalPicture").attr("src", (url));
-			$("#picNum").html(""+number);
+			$("#picNum").html("" + number);
 			$("#myModal").modal();
 		})
-		
+
 		$("#myModal #prev").click(function() {
 			prev();
 		})
@@ -74,7 +74,7 @@
 			number++;
 		}
 		var newImage = "Images/2003pics/" + number + ".jpg	";
-		$("#picNum").html(""+number);
+		$("#picNum").html("" + number);
 		$("#modalPicture").attr("src", newImage);
 	}
 
@@ -85,7 +85,7 @@
 			number = 40;
 		}
 		var newImage = "Images/2003pics/" + number + ".jpg	";
-		$("#picNum").html(""+number);
+		$("#picNum").html("" + number);
 		$("#modalPicture").attr("src", newImage);
 	}
 
@@ -134,7 +134,8 @@
 					<li><p>
 							<a href="home.html">Home 
 						</p> </a></li>
-						<li><a href="philosophy.html"><p>About Us</a></p></li>
+					<li><a href="philosophy.html"><p>About Us</a>
+					</p></li>
 					<li class="selected"><a href="tripInfo.html"><p>Trip
 								Info</p></a></li>
 					<li><a href="leaders.html"><p>Leader Profiles</p></a></li>
@@ -160,8 +161,9 @@
 							data-dismiss="modal">Close</button>
 						<button id="next" type="button" class="btn btn-primary pull-right">Next</button>
 						<button id="prev" type="button" class="btn btn-primary pull-right">Prev</button>
-							<h4 class="modal-title" id="myModalLabel">Wilderness Project
-							2003! (<span id="picNum"></span>/40)</h4>
+						<h4 class="modal-title" id="myModalLabel">
+							Wilderness Project 2003! (<span id="picNum"></span>/40)
+						</h4>
 					</div>
 					<div class="modal-body">
 						<img id="modalPicture" src="Images/leaders1.jpg	"
@@ -179,11 +181,14 @@
 		<!-- Begin photos -->
 		<div id="photoMainHandler">
 			<div id="header" class="text-center">
-				<a class="pull-left" href="photos.html"><div class="glyphicon glyphicon-chevron-left"></div> Back to Photo Gallery</a>
+				<a class="pull-left" href="photos.html"><div
+						class="glyphicon glyphicon-chevron-left"></div> Back to Photo
+					Gallery</a>
 				<h1>Photos - 2009</h1>
 			</div>
 			<div class="photoRow" class="row">
-				<div class="photo col-md-2 col-md-offset-1 col-sm-2 col-sm-offset-1 col-xs-12">
+				<div
+					class="photo col-md-2 col-md-offset-1 col-sm-2 col-sm-offset-1 col-xs-12">
 					<img class="center-block" src="Images/2009pics/1tn.jpg	">
 				</div>
 				<div class="photo col-md-2 col-sm-2 col-xs-12">
@@ -201,7 +206,8 @@
 
 			</div>
 			<div class="photoRow" class="row">
-				<div class="photo col-md-2 col-md-offset-1 col-sm-2 col-sm-offset-1 col-xs-12">
+				<div
+					class="photo col-md-2 col-md-offset-1 col-sm-2 col-sm-offset-1 col-xs-12">
 					<img class="center-block" src="Images/2009pics/6tn.jpg	">
 				</div>
 				<div class="photo col-md-2 col-sm-2 col-xs-12">
@@ -218,7 +224,8 @@
 				</div>
 			</div>
 			<div class="photoRow" class="row">
-				<div class="photo col-md-2 col-md-offset-1 col-sm-2 col-sm-offset-1 col-xs-12">
+				<div
+					class="photo col-md-2 col-md-offset-1 col-sm-2 col-sm-offset-1 col-xs-12">
 					<img class="center-block" src="Images/2009pics/11tn.jpg	">
 				</div>
 				<div class="photo col-md-2 col-sm-2 col-xs-12">
@@ -235,7 +242,8 @@
 				</div>
 			</div>
 			<div class="photoRow" class="row">
-				<div class="photo col-md-2 col-md-offset-1 col-sm-2 col-sm-offset-1 col-xs-12">
+				<div
+					class="photo col-md-2 col-md-offset-1 col-sm-2 col-sm-offset-1 col-xs-12">
 					<img class="center-block" src="Images/2009pics/16tn.jpg	">
 				</div>
 				<div class="photo col-md-2 col-sm-2 col-xs-12">
@@ -252,7 +260,8 @@
 				</div>
 			</div>
 			<div class="photoRow" class="row">
-				<div class="photo col-md-2 col-md-offset-1 col-sm-2 col-sm-offset-1 col-xs-12">
+				<div
+					class="photo col-md-2 col-md-offset-1 col-sm-2 col-sm-offset-1 col-xs-12">
 					<img class="center-block" src="Images/2009pics/21tn.jpg	">
 				</div>
 				<div class="photo col-md-2 col-sm-2 col-xs-12">
@@ -269,7 +278,8 @@
 				</div>
 			</div>
 			<div class="photoRow" class="row">
-				<div class="photo col-md-2 col-md-offset-1 col-sm-2 col-sm-offset-1 col-xs-12">
+				<div
+					class="photo col-md-2 col-md-offset-1 col-sm-2 col-sm-offset-1 col-xs-12">
 					<img class="center-block" src="Images/2009pics/26tn.jpg	">
 				</div>
 				<div class="photo col-md-2 col-sm-2 col-xs-12">
@@ -286,7 +296,8 @@
 				</div>
 			</div>
 			<div class="photoRow" class="row">
-				<div class="photo col-md-2 col-md-offset-1 col-sm-2 col-sm-offset-1 col-xs-12">
+				<div
+					class="photo col-md-2 col-md-offset-1 col-sm-2 col-sm-offset-1 col-xs-12">
 					<img class="center-block" src="Images/2009pics/31tn.jpg	">
 				</div>
 				<div class="photo col-md-2 col-sm-2 col-xs-12">
@@ -303,7 +314,8 @@
 				</div>
 			</div>
 			<div class="photoRow" class="row">
-				<div class="photo col-md-2 col-md-offset-1 col-sm-2 col-sm-offset-1 col-xs-12">
+				<div
+					class="photo col-md-2 col-md-offset-1 col-sm-2 col-sm-offset-1 col-xs-12">
 					<img class="center-block" src="Images/2009pics/36tn.jpg	">
 				</div>
 				<div class="photo col-md-2 col-sm-2 col-xs-12">
@@ -318,8 +330,8 @@
 				<div class="photo col-md-2 col-sm-2 col-xs-12">
 					<img class="center-block" src="Images/2009pics/40tn.jpg	">
 				</div>
-		</div>
+			</div>
 
 
-		<script src="js/bootstrap.min.js"></script>
+			<script src="js/bootstrap.min.js"></script>
 </body>

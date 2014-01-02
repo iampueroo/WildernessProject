@@ -1,4 +1,27 @@
-
+@media (max-width: 768px) { 
+	#background, #reg_container 
+	{
+		background: url("../Images/kimgGagnonBgxs.jpg") no-repeat center center ;
+	}
+}
+@media (min-width: 768px) and (max-width: 992px) { 
+	#background, #reg_container 
+	{
+		background: url("../Images/kimgGagnonBgsm.jpg") no-repeat center center ;
+	}
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+	#background, #reg_container 
+	{
+		background: url("../Images/kimgGagnonBgmd.jpg") no-repeat center center fixed;
+	}
+}
+@media (min-width: 1200px) {
+	#background, #reg_container 
+	{
+		background: url("../Images/kimgGagnonBg.jpg") no-repeat center center fixed;
+	}
+}
 #main
 {
 	background-image: url("../Images/cream_pixels.png");

@@ -1,7 +1,28 @@
-body
-{
-	background: url("../Images/leaderCollage2blurlg.jpg") top center fixed;
+@media (max-width: 768px) { 
+	body 
+	{
+		background: url("../Images/leaderCollageBlurxs.jpg") top center ;
+	}
 }
+@media (min-width: 768px) and (max-width: 992px) { 
+	body
+	{
+		background: url("../Images/leaderCollageBlursm.jpg") top center fixed;
+	}
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+	body
+	{
+		background: url("../Images/leaderCollageBlurmd.jpg") top center fixed;
+	}
+}
+@media (min-width: 1200px) {
+	body
+	{
+		background: url("../Images/leaderCollageBlur.jpg") top center fixed;
+	}
+}
+
 #background
 {
 	height: 100px;

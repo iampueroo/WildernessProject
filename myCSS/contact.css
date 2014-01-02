@@ -1,11 +1,35 @@
+@media (max-width: 768px) { 
+	#background 
+	{
+		background: url("../Images/brookingsxs.jpg") no-repeat center center ;
+	}
+}
+@media (min-width: 768px) and (max-width: 992px) { 
+	#background 
+	{
+		background: url("../Images/brookingssm.jpg") no-repeat center center ;
+	}
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+	#background 
+	{
+		background: url("../Images/brookingsmd.jpg") no-repeat center center fixed;
+	}
+}
+@media (min-width: 1200px) {
+	#background 
+	{
+		background: url("../Images/brookings.jpg") no-repeat center center fixed;
+	}
+}
+
 body
 {
-	background: none	;
+	background: none;
 	background-color: white;
 }
 #background
 {
-	background: url("../Images/brookings.jpg") center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;

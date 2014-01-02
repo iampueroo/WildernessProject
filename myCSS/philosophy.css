@@ -6,25 +6,25 @@ html, body
 @media (max-width: 768px) { 
 	#background, #reg_container 
 	{
-		background: url("../Images/forestbackgroundxs.jpg") no-repeat center center ;
+		background: url("../Images/missourispringbgxs.jpg") no-repeat center center ;
 	}
 }
 @media (min-width: 768px) and (max-width: 992px) { 
 	#background, #reg_container 
 	{
-		background: url("../Images/forestbackgroundsm.jpg") no-repeat center center ;
+		background: url("../Images/missourispringbgsm.jpg") no-repeat center center ;
 	}
 }
 @media (min-width: 993px) and (max-width: 1200px) {
 	#background, #reg_container 
 	{
-		background: url("../Images/forestbackgroundmd.jpg") no-repeat center center fixed;
+		background: url("../Images/missourispringbgmd.jpg") no-repeat center center fixed;
 	}
 }
-@media (min-width: 993px) {
+@media (min-width: 1200px) {
 	#background, #reg_container 
 	{
-		background: url("../Images/missourispringbg2.jpg") no-repeat center center fixed;
+		background: url("../Images/missourispringbg.jpg") no-repeat center center fixed;
 	}
 	#promoteContainer
 	{
