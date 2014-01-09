@@ -7,41 +7,41 @@ html, body, #main
 @media (max-width: 768px) { 
 	body
 	{
-		background: url("../Images/leaderCollage2xs.jpg") no-repeat center center ;
+		background: url("../Images/leaderCollage2xs.jpg") no-repeat top center ;
 	}
 }
 @media (min-width: 769px) and (max-width: 992px) { 
 	body
 	{
-		background: url("../Images/leaderCollage2sm.jpg") no-repeat center center ;
+		background: url("../Images/leaderCollage2sm.jpg") no-repeat top center ;
 	}
 }
 @media (min-width: 993px) and (max-width: 1200px) {
 	body 
 	{
-		background: url("../Images/leaderCollage2md.jpg")   no-repeat center center;
+		background: url("../Images/leaderCollage2md.jpg")   no-repeat top center;
 	}
 }
 
 @media (min-width: 1201px) and (max-width: 1700px) {
 	body 
 	{
-		background: url("../Images/leaderCollage2lg.jpg")   no-repeat center center;
+		background: url("../Images/leaderCollage2lg.jpg")   no-repeat top center;
 	}
 }
 @media (min-width: 1701px) {
 	body 
 	{
-		background: url("../Images/leaderCollage2.jpg")   no-repeat center center;
+		background: url("../Images/leaderCollage2.jpg")   no-repeat top center;
 	}
 }
 body
-	{
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-image-size: covDer;	
-	}
+{
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-image-size: covDer;	
+}
 
 #background {
 	height: 100%;

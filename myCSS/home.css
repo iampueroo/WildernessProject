@@ -25,14 +25,13 @@ body
 .masterrow
 {
 	position: relative;
+	top: 150px;
 }
 
 .jumbotron
 {
 	background-color:rgba(0,0,0,.5);
-	width: 66%;
 	padding: 40px 25px;
-	margin: 0 auto;
 	border-radius: 10px;
 	color: white;	
 	margin-top: 60px; 
@@ -81,46 +80,6 @@ img
 	height: 100vh;
 }
 
-#leaders, #freshmen
-{
-	height: 100%;
-}
-
-#carouselcontainer
-{
-	width: 480px;
-	margin: 0 auto;
-	padding-top: 200px;	
-}
-
-#leaders > .page-header
-{
-	padding-top: 0px;
-}
-
-.divider
-{
-	height: 70px;
-	/*background-color: #000000;*/
-}
-
-#myCarousel1 img, #myCarousel2 img
-{
-	margin: 0 auto;
-}
-
-.carousel-inner
-{
-	badckground-color: #DEDEDE;
-}
-
-.carousel-inner img
-{
-	border-style: none solid none solid;	
-	border-color: white;
-	border-width: 3px;
-}
-
 .thumbnail {
 	height: 140px;
 	border-radius: 70px;
@@ -131,7 +90,7 @@ img
  top: 22px;
 }
 
-.freshmenContainer
+.adContainer
 {
 	padding: 75px 0 75px 0;
 	padding-top: 0;
@@ -143,14 +102,39 @@ img
 {
 	margin-top: 0;
 }
-.freshmenContainer .jumbotron
+.adContainer .jumbotron
 {
 	background-color: rgba(63,104,0,0.5);
 	background-color:rgba(0,0,0,0.5);
 }
 
-.freshmenHolder > .jumbotron
+/* Adding necessary CSS */
+.holder
 {
-	box-shadow: 
-	background-color:rgba(255,255,255,0.5);
+	display: inline-block;
+}
+
+.holder:first
+{
+	margin-bottom: 50px;
+}
+.holder > div
+{
+	margin-bottom: 20px;
+}
+
+.holder > div > .carousel img
+{
+	border: solid 8px white;
+	border-radius: 10px;
+}
+.links
+{
+	background-color: rgba(255,255,255,.5);
+	border-radius: 10px;
+}
+
+.links div h2, .links div p
+{
+	text-align: center;
 }

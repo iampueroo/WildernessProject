@@ -297,11 +297,17 @@
 						} else {
 							dest = $(this.hash).offset().top;
 						}
+
+						if (dest < $(document).outerHeight()-$(window).outerHeight()) {
+						dest = dest-100;
+					}
 						//go to destination
 						$('html,body').animate({
-							scrollTop : dest - 100
+							scrollTop : dest
 						}, 1000, 'swing');
 					});
+
+
 
 			$('.carousel').carousel({
 				interval : 4000

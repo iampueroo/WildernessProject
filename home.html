@@ -46,43 +46,11 @@
 			}
 		})
 	}
-	function centerOnWindow(id) {
-		var e = document.getElementsByClassName(id)[0];
-		var navHeight = document.getElementsByClassName("navbar")[0].clientHeight;
-		var eHeight = e.clientHeight;
-		var windowHeight = window.innerHeight;
-		var offset = ((windowHeight - navHeight - eHeight) / 2) + navHeight;
-		if (offset < 0) {
-			offset = 5;
-		}
-		e.style.top = "" + offset + "px";
-	}
-	function centerContainers() {
-		var e1 = document.getElementsByClassName("freshmenHolder")[0];
-		var e2 = document.getElementsByClassName("freshmenHolder")[1];
-
-		var navHeight = document.getElementsByClassName("navbar")[0].clientHeight;
-		var e1Height = e1.clientHeight;
-		var e2Height = e2.clientHeight;
-		var windowHeight = window.innerHeight;
-		var offset1 = ((windowHeight - navHeight - e1Height) / 2) + navHeight;
-		var offset2 = ((windowHeight - navHeight - e2Height) / 2) + navHeight;
-		if (offset1 < 0) {
-			offset1 = 5;
-		}
-		if (offset2 < 0) {
-			offset2 = 5;
-		}
-		e1.style.cssText = "padding-top:" + offset1 + "px";
-		e2.style.cssText = "padding-top:" + offset2 + "px";
-	}
-
+	
 	$(document).ready(function() {
 		toggleNavbar();
 		navHandler();
-		centerOnWindow("masterrow");
-		centerContainers();
-		$(".fadeIn").hide(0).delay(250).fadeIn(1600)
+		$(.carousel).carousel();
 	});
 </script>
 </head>
@@ -137,10 +105,10 @@
 			<!-- /.navbar-collapse -->
 		</nav>
 
-		<div class="row myrow masterrow">
+		<div class="masterrow">
 			<div class="row myrow">
 				<div
-					class="jumbotron fadeIn col-xs-12 col-sm-offset-3 col-md-offset-3">
+					class="jumbotron fadeIn col-xs-12 col-sm-8 col-sm-offset-2">
 					<p class="fadeIn">
 						<small>Washington University Outing Club presents...</small>
 					</p>
@@ -151,14 +119,14 @@
 				</div>
 			</div>
 			<div id="tentrow" class="row myrow fadeIn">
-				<div class="col-sm-offset-3 col-sm-2">
+				<div class="col-xs-6 col-sm-offset-3 col-sm-2">
 					<a href="#leaders" class="thumbnail scroll">
 						<div class="caption">
 							<h3>Prospective Leaders</h3>
 						</div>
 					</a>
 				</div>
-				<div class="col-sm-offset-2 col-sm-2">
+				<div class="col-xs-6 col-sm-offset-2 col-sm-2">
 					<a href="#freshmen" class="thumbnail scroll">
 						<div class="caption">
 							<h3>Incoming Freshmen</h3>
@@ -170,40 +138,66 @@
 	</div>
 	<!-- Jumbotron -->
 
-	<div class="freshmenContainer" id="freshmen">
-		<div class="freshmenHolder">
-			<div class="jumbotron">
-				<h1>Join WP</h1>
-				<p class="lead">As an incoming freshman, you will meet all the
-					cool leaders, a whole lot of other freshmen, and share experiences
-					from hiking in the Ozarks to top roping new routes!</p>
-			</div>
-
-			<!-- Example row of columns -->
-			<div class="col-sm-1 col-md-1 col-lg-1"></div>
+	<div class="adContainer" id="freshmen">
+		<div class="holder">
 			<div class="row">
-				<div class="col-xs-3 col-sm-3 col-lg-3">
+				<div id="carousel-example-generic"
+					class="carousel slide col-xs-12 col-md-4 col-md-offset-1" data-ride="carousel">
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#carousel-example-generic" data-slide-to="0"
+							class="active"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					</ol>
+
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner">
+						<div class="item active">
+							<img src="Images/biggroupstatue.jpg" class="center-block"
+								alt="...">
+						</div>
+						<div class="item">
+							<img src="Images/humanknot.jpg" class="center-block" alt="...">
+						</div>
+						<div class="item">
+							<img src="Images/steering-dynamic.jpg" class="center-block"
+								alt="...">
+						</div>
+
+					</div>
+				</div>
+				<div class="jumbotron col-xs-12 col-sm-12 col-md-5 col-md-offset-1">
+					<h1>Join WP</h1>
+					<p class="lead">As an incoming freshman, you will meet all the
+						cool leaders, a whole lot of other freshmen, and share experiences
+						from hiking in the Ozarks to top roping new routes!</p>
+				</div>
+			</div>
+			<!-- Example row of columns -->
+			<div class="links row">
+				<div class="col-xs-12 col-sm-3 col-sm-offset-1">
 					<h2>Register</h2>
-					<p>Already know WP is the pre-o for you? Don't waist anymore
+					<p>Already know WP is the pre-o for you? Don't waste anymore
 						time and register asap by clicking the link and following the
 						instructions!</p>
 					<p>
-						<a class="btn btn-success" href="tripInfo2.html#registration"
+						<a class="btn btn-success" href="tripInfo.html#registration"
 							role="button">Register Now &raquo;</a>
 					</p>
 				</div>
-				<div class="col-xs-4 col-sm-4 col-lg-4">
+				<div class="col-xs-12 col-sm-4 col-lg-4">
 					<h2>Learn more!</h2>
 					<p>Get all the information about the pre-orientation trip -
 						from the logistics such as the schedule and the packing list, to
 						what WP is as a community - our philosophy, our goals, and all
 						about who we are!</p>
 					<p>
-						<a class="btn btn-info" href="tripInfo2.html" role="button">Get
+						<a class="btn btn-info" href="tripInfo.html" role="button">Get
 							Info &raquo;</a>
 					</p>
 				</div>
-				<div class="col-xs-3 col-sm-3 col-lg-3">
+				<div class="col-xs-12 col-sm-3 col-lg-3">
 					<h2>Meet the Leaders!</h2>
 					<p>Want to see who the leaders are this year? Check them out!</p>
 					<p>
@@ -218,28 +212,54 @@
 
 
 	<!-- Jumbotron -->
-	<div class="freshmenHolder" id="leaders">
-		<div class="jumbotron">
-			<h1>Lead WP</h1>
-			<p class="lead">By becoming a WP leader, you join one of the
-				closest communities on campus. The experience is unlike any other.
-				There are yearly applications so keep an eye out for us!</p>
-		</div>
-
-		<!-- Example row of columns -->
-		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
+	<div  id="leaders" class="holder" >
 		<div class="row">
-			<div class="col-xs-4 col-sm-4 col-lg-4">
+			<div class="jumbotron col-xs-12 col-md-5 col-md-offset-1">
+				<h1>Lead WP</h1>
+				<p class="lead">By becoming a WP leader, you join one of the
+					closest communities on campus. The experience is unlike any other.
+					There are yearly applications so keep an eye out for us!</p>
+			</div>
+			<div id="carousel-example-generic"
+					class="carousel slide col-xs-12 col-md-4 col-md-offset-1" data-ride="carousel">
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#carousel-example-generic" data-slide-to="0"
+							class="active"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					</ol>
+
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner">
+						<div class="item active">
+							<img src="Images/leaders2012cardance.jpg" class="center-block"
+								alt="...">
+						</div>
+						<div class="item">
+							<img src="Images/leaders2013.jpg" class="center-block" alt="...">
+						</div>
+						<div class="item">
+							<img src="Images/leaders2013river.jpg" class="center-block"
+								alt="...">
+						</div>
+
+					</div>
+				</div>
+		</div>
+		<!-- Example row of columns -->
+		<div class="row links">
+			<div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-1">
 				<h2>Information</h2>
 				<p>See what WP is all about. Learn about the trip you could
 					lead, the places we'll be going, and the community you'll be
 					joining.</p>
 				<p>
-					<a class="btn btn-info" href="tripInfo2.html" role="button">Learn
+					<a class="btn btn-info" href="tripInfo.html" role="button">Learn
 						More &raquo;</a>
 				</p>
 			</div>
-			<div class="col-xs-4 col-sm-4 col-lg-4">
+			<div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-1">
 				<h2>Apply!</h2>
 				<p>Know you want to become a WP leader? Click the link below to
 					get to the application! Make sure to remember the deadline of when
@@ -255,7 +275,7 @@
 		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
 	</div>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="jquery/jquery.min.js"></script>
+	<script src="jquery/jquery-1.10.2.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="js/bootstrap.min.js"></script>
 	<script>
@@ -270,13 +290,15 @@
 					} else {
 						dest = $(this.hash).offset().top;
 					}
+					if (dest < $(document).outerHeight()-$(window).outerHeight()) {
+						dest = dest-110;
+					}
 					//go to destination
 					$('html,body').animate({
+
 						scrollTop : dest
 					}, 1000, 'swing');
 				});
-
-		<!--Rememberthe packing list -->
 	</script>
 </body>
 </html>
