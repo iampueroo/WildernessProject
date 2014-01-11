@@ -59,6 +59,13 @@ nav
 	color: white;
 }
 
+@media (min-width: 768px) and (max-width: 784px) {
+	.navbar ul.nav li a
+	{
+		font-size: 12.5px;
+	}
+}
+
 .navbar ul.nav li#selected
 {
 	border-bottom-style: solid;

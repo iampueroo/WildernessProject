@@ -56,8 +56,9 @@ ul.dl
 }
 .question.odd
 {
-	background-color: #CEFFCE
-		;
+	background-color: #CEFFCE;
+	background-color: #CEFFDD;
+
 }
 .question.selected{
 	background-color: white;

@@ -15,7 +15,7 @@
 #leader_container_mobile .singleleader:not(.steering):nth-child(even)
 {
 	border-right: solid 2px lightgreen;
-border-left: dashed 1px lightgrey;
+	border-left: dashed 1px lightgrey;
 }
 
 #leader_container_mobile .singleleader:not(.steering):nth-child(odd)
@@ -28,7 +28,6 @@ border-left: dashed 1px lightgrey;
 {
 	border-top: dashed 1px lightgrey;
 	border-left: dashed 1px lightgrey;
-
 	padding-top: 40px;
 	padding-bottom: 20px;	
 	margin: 20px -15px 0px -15px;
@@ -40,8 +39,6 @@ border-left: dashed 1px lightgrey;
 {
 
 	border-left: dashed 1px lightgrey;
-
-}
 }
 
 #leader_container_mobile .singleleader img
@@ -62,4 +59,16 @@ border-left: dashed 1px lightgrey;
 {
 	margin-left: 5px;
 	margin-right: 5px;
+}
+
+.tn_container .row img.steeringtn
+{
+	webkit-box-shadow: 0 0 5px black;
+    box-shadow: 0 0 10px black;
+}
+@media (max-width: 854px) {
+	#leader_container_mobile .singleleader img
+	{
+		width: 50%;
+	}
 }

@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="myCSS/navbar.css">
 <link rel="stylesheet" type="text/css" href="myCSS/home.css">
 <link rel="icon" type="image/ico"
-	href="http://www.students.cec.wustl.edu/~rachelgershon/OC Site/favicon.ico">
+	href="Images/favicon.ico">
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -50,7 +50,6 @@
 	$(document).ready(function() {
 		toggleNavbar();
 		navHandler();
-		$(.carousel).carousel();
 	});
 </script>
 </head>
@@ -107,7 +106,7 @@
 
 		<div class="masterrow">
 			<div class="row myrow">
-				<div
+				<div id="Title"
 					class="jumbotron fadeIn col-xs-12 col-sm-8 col-sm-offset-2">
 					<p class="fadeIn">
 						<small>Washington University Outing Club presents...</small>
@@ -119,17 +118,17 @@
 				</div>
 			</div>
 			<div id="tentrow" class="row myrow fadeIn">
-				<div class="col-xs-6 col-sm-offset-3 col-sm-2">
-					<a href="#leaders" class="thumbnail scroll">
-						<div class="caption">
-							<h3>Prospective Leaders</h3>
-						</div>
-					</a>
-				</div>
 				<div class="col-xs-6 col-sm-offset-2 col-sm-2">
 					<a href="#freshmen" class="thumbnail scroll">
 						<div class="caption">
 							<h3>Incoming Freshmen</h3>
+						</div>
+					</a>
+				</div>
+				<div class="col-xs-6 col-sm-offset-3 col-sm-2">
+					<a href="#leaders" class="thumbnail scroll">
+						<div class="caption">
+							<h3>Prospective Leaders</h3>
 						</div>
 					</a>
 				</div>
@@ -141,27 +140,27 @@
 	<div class="adContainer" id="freshmen">
 		<div class="holder">
 			<div class="row">
-				<div id="carousel-example-generic"
-					class="carousel slide col-xs-12 col-md-4 col-md-offset-1" data-ride="carousel">
+				<div id="carousel1md"
+					class="carousel slide hidden-sm hidden-xs col-md-4 col-md-offset-1" data-ride="carousel">
 					<!-- Indicators -->
 					<ol class="carousel-indicators">
-						<li data-target="#carousel-example-generic" data-slide-to="0"
+						<li data-target="#carousel1md" data-slide-to="0"
 							class="active"></li>
-						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+						<li data-target="#carousel1md" data-slide-to="1"></li>
+						<li data-target="#carousel1md" data-slide-to="2"></li>
 					</ol>
 
 					<!-- Wrapper for slides -->
 					<div class="carousel-inner">
 						<div class="item active">
-							<img src="Images/biggroupstatue.jpg" class="center-block"
+							<img src="Images/freshmenPic1.jpg" class="center-block"
 								alt="...">
 						</div>
 						<div class="item">
-							<img src="Images/humanknot.jpg" class="center-block" alt="...">
+							<img src="Images/freshmenPic2.jpg" class="center-block" alt="...">
 						</div>
 						<div class="item">
-							<img src="Images/steering-dynamic.jpg" class="center-block"
+							<img src="Images/freshmenPic3.jpg" class="center-block"
 								alt="...">
 						</div>
 
@@ -172,6 +171,32 @@
 					<p class="lead">As an incoming freshman, you will meet all the
 						cool leaders, a whole lot of other freshmen, and share experiences
 						from hiking in the Ozarks to top roping new routes!</p>
+				</div>
+				<div id="carousel1sm"
+					class="carousel slide col-xs-12 visible-xs visible-sm" data-ride="carousel">
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#carousel1sm" data-slide-to="0"
+							class="active"></li>
+						<li data-target="#carousel1sm" data-slide-to="1"></li>
+						<li data-target="#carousel1sm" data-slide-to="2"></li>
+					</ol>
+
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner">
+						<div class="item active">
+							<img src="Images/freshmenPic1.jpg" class="center-block"
+								alt="...">
+						</div>
+						<div class="item">
+							<img src="Images/freshmenPic2.jpg" class="center-block" alt="...">
+						</div>
+						<div class="item">
+							<img src="Images/freshmenPic3.jpg" class="center-block"
+								alt="...">
+						</div>
+
+					</div>
 				</div>
 			</div>
 			<!-- Example row of columns -->
@@ -220,27 +245,27 @@
 					closest communities on campus. The experience is unlike any other.
 					There are yearly applications so keep an eye out for us!</p>
 			</div>
-			<div id="carousel-example-generic"
+			<div id="carousel2"
 					class="carousel slide col-xs-12 col-md-4 col-md-offset-1" data-ride="carousel">
 					<!-- Indicators -->
 					<ol class="carousel-indicators">
-						<li data-target="#carousel-example-generic" data-slide-to="0"
+						<li data-target="#carousel2" data-slide-to="0"
 							class="active"></li>
-						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+						<li data-target="#carousel2" data-slide-to="1"></li>
+						<li data-target="#carousel2" data-slide-to="2"></li>
 					</ol>
 
 					<!-- Wrapper for slides -->
 					<div class="carousel-inner">
 						<div class="item active">
-							<img src="Images/leaders2012cardance.jpg" class="center-block"
+							<img src="Images/leadersPic1.jpg" class="center-block"
 								alt="...">
 						</div>
 						<div class="item">
-							<img src="Images/leaders2013.jpg" class="center-block" alt="...">
+							<img src="Images/leadersPic2.jpg" class="center-block" alt="...">
 						</div>
 						<div class="item">
-							<img src="Images/leaders2013river.jpg" class="center-block"
+							<img src="Images/leadersPic3.jpg" class="center-block"
 								alt="...">
 						</div>
 
@@ -299,6 +324,10 @@
 						scrollTop : dest
 					}, 1000, 'swing');
 				});
+		$('.carousel').carousel({
+			interval : 3000,
+			wrap: true
+		})
 	</script>
 </body>
 </html>

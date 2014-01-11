@@ -4,6 +4,31 @@ html, body
 	height: 100%;
 }
 
+
+@media (max-width: 768px) { 
+	body
+	{
+		background: url("../Images/tree.jpg") no-repeat center center ;
+	}
+}
+@media (min-width: 768px) and (max-width: 992px) { 
+	body
+	{
+		background: url("../Images/tree.jpg") no-repeat center center ;
+	}
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+	body
+	{
+		background: url("../Images/tree.jpg") no-repeat center center fixed;
+	}
+}
+@media (min-width: 1200px) {
+	body
+	{
+			background: url(../Images/tree.jpg) no-repeat center center fixed;
+	}
+}
 body
 {
 	background: url(../Images/tree.jpg) no-repeat center center fixed;
@@ -102,6 +127,13 @@ img
 {
 	margin-top: 0;
 }
+
+@media (max-width: 768px) { 
+	.jumbotron:not(#Title)
+	{
+		margin-bottom: 0; ;
+	}
+}
 .adContainer .jumbotron
 {
 	background-color: rgba(63,104,0,0.5);
@@ -132,6 +164,13 @@ img
 {
 	background-color: rgba(255,255,255,.5);
 	border-radius: 10px;
+}
+
+@media (max-width: 768px) { 
+	.adContainer .holder .row, #leaders > .row:not(.links)
+	{
+		margin-bottom: 0; ;
+	}
 }
 
 .links div h2, .links div p
