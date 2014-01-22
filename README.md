@@ -1,6 +1,6 @@
 Wilderness Project Website
 ==========================
-[In progress link](tinyurl.com/tempwpurl) (*please excuse the little messes*)
+[In progress link](http://www.tinyurl.com/tempwpurl) (*please excuse the little messes*)
 
 
 What is it 
