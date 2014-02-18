@@ -1,25 +1,32 @@
-@media (max-width: 768px) { 
+@media (max-width: 320px) {
+	#background, #reg_container
+	{
+		background: url(../Images/kimGagnonBgMobile.jpg) no-repeat center center ;
+	}
+}
+
+@media (min-width: 321px) and (max-width: 768px) { 
 	#background, #reg_container 
 	{
-		background: url("../Images/kimGagnonBgxs.jpg") no-repeat center center ;
+		background: url(../Images/kimGagnonBgxs.jpg) no-repeat center center ;
 	}
 }
 @media (min-width: 768px) and (max-width: 992px) { 
 	#background, #reg_container 
 	{
-		background: url("../Images/kimGagnonBgsm.jpg") no-repeat center center ;
+		background: url(../Images/kimGagnonBgsm.jpg) no-repeat center center ;
 	}
 }
 @media (min-width: 993px) and (max-width: 1200px) {
 	#background, #reg_container 
 	{
-		background: url("../Images/kimGagnonBgmd.jpg") no-repeat center center fixed;
+		background: url(../Images/kimGagnonBgmd.jpg) no-repeat center center fixed;
 	}
 }
 @media (min-width: 1200px) {
 	#background, #reg_container 
 	{
-		background: url("../Images/kimGagnonBg.jpg") no-repeat center center fixed;
+		background: url(../Images/kimGagnonBg.jpg) no-repeat center center fixed;
 	}
 }
 

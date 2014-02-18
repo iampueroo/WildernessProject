@@ -117,18 +117,19 @@
 				<a class="close-btn" href="javascript:void(0)"
 					onclick="document.getElementById('envelope').style.display='none';document.getElementById('fade').style.display='none'">Hide</a>
 				<h1 class="title">Send us a message</h1>
-				<form method="post" action="">
+				<form method="post" action="sendQuickQuestion.py">
 
 					<input type="text" onclick="this.value='';" onfocus="this.select()"
 						onblur="this.value=!this.value?'Your name':this.value;"
-						value="Your Name" class="your-name" /> <input type="text"
+						value="Your Name" class="your-name" name="name"/> 
+					<input type="text"
 						onclick="this.value='';" onfocus="this.select()"
-						onblur="this.value=!this.value?'Email address':this.value;"
+						onblur="this.value=!this.value?'Email address':this.value;" name = "email"		
 						value="Email address" class="email-address" />
 
-					<textarea class="your-message">Your Message Here.</textarea>
+					<textarea name = "message" class="your-message">Your Message Here.</textarea>
 
-					<input type="button" value="Send message" class="send-message">
+					<input type="submit" value="Send message" class="send-message">
 
 				</form>
 			</div>
@@ -159,7 +160,7 @@
 					alt="Generic placeholder image">
 				<h2>Email</h2>
 				<p>We're always checking our email ready to respond to questions
-					or concern?</p>
+					and concerns</p>
 				<p>
 					<a class="btn btn-default"
 						href="mailto:wildernessproject@gmail.com" role="button">Email
@@ -179,21 +180,27 @@
 				</p>
 			</div>
 			<!-- /.col-sm-4 col-md-4 col-lg-4 -->
-			<div class="col-sm-4 col-md-4 col-lg-4">
-				<img class="img-circle" src="Images/twitterlogo.png"
+			<div id="summerContacts" class="col-sm-4 col-md-4 col-lg-4">
+				<img class="img-circle" src="http://www.bostonbakesforbreastcancer.org/wp-content/uploads/2012/03/sun.jpg"
 					alt="Generic placeholder image">
-				<h2>Twitter</h2>
-				<p>Check out our amazing twitter and all the tweets we have
-					sent!</p>
-				<p>
-					<a class="btn btn-default" href="https://www.twitter.com"
-						role="button">Tweet Us &raquo;</a>
+				<h2>Summer Contacts</h2>
+				<p>Email one of our summer contacts directly!</p>
+				<p class="il">
+					<a class="" href="mailto:bzod@wustl.edu">Ben Zod</a>
+					<div class="glyphicon glyphicon-envelope il"></div>
 				</p>
+				<p class="il">
+					<a class="" href="mailto:helen.head@wustl.edu">Helen Head</a>
+					<div class="glyphicon glyphicon-envelope il"></div>
+				</p>
+
 			</div>
 			<!-- /.col-lg-4 -->
 		</div>
 		<!-- /.row -->
 	</div>
+
+	
 	</div>
 
 

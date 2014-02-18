@@ -1,38 +1,37 @@
 @CHARSET "UTF-8";
 
-html, body, #main
-{
-	height: 100%;
-}
 @media (max-width: 768px) { 
 	body
 	{
-		background: url("../Images/leaderCollage2xs.jpg") no-repeat top center ;
+		background: url("../Images/leaderCollage2xs.jpg") top center ;
+		background-repeat: repeat;
 	}
+
 }
 @media (min-width: 769px) and (max-width: 992px) { 
 	body
 	{
-		background: url("../Images/leaderCollage2sm.jpg") no-repeat top center ;
+		background: url("../Images/leaderCollage2sm.jpg")  ;
+		background-size: cover;
 	}
 }
 @media (min-width: 993px) and (max-width: 1200px) {
 	body 
 	{
-		background: url("../Images/leaderCollage2md.jpg")   no-repeat top center;
+		background: url("../Images/leaderCollage2md.jpg") top center;
 	}
 }
 
 @media (min-width: 1201px) and (max-width: 1700px) {
 	body 
 	{
-		background: url("../Images/leaderCollage2lg.jpg")   no-repeat top center;
+		background: url("../Images/leaderCollage2lg.jpg") top center;
 	}
 }
 @media (min-width: 1701px) {
 	body 
 	{
-		background: url("../Images/leaderCollage2.jpg")   no-repeat top center;
+		background: url("../Images/leaderCollage2.jpg")  top center;
 	}
 }
 body

@@ -1,107 +1,101 @@
-html, body
-{
+html,body {
 	width: 100%;
 	height: 100%;
 }
 
+@media ( max-width : 350px) {
+	#background {
+		background: url(../Images/treeBgMobile.jpg);
+		background-size: cover;
 
-@media (max-width: 768px) { 
-	body
-	{
-		background: url("../Images/tree.jpg") no-repeat center center ;
 	}
 }
-@media (min-width: 768px) and (max-width: 992px) { 
-	body
-	{
-		background: url("../Images/tree.jpg") no-repeat center center ;
+
+@media ( min-width : 350px) and (max-width: 992px) {
+	#background {
+		background: url(../Images/treeBgsm.jpg) no-repeat;
+		background-size: cover;
 	}
 }
-@media (min-width: 993px) and (max-width: 1200px) {
-	body
-	{
-		background: url("../Images/tree.jpg") no-repeat center center fixed;
+
+@media ( min-width : 993px) and (max-width: 1200px) {
+	body {
+		background: url(../Images/treeBgmd.jpg) no-repeat center center fixed;
 	}
 }
-@media (min-width: 1200px) {
-	body
-	{
-			background: url(../Images/tree.jpg) no-repeat center center fixed;
+
+@media ( min-width : 1200px) {
+	body {
+		background: url(../Images/treeBgmd.jpg) no-repeat center center fixed;
 	}
 }
-body
-{
-	background: url(../Images/tree.jpg) no-repeat center center fixed;
+
+body {
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 }
-#main
-{
+
+#main {
 	width: 100%;
-	height: 100%;
 }
-#navbar
-{
+
+
+#navbar {
 	margin-bottom: 0;
 }
 
-.masterrow
+#background #firstHeader
 {
-	position: relative;
-	top: 150px;
+	padding-top: 120px;
 }
 
-.jumbotron
-{
-	background-color:rgba(0,0,0,.5);
+ #pageJumps {
+	padding-bottom: 50px;
+}
+
+.jumbotron {
+	background-color: rgba(0, 0, 0, .5);
 	padding: 40px 25px;
 	border-radius: 10px;
-	color: white;	
-	margin-top: 60px; 
+	color: white;
+	margin-top: 60px;
 	padding-bottom: 20px;
 }
 
-img
-{
+img {
 	position: relative;
 	top: 0;
 }
 
-.thumbnail
-{
-	background-color: rgba(0,0,0,0.2);
+.thumbnail {
+	background-color: rgba(0, 0, 0, 0.2);
 	width: 150px;
 	height: 132px;
 	margin: 0;
 }
 
-.thumbnail img
-{
+.thumbnail img {
 	margin-top: 12px;
 }
 
-#tentrow
-{	
-	margin: 20px 20px 0px 20px;	
+#tentrow {
+	
 }
 
-#tentrow .caption
-{
+#tentrow .caption {
 	padding-top: 5px;
 }
-	
-#tentrow h3
-{
+
+#tentrow h3 {
 	text-align: center;
 	color: white;
 	font-weight: 100;
 	margin-top: 10px;
 }
 
-#leadermain, #freshmenmain
-{
+#leadermain,#freshmenmain {
 	height: 100vh;
 }
 
@@ -109,71 +103,76 @@ img
 	height: 140px;
 	border-radius: 70px;
 }
-.thumbnail .caption
-{
- position: relative;
- top: 22px;
+
+.thumbnail .caption {
+	position: relative;
+	top: 22px;
 }
 
-.adContainer
-{
+.adContainer {
 	padding: 75px 0 75px 0;
 	padding-top: 0;
 	margin-top: 0;
 	backgrdound-image: url("../Images/cream_pixels.png");
-
 }
-.jumbotron
-{
+
+.jumbotron {
 	margin-top: 0;
 }
 
-@media (max-width: 768px) { 
-	.jumbotron:not(#Title)
-	{
-		margin-bottom: 0; ;
+@media ( max-width : 768px) {
+	.jumbotron:not (#Title ) {
+		margin-bottom: 0;;
 	}
 }
-.adContainer .jumbotron
-{
-	background-color: rgba(63,104,0,0.5);
-	background-color:rgba(0,0,0,0.5);
+
+
+.adContainer .jumbotron {
+	background-color: rgba(63, 104, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 992px) {
+	.adContainer .jumbotron, #leaders .jumbotron	{
+		background-color: #fff;
+		color: #000;
+	}
+
+	#carousel1sm
+	{
+		padding: 0;
+	}
 }
 
 /* Adding necessary CSS */
-.holder
-{
-	display: inline-block;
+.holder {
+	display: inldine-block;
 }
 
-.holder:first
-{
+.holder:first {
 	margin-bottom: 50px;
 }
-.holder > div
-{
+
+.holder>div {
 	margin-bottom: 20px;
 }
 
-.holder > div > .carousel img
-{
+.holder>div>.carousel img {
 	border: solid 8px white;
 	border-radius: 10px;
 }
-.links
-{
-	background-color: rgba(255,255,255,.5);
+
+.links {
+	background-color: rgba(255, 255, 255, .5);
 	border-radius: 10px;
 }
 
-@media (max-width: 768px) { 
-	.adContainer .holder .row, #leaders > .row:not(.links)
-	{
-		margin-bottom: 0; ;
+@media ( max-width : 768px) {
+	.adContainer .holder .row,#leaders>.row:not (.links ) {
+		margin-bottom: 0;;
 	}
 }
 
-.links div h2, .links div p
-{
+.links div h2,.links div p {
 	text-align: center;
 }

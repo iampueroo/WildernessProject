@@ -8,6 +8,7 @@ html, body
 	{
 		background: url("../Images/missourispringbgxs.jpg") no-repeat center center ;
 	}
+
 }
 @media (min-width: 768px) and (max-width: 992px) { 
 	#background, #reg_container 
@@ -29,8 +30,8 @@ html, body
 }
 #promoteContainer
 	{
-		background-color: #80d4df;
-		background-color: #94e49e;
+		background-color: rgb(232, 238, 241);/*#243D42;*/
+		padding-bottom: 40px;
 	}
 #background, #reg_container 
 	{
@@ -143,20 +144,28 @@ html, body
 	font-size: 1.25em;
 }
 
-
-
-#promoteContainer h2, #promoteContainer h3
+#promoteContainer h2
 {
-	color: white;
+	color: #4e585c;
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
-#promoteContainer h2 {
-	padding: 20px;
+
+#promoteContainer h4
+{
+	color: #626e73;
+
+}
+
+#promoteContainer .apply img
+{
+	margin-bottom: 30px;
 }
 
 #ending
 {
 	padding: 50px 0px 50px 0px;
-	color: #32c845;
+	color: darkgreen;
 }
 .jumbo_background
 	{
@@ -169,7 +178,11 @@ html, body
 		height:700px;
 	}
 
-	
+	.mobilemargins
+	{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 
 	.jumbotron p
 	{
