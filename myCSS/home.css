@@ -51,11 +51,8 @@ body {
 	padding-top: 120px;
 }
 
- #pageJumps {
-	padding-bottom: 50px;
-}
-
-.jumbotron {
+.jumbotron 
+{
 	background-color: rgba(0, 0, 0, .5);
 	padding: 40px 25px;
 	border-radius: 10px;
@@ -80,9 +77,6 @@ img {
 	margin-top: 12px;
 }
 
-#tentrow {
-	
-}
 
 #tentrow .caption {
 	padding-top: 5px;
@@ -126,7 +120,6 @@ img {
 	}
 }
 
-
 .adContainer .jumbotron {
 	background-color: rgba(63, 104, 0, 0.5);
 	background-color: rgba(0, 0, 0, 0.5);
@@ -162,14 +155,38 @@ img {
 	border-radius: 10px;
 }
 
-.links {
-	background-color: rgba(255, 255, 255, .5);
+.links:not(#pageJumps){
+	background-color: rgba(255, 255, 255, .50);
 	border-radius: 10px;
 }
 
+#pageJumps .caption h3
+{
+	height: 75px;
+	border-radius: 10px;
+	color: black;
+	background-color: rgba(255, 255, 255, .4);
+	padding-top: 20px;
+}
+
+#pageJumps a:hover
+{
+	text-decoration: none;
+}
+#pageJumps .caption h3:hover
+{
+	background-color: rgba(0,0,0,.5);
+	color: white;
+}
+
+
 @media ( max-width : 768px) {
 	.adContainer .holder .row,#leaders>.row:not (.links ) {
-		margin-bottom: 0;;
+		margin-bottom: 0;
+	}
+	#pageJumps .caption h3
+	{
+		font-size: 20px;
 	}
 }
 

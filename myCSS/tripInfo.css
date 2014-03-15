@@ -108,12 +108,7 @@ html, body
 	text-align: center;
 }
 
-.lead
-{
-	font-size: 1.25em;
-	margin-left: 10px;
-	margin-right: 10px;
-}
+
 
 h1
 {
@@ -143,6 +138,12 @@ h1
 
 	#background {
 		height: 750px;
+	}
+	.lead:not(.pheader)
+	{
+	font-size: 1.25em;
+	margin-left: 10px;
+	margin-right: 10px;
 	}
 
 }

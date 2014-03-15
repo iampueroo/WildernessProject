@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)file://localhost/Users/ignacioampuero/GitHub/WP/leaderInfo.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Wilderness Project</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+@import url(http://fonts.googleapis.com/css?family=Lato:100);
+</style>
+<!-- Bootstrap -->
+<link rel="icon" type="image/ico" href="file://localhost/Users/ignacioampuero/GitHub/WP/Images/favicon.ico">
+<link href="file://localhost/Users/ignacioampuero/GitHub/WP/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" type="text/css" href="./Wilderness Project_files/navbar.css">
+<link rel="stylesheet" type="text/css" href="./Wilderness Project_files/leaderInfo.css">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+<script src="./Wilderness Project_files/jquery-1.10.2.min.js"></script>
+<script>
+	function toggleNavbar() {
+		$("#navbarButton").click(function() {
+			$("#toggleList li").toggle("fast");
+		});
+	}
+	function navHandler() {
+		$("#toggleList li").hide();
+		var currWidth = $(window).innerWidth();
+		var isShortened = false;
+		var isWP = false;
+		var changeWidth = 1020;
+		if (currWidth < changeWidth) {
+			$("#w, #p").hide();
+			isWP = true;
+		}
+		$(window).resize(function() {
+			var newWidth = $(window).innerWidth();
+			if (!isWP && newWidth < changeWidth) {
+				$("#w, #p").hide("medium");
+				isWP = true;
+			} else if (isWP && newWidth >= changeWidth) {
+				isWP = false
+				$("#w, #p").show("medium");
+			}
+		})
+	}
+
+	$(document).ready(
+			function() {
+				$(".singleleader:odd").find("img").css("float", "left")
+						.addClass("left");
+				toggleNavbar();
+				navHandler();
+				$('.tn').tooltip("show");
+			});
+</script>
+
+</head>
+<body style="">
+	<div id="main">
+		<div id="background">
+			<nav class="navbar navbar-default" role="navigation">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button id="navbarButton" type="button" class="navbar-toggle">
+						<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+					</button>
+					<a id="bigLogo" class="navbar-brand" href="file://localhost/Users/ignacioampuero/GitHub/WP/home.html"><span class="bigletter">W</span><span id="w">ilderness</span> <span class="bigletter">P</span><span id="p">roject</span></a> <a id="smallLogo" class="navbar-brand" href="file://localhost/Users/ignacioampuero/GitHub/WP/home.hml"><span class="bigletter">WP</span></a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="file://localhost/Users/ignacioampuero/GitHub/WP/home.html">Home</a></li>
+						<li><a href="file://localhost/Users/ignacioampuero/GitHub/WP/philosophy.html">About</a></li>
+						<li><a href="file://localhost/Users/ignacioampuero/GitHub/WP/tripInfo.html">Trip Info</a></li>
+						<li id="selected"><a href="file://localhost/Users/ignacioampuero/GitHub/WP/leaders.html">Leaders</a></li>
+						<li><a href="file://localhost/Users/ignacioampuero/GitHub/WP/faq.html">FAQ</a></li>
+						<li><a href="file://localhost/Users/ignacioampuero/GitHub/WP/photos.html">Photos</a></li>
+						<li><a href="file://localhost/Users/ignacioampuero/GitHub/WP/contact.html">Contact</a></li>
+						<li><a href="http://www.outing.wustl.edu/"> <span class="glyphicon glyphicon-home"></span> Back to OC
+						</a></li>
+					</ul>
+				</div>
+				<ul id="toggleList" class="visible-xs">
+					<li style="display: none;"><p>
+							<a href="file://localhost/Users/ignacioampuero/GitHub/WP/home.html">Home 
+						</a></p><a href="file://localhost/Users/ignacioampuero/GitHub/WP/home.html"> </a></li>
+					<li style="display: none;"><a href="file://localhost/Users/ignacioampuero/GitHub/WP/philosophy.html"><p>About Us</p></a></li>
+					<li style="display: none;"><a href="file://localhost/Users/ignacioampuero/GitHub/WP/tripInfo.html"><p>Trip Info</p></a></li>
+					<li class="selected" style="display: none;"><a href="file://localhost/Users/ignacioampuero/GitHub/WP/leaders.html"><p>Leader
+								Profiles</p></a></li>
+					<li style="display: none;"><a href="file://localhost/Users/ignacioampuero/GitHub/WP/faq.html"><p>FAQ</p></a></li>
+					<li style="display: none;"><a href="file://localhost/Users/ignacioampuero/GitHub/WP/photos.html"><p>Photos</p></a></li>
+					<li style="display: none;"><a href="file://localhost/Users/ignacioampuero/GitHub/WP/contact.html"><p>Contact Us</p></a></li>
+					<li style="display: none;"><a href="http://www.outing.wustl.edu/"><p>
+								<span class="glyphicon glyphicon-home"></span> Back to OC
+							</p></a></li>
+				</ul>
+				<!-- /.navbar-collapse -->
+			</nav>
+
+
+			<div class="jumbotron center-block row">
+				<h1 class="col-md-10 col-md-offset-1 col-sm-12">What Does It Take to Be a Leader?</h1>
+
+				
+			</div>
+
+		</div>
+
+		<!-- START THE FEATURETTES -->
+
+				<div id="leaderTraining" class="row featurette">
+					<div class="col-xs-12 col-sm-12 col-md-12 text-center">
+						<h2 class="featurette-heading">
+							Leader Training<span class="text-muted"></span></h2>
+							<p class="lead">Have no fear, leaders are very well trained! We spend four weekends during the spring semester working on our outdoor, leader, and group skills while camping in Missouri. We choose to do this via campouts to ensure your full comfort with outdoor living and leading. We also train all leaders in Wilderness First Aid as well as encouraging them to explore St. Louis and social justice in general through a walking tour of many areas. This does mean committing a significant ammount of time to Wilderness Project, but the rewards are an unmatched outdoor education and building a team of friends that can overcome any obstacle. Training gives leaders all the tools necessary for an incredibly safe, fun, and enlightening experience.</p>
+					</div>
+					
+				</div>
+
+				<hr class="featurette-divider">
+
+				<div class="row featurette">
+					<div id="climbingpic" class="col-xs-12 col-sm-12 col-md-5">
+						<img class="featurette-image img-responsive center-block" src="./Wilderness Project_files/MaddyLaughing.jpg" alt="Climbing in 2007!">
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-7">
+						<h2 class="featurette-heading">
+							Rock Climbing <span class="text-muted"><small> ...
+									how high will you go?</small></span>
+						</h2>
+						<p class="lead">The Wilderness Project is dedicated to providing not only a physically safe environment, but also an emotionally safe one. All leaders learn social justice skills focusing on identifying group dynamics, understanding how individuals function within larger groups, and exploring inequality in contemporary social situations. Outside groups that have assisted in the development of leader abilities include CD Players (Cultural-Diversity Players, a University organization dedicated to cross-cultural dialogue and discussion) and Safe Zones (a Washington University organization that teaches about LGBTQA issues). All leaders are dedicated to upholding the Wilderness Project philosophy, and will participate in dialogue on leadership, ethics, group dynamics, and diversity.</p>
+					</div>
+				</div>
+			</div>
+
+		
+	
+	<script>
+		$(".scroll").click(
+				function(event) {
+					event.preventDefault();
+					//calculate destination place
+					var dest = 0;
+					if ($(this.hash).offset().top > $(document).height()
+							- $(window).height()) {
+						dest = $(document).height() - $(window).height();
+					} else {
+						dest = $(this.hash).offset().top - 100;
+					}
+					//go to destination
+					$('html,body').animate({
+						scrollTop : dest
+					}, 1000, 'swing');
+				});
+	</script>
+
+
+</body></html>

@@ -98,6 +98,12 @@ body
 	margin-left: 10px;
 }
 
+#foot
+{
+	height: 10px;
+	background-color: gray;
+}
+
 /* Change later just inc ase */
 #summerContacts img {
 	width: 150px;g

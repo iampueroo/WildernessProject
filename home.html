@@ -107,7 +107,7 @@
 
 			<div id="firstHeader" class="row">
 				<div id="Title"
-					class="jumbotron fadeIn col-xs-12 col-sm-8 col-sm-offset-2">
+					class="jumbotron fadeIn col-xs-12 col-md-8 col-md-offset-2">
 					<p class="fadeIn">
 						<small>Washington University Outing Club presents...</small>
 					</p>
@@ -117,22 +117,21 @@
 					</p>
 				</div>
 			</div>
-			<div id="pageJumps" class="row">
-				<div class="col-xs-6 col-sm-offset-2 col-sm-2">
-					<a href="#freshmen" class="thumbnail scroll">
-						<div class="caption">
+			<div id="pageJumps" class="row links">
+				<div class="col-xs-6 col-md-offset-2 col-md-4">
+					<div class="caption text-center circle">
+						<a href="#freshmen" class=" scroll">
 							<h3>Incoming Freshmen</h3>
-						</div>
-					</a>
+						</a>
+					</div>
 				</div>
-				<div class="col-xs-6 col-sm-offset-3 col-sm-2">
-					<a href="#leaders" class="thumbnail scroll">
-						<div class="caption">
+				<div class="col-xs-6 col-md-4">
+					<div class="caption text-center circle">
+						<a href="#leaders" class=" scroll">
 							<h3>Prospective Leaders</h3>
-						</div>
-					</a>
+						</a>
+					</div>
 				</div>
-				<div class="row"></div>
 			</div>
 		</div>
 			<!-- Jumbotron -->
@@ -280,15 +279,14 @@
 							lead, the places we'll be going, and the community you'll be
 							joining.</p>
 						<p>
-							<a class="btn btn-info" href="tripInfo.html" role="button">Learn
+							<a class="btn btn-info" href="leaderInfo.html" role="button">Learn
 								More &raquo;</a>
 						</p>
 					</div>
 					<div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-1">
 						<h2>Apply!</h2>
 						<p>Know you want to become a WP leader? Click the link below
-							to get to the application! Make sure to remember the deadline of
-							when it is due!</p>
+							to get to the application! Don't forget the deadline!</p>
 						<p>
 							<a class="btn btn-success"
 								href="https://docs.google.com/forms/d/1o61MyH1mFUNwJJjAhvRemK-VwhMp3YzFN-w50UmxWQI/closedform.html"
@@ -323,12 +321,23 @@
 							$('html,body').animate({
 
 								scrollTop : dest
-							}, 1000, 'swing');
+							}, 500, 'swing');
 						});
 				$('.carousel').carousel({
 					interval : 3000,
 					wrap : true
 				})
+
+				if (window.outerWidth >= 993) {
+					var spaceAvailable = window.innerHeight - $("nav.navbar").height();
+					var spaceTaken = $("#firstHeader").height() + $("#pageJumps").height();
+					var totalMargins = spaceAvailable - spaceTaken;
+					if (totalMargins > 0) {
+						var finalMargin = totalMargins/2;
+						$("#firstHeader").css("padding-top", ""+(finalMargin+$("nav.navbar").height())+"px");
+						$("#pageJumps").css("margin-bottom", "" + finalMargin + "px");
+					}
+				}
 			</script>
 </body>
 </html>
