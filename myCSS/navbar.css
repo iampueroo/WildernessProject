@@ -48,7 +48,7 @@ nav
 	top: -10px;
 }
 
-.navbar .navbar-brand span:not(.bigletter):hover
+.navbar .navbar-brand span:not(.bigletter):hover, #bigLogo:hover
 {
 	color: white;
 }
