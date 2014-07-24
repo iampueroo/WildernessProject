@@ -1,6 +1,6 @@
 Wilderness Project Website
 ==========================
-[In progress link](http://www.tinyurl.com/tempwpurl) (*please excuse the little messes*)
+[http://www.outing.wustl.edu/wp](http://www.outing.wustl.edu/wp) 
 
 
 What is it 
