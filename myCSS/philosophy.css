@@ -57,7 +57,6 @@ html, body
 	margin-bottom: 70px;
 }
 #background {
-	height: 620px;
 	margin-bottom: 50px;
 }
 
@@ -95,6 +94,7 @@ html, body
 	padding: 20px;
 	position: relative;
 	top: 25px;
+	margin-bottom: 25px;
 }
 
 .jumbotron h1

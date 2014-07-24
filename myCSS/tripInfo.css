@@ -58,7 +58,7 @@ html, body
 
 .jumbotron .jumbo_background
 {
-	background-color: rgba(256, 256, 256, .3);
+	background-color: rgba(256, 256, 256, .5);
 	padding: 20px;
 	border-radius: 10px;
 	margin-top: 80px;
@@ -88,7 +88,7 @@ html, body
 }
 #reg_container .container .row
 {
-	background-color: rgba(0,0,0,.5);
+	background-color: rgba(0,0,0,.6);
 	border-radius: 10px;
 }
 

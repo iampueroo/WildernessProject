@@ -42,7 +42,7 @@ nav
 	display: visible;
 }
 
-.navbar .navbar-brand span:not(.bigletter)
+.navbar .navbar-brand span:not(.bigletter)t
 {
 	position: relative;
 	top: -10px;
