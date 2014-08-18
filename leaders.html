@@ -58,13 +58,35 @@
 		})
 	}
 
+	function getThumbnails() {
+		var thumbnails = $(".tn > a > img");
+		thumbnails.each(function() {
+			var file_name = this.getAttribute('data-name').toLowerCase().replace(' ','');
+			this.setAttribute('src','Images/2014/' + file_name + 'tn.jpg');
+		});
+	}
+
+	function getMainPhotos() {
+		var leaders = $('.singleleader');
+		$.each(leaders, function(index,value) {
+			var file_name = $(value).find("h2").html().toLowerCase().replace(' ', '');
+			$(value).find('img').attr('src','Images/2014/' + file_name + '.jpg');
+		});
+	}
+
+	function addToolTips() {
+		var images = $('.tn > a > img');
+
+	}
+
 	$(document).ready(
 			function() {
 				$(".singleleader:odd").find("img").css("float", "left")
 						.addClass("left");
 				toggleNavbar();
 				navHandler();
-				$('.tn').tooltip("show");
+				getThumbnails();
+				getMainPhotos();
 			});
 </script>
 
@@ -135,56 +157,56 @@
 					<div class="row">
 						<div class="col-xs-1 col-sm-1 col-md-1 tn">
 							<a href="#1" class="scroll"><img
-								src="Images/2014/mollygibsontn.jpg"
+								data-name="Molly Gibson"
 								class="img-circle center-block"></a>
 						</div>
 
 						<div class="col-xs-1 col-sm-1 col-md-1 tn">
 							<a href="#2" class="scroll"><img
-								src="Images/2014/mikeheavnertn.jpg"
+								data-name="Mike Heavner"
 								class="img-circle center-block"></a>
 						</div>
 
 						<div class="col-xs-1 col-sm-1 col-md-1 tn">
 							<a href="#3" class="scroll" class="scroll"><img
-								src="Images/2014/ellenweinheimertn.jpg"
+								data-name="Ellen Weinheimer"
 								class="img-circle center-block"></a>
 						</div>
 
 						<div class="col-xs-1 col-sm-1 col-md-1 tn">
 							<a href="#4" class="scroll" class="scroll"><img
-								src="Images/2014/dannycottontn.jpg"
+								data-name="Danny Cotton"
 								class="img-circle center-block"></a>
 						</div>
 
 						<div class="col-xs-1 col-sm-1 col-md-1 tn">
 							<a href="#5" class="scroll"><img
-								src="Images/2014/nicolasalzmantn.jpg"
+								data-name="Nicola Salzman"
 								class="img-circle center-block"></a>
 						</div>
 						<div class="col-xs-1 col-sm-1 col-md-1 tn">
 							<a href="#6" class="scroll"><img
-								src="Images/2014/johannahhansentn.jpg"
+								data-name="Johannah Hansen"
 								class="img-circle center-block"></a>
 						</div>
 						<div class="col-xs-1 col-sm-1 col-md-1 tn">
 							<a href="#7" class="scroll"><img
-								src="Images/2014/andrewwardtn.jpg"
+								data-name="Andrew Ward"
 								class="img-circle center-block"></a>
 						</div>
 						<div class="col-xs-1 col-sm-1 col-md-1 tn">
 							<a href="#8" class="scroll"><img
-								src="Images/2014/davidgilmoretn.jpg"
+								data-name="David Gilmore"
 								class="img-circle center-block"></a>
 						</div>
 						<div class="col-xs-1 col-sm-1 col-md-1 tn">
 							<a href="#9" class="scroll"><img
-								src="Images/2014/alanliutn.jpg"
+								data-name="Alan Liu"
 								class="img-circle center-block"></a>
 						</div>
 						<div class="col-xs-1 col-sm-1 col-md-1 tn">
 							<a href="#10" class="scroll"><img
-								src="Images/2014/peterschneinertn.jpg"
+								data-name="Peter Schneiner"
 								class="img-circle center-block"></a>
 						</div>
 					</div>
@@ -192,89 +214,89 @@
 
 						<div class="col-xs-1 col-sm-1 col-md-1 tn">
 							<a href="#11" class="scroll"><img
-								src="Images/2014/lizprutztn.jpg"
+								data-name="Liz Prutz"
 								class="img-circle center-block"></a>
 						</div>
 						<div class="col-xs-1 col-sm-1 col-md-1 tn">
 							<a href="#12" class="scroll"><img
-								src="Images/2014/nadavspraguetn.jpg"
+								data-name="Nadav Sprague"
 								class="img-circle center-block"></a>
 						</div>
 						<div class="col-xs-1 col-sm-1 col-md-1 tn">
 							<a href="#13" class="scroll"><img
-								src="Images/2014/benaikentn.jpg"
+								data-name="Ben Aiken"
 								class="img-circle center-block"></a>
 						</div>
 						<div class="col-xs-1 col-sm-1 col-md-1 tn">
 							<a href="#14" class="scroll"><img
-								src="Images/2014/landispowelltn.jpg"
+								data-name="Landis Powell"
 								class="img-circle center-block"></a>
 						</div>
 						<div class="col-xs-1 col-sm-1 col-md-1 tn">
 							<a href="#15" class="scroll"><img
-								src="Images/2014/johnjordantn.jpg"
+								data-name="John Jordan"
 								class="img-circle center-block"></a>
 						</div>
 						<div class="col-xs-1 col-sm-1 col-md-1 tn">
 							<a href="#16" class="scroll"><img
-								src="Images/2014/addyshawtn.jpg"
+								data-name="Addy Shaw"
 								class="img-circle center-block"></a>
 						</div>
 						<div class="col-xs-1 col-sm-1 col-md-1 tn">
 							<a href="#17" class="scroll"><img
-								src="Images/2014/erikcarlsontn.jpg"
+								data-name="Erik Carlson"
 								class="img-circle center-block"></a>
 						</div>
 						<div class="col-xs-1 col-sm-1 col-md-1 tn">
 							<a href="#18" class="scroll"><img
-								src="Images/2014/deedeepearcetn.jpg"
+								data-name="Deedee Pearce"
 								class="img-circle center-block"></a>
 						</div>
 						<div class="col-xs-1 col-sm-1 col-md-1 tn">
 							<a href="#19" class="scroll"><img
-								src="Images/2014/taliagaloshertn.jpg"
+								data-name="Talia Galosher"
 								class="img-circle center-block"></a>
 						</div>
 						<div class="col-xs-1 col-sm-1 col-md-1 tn">
 							<a href="#20" class="scroll"><img
-								src="Images/2014/lucyswantn.jpg"
+								data-name="Lucy Swan"
 								class="img-circle center-block"></a>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-xs-1 col-sm-1 col-md-1 tn">
 							<a href="#21" class="scroll"><img
-								src="Images/2014/andrewmillertn.jpg"
+								data-name="Andrew Miller"
 								class="img-circle center-block"></a>
 						</div>
 						<div class="col-xs-1 col-sm-1 col-md-1 tn">
 							<a href="#22" class="scroll"><img
-								src="Images/2014/lydarossitn.jpeg"
+								data-name="Lyda Rossi"
 								class="steeringtn img-circle center-block"></a>
 						</div>
 						<div class="col-xs-1 col-sm-1 col-md-1 tn">
 							<a href="#23" class="scroll"><img
-								src="Images/2014/benzodtn.jpg"
+								data-name="Ben Zod"
 								class="steeringtn img-circle center-block"></a>
 						</div>
 						<div class="col-xs-1 col-sm-1 col-md-1 tn">
 							<a href="#24" class="scroll"><img
-								src="Images/2014/clairemaitn.jpg"
+								data-name="Claire Mai"
 								class="steeringtn img-circle center-block"></a>
 						</div>
 						<div class="col-xs-1 col-sm-1 col-md-1 tn">
 							<a href="#25" class="scroll"><img
-								src="Images/2014/forrestcobbtn.jpeg"
+								data-name="Forrest Cobb"
 								class="steeringtn img-circle center-block"></a>
 						</div>
 						<div class="col-xs-1 col-sm-1 col-md-1 tn">
 							<a href="#26" class="scroll"><img
-								src="Images/2014/kimgagnontn.jpg"
+								data-name="Kim Gagnon"
 								class="steeringtn img-circle center-block"></a>
 						</div>
 						<div class="col-xs-1 col-sm-1 col-md-1 tn">
 							<a href="#27" class="scroll"><img
-								src="Images/2014/jaimecollins.jpeg"
+								data-name="Jaime Collins"
 								class="steeringtn img-circle center-block"></a>
 						</div>
 					
@@ -301,7 +323,7 @@
 					<div id="leader_container_mobile">
 						<h1 class=" text-center">Current Leaders</h1>
 						<div id="1" class="singleleader row row">
-	<img src="Images/2014/mollygibson.jpg">
+	<img>
 	<h2>Molly Gibson</h2>
 	<div>
 		<p>
@@ -367,7 +389,7 @@
 	</div>
 </div>
 <div id="2" class="singleleader row row">
-	<img src="Images/2014/mikeheavner.jpg">
+	<img>
 	<h2>Mike Heavner</h2>
 	<div>
 		<p>
@@ -434,7 +456,7 @@
 </div>
 
 <div id="3" class="singleleader row row">
-	<img src="Images/2014/ellenweinheimer.jpg">
+	<img>
 	<h2>Ellen Weinheimer</h2>
 	<div>
 		<p>
@@ -501,7 +523,7 @@
 </div>
 
 <div id="4" class="singleleader row row">
-	<img src="Images/2014/dannycotton.jpg">
+	<img>
 	<h2>Danny Cotton</h2>
 	<div>
 		<p>
@@ -568,7 +590,7 @@
 </div>
 
 <div id="5" class="singleleader row row">
-	<img src="Images/2014/nicolasalzman.jpg">
+	<img>
 	<h2>Nicola Salzman</h2>
 	<div>
 		<p>
@@ -635,8 +657,8 @@
 </div>
 
 <div id="6" class="singleleader row row">
-	<img src="Images/2014/johannahhansen.jpg">
-	<h2>Johannah</h2>
+	<img>
+	<h2>Johannah Hansen</h2>
 	<div>
 		<p>
 			<strong>Nickname/Rapper Name:</strong> H_Baby
@@ -702,8 +724,8 @@
 </div>
 
 <div id="7" class="singleleader row row">
-	<img src="Images/2014/andrewward.jpg">
-	<h2>Andrew Francis Ward II</h2>
+	<img>
+	<h2>Andrew Ward</h2>
 	<div>
 		<p>
 			<strong>Nickname/Rapper Name:</strong> Mad Prankster
@@ -780,8 +802,8 @@ Participate in PLTL with Claire. Be super nervous when you sit behind her in che
 </div>
 
 <div id="8" class="singleleader row row">
-	<img src="Images/2014/davidgilmore.jpg">
-	<h2>David "the eater" Gilmore</h2>
+	<img>
+	<h2>David Gilmore</h2>
 	<div>
 		<p>
 			<strong>Nickname/Rapper Name:</strong> MC Gilly
@@ -847,7 +869,7 @@ Participate in PLTL with Claire. Be super nervous when you sit behind her in che
 </div>
 
 <div id="9" class="singleleader row row">
-	<img src="Images/2014/alanliu.jpg">
+	<img>
 	<h2>Alan Liu</h2>
 	<div>
 		<p>
@@ -914,7 +936,7 @@ Participate in PLTL with Claire. Be super nervous when you sit behind her in che
 </div>
 
 <div id="10" class="singleleader row row">
-	<img src="Images/2014/peterschneider.jpg">
+	<img>
 	<h2>Peter Schneider</h2>
 	<div>
 		<p>
@@ -991,8 +1013,8 @@ Get outside and make time to breathe.
 </div>
 
 <div id="11" class="singleleader row row">
-	<img src="Images/2014/lizprutz.jpg">
-	<h2>Elizabeth Grace Prutz</h2>
+	<img>
+	<h2>Liz Prutz</h2>
 	<div>
 		<p>
 			<strong>Nickname/Rapper Name:</strong> Biz bOOtZ
@@ -1058,7 +1080,7 @@ Get outside and make time to breathe.
 </div>
 
 <div id="12" class="singleleader row row">
-	<img src="Images/2014/nadavsprague.jpg">
+	<img>
 	<h2>Nadav Sprague</h2>
 	<div>
 		<p>
@@ -1125,7 +1147,7 @@ Get outside and make time to breathe.
 </div>
 
 <div id="13" class="singleleader row row">
-	<img src="Images/2014/benaiken.jpg">
+	<img>
 	<h2>Ben Aiken</h2>
 	<div>
 		<p>
@@ -1192,7 +1214,7 @@ Get outside and make time to breathe.
 	</div>
 </div>
 <div id="14" class="singleleader row row">
-	<img src="Images/2014/landispowell.jpg">
+	<img>
 	<h2>Landis Powell</h2>
 	<div>
 		<p>
@@ -1266,7 +1288,7 @@ Get outside and make time to breathe.
 	</div>
 </div>
 <div id="15" class="singleleader row row">
-	<img src="Images/2014/johnjordan.jpg">
+	<img>
 	<h2>John Jordan</h2>
 	<div>
 		<p>
@@ -1333,8 +1355,8 @@ Get outside and make time to breathe.
 	</div>
 </div>
 <div id="16" class="singleleader row row">
-	<img src="Images/2014/addyshaw.jpg">
-	<h2>Aditya Shah</h2>
+	<img>
+	<h2>Addy Shaw</h2>
 	<div>
 		<p>
 			<strong>Nickname/Rapper Name:</strong> Addy
@@ -1399,7 +1421,7 @@ Get outside and make time to breathe.
 	</div>
 </div>
 <div id="17" class="singleleader row row">
-	<img src="Images/2014/erikcarlson.jpg">
+	<img>
 	<h2>Erik Carlson</h2>
 	<div>
 		<p>
@@ -1473,7 +1495,7 @@ Sorry, I'm an engineer!"
 	</div>
 </div>
 <div id="18" class="singleleader row row">
-	<img src="Images/2014/deedeepearce.jpg">
+	<img>
 	<h2>Deedee Pearce</h2>
 	<div>
 		<p>
@@ -1539,7 +1561,7 @@ Sorry, I'm an engineer!"
 	</div>
 </div>
 <div id="19" class="singleleader row row">
-	<img src="Images/2014/taliagalosher.jpg">
+	<img>
 	<h2>Talia Galosher</h2>
 	<div>
 		<p>
@@ -1605,7 +1627,7 @@ Sorry, I'm an engineer!"
 	</div>
 </div>
 <div id="20" class="singleleader row row">
-	<img src="Images/2014/lucyswan.jpg">
+	<img>
 	<h2>Lucy Swan</h2>
 	<div>
 		<p>
@@ -1673,7 +1695,7 @@ Creepy, I know, but I had to get sentimental at some point"
 	</div>
 </div>
 <div id="21" class="singleleader row row">
-	<img src="Images/2014/andrewmiller.jpg">
+	<img>
 	<h2>Andrew Miller</h2>
 	<div>
 		<p>
@@ -1744,7 +1766,7 @@ Creepy, I know, but I had to get sentimental at some point"
 							Steering Committee
 							</h1>
 <div id="22" class="singleleader row row">
-	<img src="Images/2014/lydarossi.jpeg">
+	<img>
 	<h2>Lyda Rossi</h2>
 	<div>
 		<p>
@@ -1810,7 +1832,7 @@ Creepy, I know, but I had to get sentimental at some point"
 	</div>
 </div>
 <div id="23" class="singleleader row row">
-	<img src="Images/2014/benzod.jpg">
+	<img>
 	<h2>Ben Zod</h2>
 	<div>
 		<p>
@@ -1883,7 +1905,7 @@ Creepy, I know, but I had to get sentimental at some point"
 </div>
 
 <div id="24" class="singleleader row row">
-	<img src="Images/2014/clairemai.jpg">
+	<img>
 	<h2>Claire Mai</h2>
 	<div>
 		<p>
@@ -1948,7 +1970,7 @@ Creepy, I know, but I had to get sentimental at some point"
 	</div>
 </div>
 <div id="25" class="singleleader row row">
-	<img src="Images/2014/forrestcobb.jpeg">
+	<img>
 	<h2>Forrest Cobb</h2>
 	<div>
 		<p>
@@ -2012,7 +2034,7 @@ Creepy, I know, but I had to get sentimental at some point"
 		</p>
 	</div>
 </div><div id="26" class="singleleader row row">
-	<img src="Images/2014/kimgagnon.jpg">
+	<img>
 	<h2>Kim Gagnon</h2>
 	<div>
 		<p>
@@ -2078,7 +2100,7 @@ but also explore st. louis as much as you can"
 	</div>
 </div>
 <div id="27" class="singleleader row row">
-	<img src="Images/2014/jaimecollins.jpeg">
+	<img>
 	<h2>Jaime Collins</h2>
 	<div>
 		<p class='text-center'>...she did not give her answers...</p>
