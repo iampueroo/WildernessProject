@@ -1,6 +1,6 @@
 Wilderness Project Website
 ==========================
-[http://www.outing.wustl.edu/wp](http://www.outing.wustl.edu/wp) 
+[http://www.outing.wustl.edu/wp](http://outing.wustl.edu/WildernessProject/) 
 
 
 What is it 
